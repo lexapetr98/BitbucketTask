@@ -1,1 +1,0 @@
-define("bitbucket/internal/bbui/request/request",["module","exports","../javascript-errors/javascript-errors"],function(b,a,c){Object.defineProperty(a,"__esModule",{value:!0});var d=babelHelpers.interopRequireDefault(c);a.default={rest:function(a){throw new d.default.NotImplementedError;}};b.exports=a["default"]});

@@ -1,8 +1,0 @@
-.faux-upload-field:focus + label {
-  outline: #333333 dotted 1px;
-}
-@media (-webkit-min-device-pixel-ratio: 0) {
-  .faux-upload-field:focus + label {
-    outline: -webkit-focus-ring-color auto 5px;
-  }
-}

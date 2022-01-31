@@ -1,2 +1,0 @@
-define("bitbucket/internal/util/shortcuts/create-keyboard-shortcuts-handler",["module","exports","bitbucket/internal/util/dom-event"],function(d,b,e){Object.defineProperty(b,"__esModule",{value:!0});var g=babelHelpers.interopRequireWildcard(e).isAnyModifierPressed,h=["input","select","textarea"];b.default=function(b){return function(a){var c=a.currentTarget,f=a.target,d=a.key,e=h.includes(f.tagName.toLowerCase())||f.isContentEditable;c!==f&&e||g(a)||(c=b[d],"function"===typeof c&&(a.preventDefault(),
-a.stopPropagation(),c()))}};d.exports=b["default"]});

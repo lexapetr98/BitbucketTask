@@ -1,1 +1,0 @@
-define("bitbucket/internal/bbui/pull-request-header/pull-request-title-enricher",["module","exports","../../util/string-replacer"],function(c,a,b){Object.defineProperty(a,"__esModule",{value:!0});b=new (babelHelpers.interopRequireDefault(b).default);a.default=b;c.exports=a["default"]});

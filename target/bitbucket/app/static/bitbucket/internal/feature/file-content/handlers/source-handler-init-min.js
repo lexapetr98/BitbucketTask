@@ -1,1 +1,0 @@
-(function(){function a(a,b){c.register({weight:a,extraClasses:"source-file-content",builtIn:!0,handle:function(a){return require("bitbucket/internal/feature/file-content/handlers/source-handler")[b](a)}})}var c=require("bitbucket/feature/files/file-handlers");a(9E3,"handleDirectory");a(1E4,"handleImage");a(10300,"handleBinary");a(10700,"handleEmptyFile");a(11E3,"handleText")})();

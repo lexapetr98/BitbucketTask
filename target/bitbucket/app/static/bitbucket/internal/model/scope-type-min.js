@@ -1,1 +1,0 @@
-define("bitbucket/internal/model/scope-type",["exports"],function(a){Object.defineProperty(a,"__esModule",{value:!0});var b={GLOBAL:"GLOBAL",PROJECT:"PROJECT",REPOSITORY:"REPOSITORY"},c=b.GLOBAL,d=b.PROJECT,e=b.REPOSITORY;a.default=b;a.GLOBAL=c;a.PROJECT=d;a.REPOSITORY=e});

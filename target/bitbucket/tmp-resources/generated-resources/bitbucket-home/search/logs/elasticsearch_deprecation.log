@@ -1,2 +1,0 @@
-[2018-11-16T04:23:52,443][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [version]
-[2018-11-16T04:23:52,444][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [version]

@@ -1,1 +1,0 @@
-define("bitbucket/internal/feature/alerts/actions",["exports"],function(a){Object.defineProperty(a,"__esModule",{value:!0});a.ADD_ALERT="alerts/ADD_ALERT";a.REMOVE_ALERT="alerts/REMOVE_ALERT";a.DIALOG_OPEN="alerts/DIALOG_OPEN";a.DIALOG_CLOSED="alerts/DIALOG_CLOSED"});

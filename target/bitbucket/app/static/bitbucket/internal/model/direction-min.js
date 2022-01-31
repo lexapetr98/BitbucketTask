@@ -1,1 +1,0 @@
-define("bitbucket/internal/model/direction",["module","exports"],function(b,a){Object.defineProperty(a,"__esModule",{value:!0});a.default={UP:"UP",DOWN:"DOWN"};b.exports=a["default"]});

@@ -1,1 +1,0 @@
-define("bitbucket/internal/util/browser-window",["module","exports"],function(b,a){Object.defineProperty(a,"__esModule",{value:!0});a.default=window;b.exports=a["default"]});

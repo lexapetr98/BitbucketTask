@@ -1,1 +1,0 @@
-define("bitbucket/internal/widget/quick-copy-text",["module","exports","jquery"],function(c,a,d){Object.defineProperty(a,"__esModule",{value:!0});var e=babelHelpers.interopRequireDefault(d),b=!0;a.default={onReady:function(){b&&(b=!1,(0,e.default)(document).on("click",".quick-copy-text",function(a){this.focus();this.select()}))}};c.exports=a["default"]});

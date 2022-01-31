@@ -1,1 +1,0 @@
-define("bitbucket/internal/feature/pull-request/can-merge/can-merge",["module","exports","bitbucket/internal/util/events"],function(b,a,c){Object.defineProperty(a,"__esModule",{value:!0});var d=babelHelpers.interopRequireDefault(c);a.default=function(){d.default.trigger("bitbucket.internal.feature.pull-request.merge-check")};b.exports=a["default"]});

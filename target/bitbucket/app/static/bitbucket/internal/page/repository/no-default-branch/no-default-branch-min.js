@@ -1,2 +1,0 @@
-define("bitbucket/internal/page/repository/no-default-branch/no-default-branch",["module","exports","bitbucket/util/navbuilder","bitbucket/internal/util/events"],function(c,a,d,e){Object.defineProperty(a,"__esModule",{value:!0});var f=babelHelpers.interopRequireDefault(d),g=babelHelpers.interopRequireDefault(e);a.default={onReady:function(){g.default.on("bitbucket.internal.feature.repository.revisionReferenceSelector.revisionRefChanged",function(a){var b=f.default.parse(location.href);b.addQueryParam("at",
-a.getId());location.href=b.toString()})}};c.exports=a["default"]});

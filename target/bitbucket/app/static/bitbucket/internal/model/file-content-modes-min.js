@@ -1,1 +1,0 @@
-define("bitbucket/internal/model/file-content-modes",["module","exports"],function(b,a){Object.defineProperty(a,"__esModule",{value:!0});a.default={SOURCE:"source",DIFF:"diff"};b.exports=a["default"]});

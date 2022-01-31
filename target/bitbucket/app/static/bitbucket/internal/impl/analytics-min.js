@@ -1,2 +1,0 @@
-define("bitbucket/internal/impl/analytics",["module","exports","@atlassian/aui","bitbucket/internal/bbui/analytics/analytics","bitbucket/internal/util/object"],function(d,a,e,f,g){function b(){c.default.call(this)}Object.defineProperty(a,"__esModule",{value:!0});var h=babelHelpers.interopRequireDefault(e),c=babelHelpers.interopRequireDefault(f);babelHelpers.interopRequireDefault(g).default.inherits(b,c.default);b.prototype.trigger=function(a,b){h.default.trigger("analytics",{name:a,data:b})};a.default=
-new b;d.exports=a["default"]});

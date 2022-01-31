@@ -1,1 +1,0 @@
-define("bitbucket/internal/feature/project/filterable-project-table/action-creators",["exports","./actions"],function(a,b){Object.defineProperty(a,"__esModule",{value:!0});a.populateProjects=void 0;a.populateProjects=function(a){return{type:b.LOAD_PROJECTS_SUCCESS,payload:a}}});

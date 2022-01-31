@@ -1,9 +1,0 @@
-.branch-selector-toolbar .aui-toolbar2-primary > .aui-group {
-  table-layout: auto;
-}
-.flex-container {
-  display: flex;
-}
-.commits-content {
-  flex: 1;
-}

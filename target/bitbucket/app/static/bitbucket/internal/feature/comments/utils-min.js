@@ -1,2 +1,0 @@
-define("bitbucket/internal/feature/comments/utils",["exports"],function(b){Object.defineProperty(b,"__esModule",{value:!0});var f=function(c){return c.trim().replace(/\s+/gm," ")};b.getCommentSelection=function(c){var e=window.getSelection();if(e){var a=e.anchorNode,d=e.focusNode;a&&a.nodeType!==Node.ELEMENT_NODE&&(a=a.parentNode);d&&d.nodeType!==Node.ELEMENT_NODE&&(d=d.parentNode);var b=c.querySelector(".message");c=c.querySelector(".actions");if(b.contains(a)&&(b.contains(d)||c===d))return a=f(e.toString()),
-e.removeAllRanges(),a}};b.sanitiseText=f});

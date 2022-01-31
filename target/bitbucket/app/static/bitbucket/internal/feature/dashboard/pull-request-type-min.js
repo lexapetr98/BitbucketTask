@@ -1,1 +1,0 @@
-define("bitbucket/internal/feature/dashboard/pull-request-type",["exports"],function(a){Object.defineProperty(a,"__esModule",{value:!0});var b=a.REVIEWING="REVIEWING",c=a.CREATED="CREATED",d=a.CLOSED="CLOSED";a.default={REVIEWING:b,CREATED:c,CLOSED:d}});

@@ -1,1 +1,0 @@
-define("bitbucket/internal/imagesloaded",function(){});

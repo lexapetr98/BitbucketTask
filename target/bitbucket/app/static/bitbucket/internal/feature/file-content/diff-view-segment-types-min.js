@@ -1,1 +1,0 @@
-define("bitbucket/internal/feature/file-content/diff-view-segment-types",["module","exports"],function(b,a){Object.defineProperty(a,"__esModule",{value:!0});a.default={ADDED:"ADDED",REMOVED:"REMOVED",CONTEXT:"CONTEXT"};b.exports=a["default"]});

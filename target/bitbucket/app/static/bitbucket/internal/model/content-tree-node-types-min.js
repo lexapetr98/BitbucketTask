@@ -1,1 +1,0 @@
-define("bitbucket/internal/model/content-tree-node-types",["module","exports"],function(b,a){Object.defineProperty(a,"__esModule",{value:!0});a.default={DIRECTORY:"DIRECTORY",FILE:"FILE",SUBMODULE:"SUBMODULE"};b.exports=a["default"]});

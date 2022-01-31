@@ -1,1 +1,0 @@
-define("bitbucket/internal/impl/request",["module","exports","bitbucket/util/server"],function(c,a,b){Object.defineProperty(a,"__esModule",{value:!0});b=babelHelpers.interopRequireDefault(b);a.default={rest:b.default.rest};c.exports=a["default"]});

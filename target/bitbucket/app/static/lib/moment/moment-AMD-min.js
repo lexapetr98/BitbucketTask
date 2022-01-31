@@ -1,1 +1,0 @@
-define("moment",[],function(){moment.locale("en");moment.locale(document.documentElement.getAttribute("lang"));return moment});

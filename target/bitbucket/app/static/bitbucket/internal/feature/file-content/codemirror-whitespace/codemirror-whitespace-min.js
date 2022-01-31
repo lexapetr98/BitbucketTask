@@ -1,1 +1,0 @@
-require(["codemirror"],function(e){e.defineOption("showWhiteSpaceCharacters",!1,function(b,c,d){d&&!c?b.removeOverlay("whitespace-characters"):!d&&c&&b.addOverlay({name:"whitespace-characters",flattenSpans:!1,token:function(a){var b=0;if(a.match(" ",!1))return a.eatWhile(function(a){return" "===a&&4>b++}),"whitespace";a.eatWhile(/[^ ]/);return null}})})});

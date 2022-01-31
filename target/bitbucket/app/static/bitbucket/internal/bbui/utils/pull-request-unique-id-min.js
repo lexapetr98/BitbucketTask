@@ -1,1 +1,0 @@
-define("bitbucket/internal/bbui/utils/pull-request-unique-id",["module","exports"],function(c,a){Object.defineProperty(a,"__esModule",{value:!0});a.default=function(a){var b=a.toRef.repository;return[b.project.key,b.slug,a.id].join("::")};c.exports=a["default"]});

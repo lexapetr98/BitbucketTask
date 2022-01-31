@@ -1,1 +1,0 @@
-require("bitbucket/feature/files/file-handlers").register({weight:5E3,builtIn:!0,handle:function(a){return require("bitbucket/internal/feature/file-content/handlers/diff-handler").handler.apply(this,arguments)}});

@@ -1,1 +1,0 @@
-define("bitbucket/internal/util/request-page-scrolling",["module","exports","bitbucket/internal/layout/page-scrolling-manager"],function(b,a,c){Object.defineProperty(a,"__esModule",{value:!0});a.default=function(){return d.default._requestScrollControl()};var d=babelHelpers.interopRequireDefault(c);b.exports=a["default"]});

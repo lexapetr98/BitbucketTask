@@ -1,1 +1,0 @@
-define("bitbucket/internal/feature/repository/filterable-repository-table/action-creators",["exports","./actions"],function(a,b){Object.defineProperty(a,"__esModule",{value:!0});a.populateRepositories=void 0;a.populateRepositories=function(a){return{type:b.LOAD_REPOSITORIES_SUCCESS,payload:a}}});

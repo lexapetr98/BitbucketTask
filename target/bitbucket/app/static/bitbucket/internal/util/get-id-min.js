@@ -1,2 +1,0 @@
-define("bitbucket/internal/util/get-id",["exports","lodash"],function(a,c){Object.defineProperty(a,"__esModule",{value:!0});a.getIdString=a.getId=a.defaultIdField=void 0;var d=a.defaultIdField="id";a.getId=function(){var a=0<arguments.length&&void 0!==arguments[0]?arguments[0]:d;return function(b){return(0,c.isFunction)(a)?a(b):(0,c.get)(b,a)}};a.getIdString=function(){var a=0<arguments.length&&void 0!==arguments[0]?arguments[0]:d;return function(b){return(b=(0,c.isFunction)(a)?a(b):(0,c.get)(b,a))&&
-String(b)}}});
