@@ -7,17 +7,15 @@
     <vendor name="${project.organization.name}" url="${project.organization.url}"/>  
     <param name="plugin-icon">images/pluginIcon.png</param>  
     <param name="plugin-logo">images/pluginLogo.png</param> 
-  </plugin-info>
-
-  <web-panel key="user-id-panel" location="bitbucket.user.profile.header.details">
-    <resource name="view" type="static">Hello world</resource>
-  </web-panel>
-
-  <web-item key="account-plugin-tab" name="Account navigation tab" section="bitbucket.user.account.nav" weight="20">
-    <label key="account.plugin.tab">My Plugin</label>
-    <link>/plugins/servlet/account/users/${accountUser.name}</link>
-    <tooltip key="account.plugin.tab.description">Hooray, we have a tab!</tooltip>
-  </web-item>
+  </plugin-info>  
+  <!--  <web-panel key="user-id-panel" location="bitbucket.user.profile.header.details">-->  
+  <!--    <resource name="view" type="static">Hello world</resource>-->  
+  <!--  </web-panel>-->  
+  <web-item key="account-plugin-tab" name="Account navigation tab" section="bitbucket.user.account.nav" weight="20"> 
+    <label key="account.plugin.tab">My Plugin</label>  
+    <link>/plugins/servlet/account/users/${accountUser.name}</link>  
+    <tooltip key="account.plugin.tab.description">Hooray, we have a tab!</tooltip> 
+  </web-item>  
   <!-- add our i18n resource -->  
   <resource type="i18n" name="i18n" location="bitbucket-profile-plugin"/>  
   <!-- add our web resources -->  
@@ -27,12 +25,17 @@
     <resource type="download" name="bitbucket-profile-plugin.js" location="/js/bitbucket-profile-plugin.js"/>  
     <resource type="download" name="images/" location="/images"/>  
     <context>bitbucket-profile-plugin</context> 
-  </web-resource>
-  <client-resource key="account-soy" name="Account Tab Soy Templates">
-    <directory location="/templates/" />
-  </client-resource>
+  </web-resource>  
+  <client-resource key="account-soy" name="Account Tab Soy Templates"> 
+    <directory location="/templates/"/> 
+  </client-resource>  
   <servlet name="Account Servlet" i18n-name-key="account-servlet.name" key="account-servlet" class="com.mycompany.bitbucket.servlet.AccountServlet"> 
     <description key="account-servlet.description">The Account Servlet Plugin</description>  
     <url-pattern>/account/users/*</url-pattern> 
-  </servlet>
+  </servlet>  
+  <web-item name="user-id-item" i18n-name-key="user-id-item.name" key="user-id-item" section="bitbucket.user.profile.header.details" weight="10">
+    <description key="user-id-item.description">The user-id-item Plugin</description>
+    <label key="user-id-item.label"/>
+    <link linkId="user-id-item-link">/plugins/servlet/account/users/${accountUser.name}</link>
+  </web-item>  
 </atlassian-plugin>
