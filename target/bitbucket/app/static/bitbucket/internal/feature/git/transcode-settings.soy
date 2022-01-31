@@ -1,0 +1,27 @@
+{namespace bitbucket.internal.feature.git.transcode}
+
+/**
+ * @param enabled
+ */
+{template .enable}
+    {call widget.aui.form.checkbox}
+        {param id: 'git-enable-transcoding' /}
+        {param labelContent}{getText('bitbucket.git.transcode.enable.label')}{/param}
+        {param checked: $enabled /}
+        {param descriptionContent}
+            {call .description /}
+        {/param}
+    {/call}
+{/template}
+
+/**
+ */
+{template .description private="true"}
+    {getText('bitbucket.git.transcode.enable.description')} {call .learnMore /}
+{/template}
+
+/**
+ */
+{template .learnMore private="true"}
+    <a href="{bitbucket_help_url('bitbucket.help.git.transcode')}" target="_blank">{getText('bitbucket.git.transcode.learn.more')}</a>
+{/template}

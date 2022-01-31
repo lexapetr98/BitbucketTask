@@ -1,0 +1,161 @@
+@import "/static/global.less";
+
+/* Make react-select look more like ~~ADG2~~ ADGS */
+
+.adg2-react-select.Select {
+    @aui-button-default-text-color: @ak-color-N500;
+    @aui-button-default-hover-text-color: @ak-color-N500;
+
+    @aui-button-default-bg-color: @ak-color-N20A;
+    @aui-button-default-hover-bg-color: @ak-color-N30A;
+
+    @aui-button-default-active-bg-color: @ak-color-B50;
+    @aui-button-default-active-text-color: @ak-color-B400;
+
+    @aui-button-default-selected-bg-color: @ak-color-N600;
+    @aui-button-default-selected-text-color: @ak-color-N0;
+
+    @aui-link-inverted-bg-color: @ak-color-B400;
+    @aui-link-inverted-text-color: @ak-color-N0;
+
+    @aui-dropdown2-bg-color: @ak-color-N0;
+    @aui-dropdown2-text-color: @ak-color-N800;
+
+    @aui-button-border-radius: @baseBorderRadius;
+    @aui-dropdown-line-height: @buttonHeight;
+
+    @aui-dropdown-option-line-height: unit(20 / @font-size-default);
+    @aui-dropdown-option-padding: 3px 10px; // From AUI
+    @aui-dropdown-option-disabled-text-color: @ak-color-N100;
+
+    max-width: @max-button-width;
+
+    // Override default styles for label
+    .Select-control {
+        border-color: transparent;
+        border-radius: @aui-button-border-radius;
+        transition: background-color .1s ease-out;
+    }
+
+    .Select-value {
+        font-size: @font-size-default;
+    }
+
+    // Override sizes
+    .Select-input,
+    .Select-control,
+    &.Select--single > .Select-control .Select-value {
+        height: auto; // Reset the previous value
+        line-height: @aui-dropdown-line-height;
+    }
+
+    > .Select-control .Select-value,
+    .Select-arrow-zone > .Select-arrow {
+        color: inherit; // Inherit color styles from parent. This works for all current, hover and active states
+    }
+
+    .Select-control,
+    &.has-value > .Select-control,
+    &.has-value.is-pseudo-focused > .Select-control {
+        .Select-value .Select-value-label {
+            color: inherit;  // Inherit color styles from parent. This works for all current, hover and active states
+        }
+    }
+
+    // Override color for different states
+    .Select-control,
+    &.has-value.is-pseudo-focused > .Select-control  {
+        background-color: @aui-button-default-bg-color;
+        color: @aui-button-default-text-color;
+
+        &:hover {
+            background: @aui-button-default-hover-bg-color;
+            color: @aui-button-default-hover-text-color;
+            cursor: pointer;
+
+            .Select-arrow {
+                opacity: 1;
+            }
+        }
+
+        &:active {
+            background: @aui-button-default-active-bg-color;
+            color: @aui-button-default-active-text-color;
+        }
+    }
+
+    &.is-open > .Select-control {
+        background-color: @aui-button-default-selected-bg-color;
+        color: @aui-button-default-selected-text-color;
+    }
+
+    &.is-focused:not(.is-open) > .Select-control {
+        border-color: transparent;
+        box-shadow: none;
+
+        .focus();
+    }
+
+    // Override dropdown options
+    .Select-option {
+        font-size: @font-size-default;
+        line-height: @aui-dropdown-option-line-height;
+        padding: @aui-dropdown-option-padding;
+
+        &,
+        &.is-selected {
+            background-color: @aui-dropdown2-bg-color;
+            color: @aui-dropdown2-text-color;
+        }
+
+        &.is-focused {
+            background-color: @aui-link-inverted-bg-color;
+            color: @aui-link-inverted-text-color;
+
+            .aui-icon {
+                color: inherit;
+            }
+        }
+
+        &.is-disabled {
+            color: @aui-dropdown-option-disabled-text-color;
+            cursor: not-allowed;
+            background-color: transparent;
+        }
+    }
+
+    &.Select--multi {
+        .Select-control {
+            background-color: @ak-color-N0;
+        }
+
+        .Select-value {
+            /*
+                TODO: A better way to handle this is to supply a custom `valueComponent`,
+                ideally just extending react-select's `Value`, but we can't do that easily with the way we consume react-select
+                This is a bit of a hack to switch the order of the label and the remove icon so we don't have to duplicate all
+                the things `Value` implements.
+             */
+            background: @feintGreyColor;
+            border: @borderWidth solid @ak-color-N40;
+            color: @bodyTextColor;
+            display: inline-flex;
+            flex-direction: row-reverse; //put the remove button after the label;
+
+            .Select-value-icon {
+                border-right: none;
+
+                &:hover {
+                    background-color: inherit;
+                    color: inherit;
+                }
+            }
+        }
+    }
+
+    .adg2-react-select-icon-option {
+        .aui-icon {
+            margin-right: @halfSpacing;
+        }
+    }
+}

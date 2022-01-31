@@ -1,0 +1,20 @@
+@import "/static/global.less";
+
+.branch-multi-selector-branch {
+    .aui-icon {
+        color: @secondaryTextColor;
+    }
+
+    .name {
+        @widthOffset: @halfSpacing + @iconSizeSmall;
+        width:  ~"calc(100% - @{widthOffset})";
+        display: inline-block;
+        margin-left: @halfSpacing;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.select2-highlighted .branch-multi-selector-branch .aui-icon {
+    color: @invertedBodyTextColor;
+}

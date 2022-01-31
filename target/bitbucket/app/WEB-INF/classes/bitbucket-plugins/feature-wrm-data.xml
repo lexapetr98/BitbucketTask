@@ -1,0 +1,25 @@
+<atlassian-plugin key="com.atlassian.bitbucket.server.feature-wrm-data" name="Feature WRM Data">
+
+    <!-- When adding a feature listing here, follow the convention: key is the feature key, data key is "data" -->
+
+    <web-resource key="attachments" name="attachments">
+        <data key="data" class="com.atlassian.stash.internal.web.fragments.IsAttachmentsEnabledDataProvider"/>
+        <dependency>com.atlassian.plugins.atlassian-plugins-webresource-plugin:data</dependency>
+    </web-resource>
+
+    <web-resource key="user.time.zone.onboarding" name="user time zone onboarding">
+        <data key="data" class="com.atlassian.stash.internal.web.fragments.IsTimeZoneOnboardingEnabledDataProvider"/>
+        <dependency>com.atlassian.plugins.atlassian-plugins-webresource-plugin:data</dependency>
+    </web-resource>
+
+    <web-resource key="pull.request.next" name="pull request next">
+        <data key="data" class="com.atlassian.stash.internal.web.fragments.IsPullRequestNextEnabledDataProvider"/>
+        <dependency>com.atlassian.plugins.atlassian-plugins-webresource-plugin:data</dependency>
+    </web-resource>
+
+    <web-resource key="commit.graph" name="Commit Graph">
+        <data key="data" class="com.atlassian.stash.internal.web.fragments.IsCommitGraphEnabledDataProvider"/>
+        <dependency>com.atlassian.plugins.atlassian-plugins-webresource-plugin:data</dependency>
+    </web-resource>
+
+</atlassian-plugin>

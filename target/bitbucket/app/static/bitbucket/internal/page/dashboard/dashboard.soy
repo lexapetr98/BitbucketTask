@@ -1,0 +1,49 @@
+{namespace bitbucket.internal.page}
+
+/**
+ * @param pullRequestsCreated
+ * @param pullRequestsClosed
+ * @param pullRequestsReviewing
+ * @param recentRepositories
+ * @param pullRequestSuggestions
+ */
+{template .dashboard}
+    {webResourceManager_requireResourcesForContext('bitbucket.page.dashboard')}
+    {call bitbucket.internal.layout.base}
+        {param windowTitle: getText('bitbucket.web.dashboard.your.work.title') /}
+        {param bodyClass: 'dashboard-page' /}
+        {param pageType: 'generic' /}
+        {param hideProfile: false /}
+        {param content}
+            {call aui.page.pagePanel}
+                {param extraClasses: 'content-body' /}
+                {param id: 'aui-page-panel-content-body' /}
+                {param extraAttributes: ['tabindex': '-1'] /}
+                {param content}
+                    {call aui.page.pagePanelContent}
+                        {param content}
+                            <div id="dashboard" class="dashboard"></div>
+                        {/param}
+                    {/call}
+                {/param}
+            {/call}
+        {/param}
+        {param pageBottomContent}
+            <script>
+                require('bitbucket/internal/page/dashboard/dashboard')
+                    .onReady(
+                        document.getElementById('dashboard'),
+                            {lb}
+                                "pullRequests": {lb}
+                                    "REVIEWING": {to_json($pullRequestsReviewing)|noAutoescape},
+                                    "CREATED": {to_json($pullRequestsCreated)|noAutoescape},
+                                    "CLOSED": {to_json($pullRequestsClosed)|noAutoescape},
+                                {rb},
+                                "recentRepositories": {to_json($recentRepositories)|noAutoescape},
+                                "pullRequestSuggestions": {to_json($pullRequestSuggestions)|noAutoescape}
+                            {rb}
+                    );
+            </script>
+        {/param}
+    {/call}
+{/template}

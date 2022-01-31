@@ -1,0 +1,106 @@
+<atlassian-plugin key="com.atlassian.bitbucket.server.bitbucket-dashboard" name="Atlassian Bitbucket Dashboard Plugin">
+
+    <plugin-info>
+        <description>Bitbucket's Dashboard Plugin</description>
+        <version>1.0</version>
+        <vendor name="Atlassian" url="http://www.atlassian.com"/>
+    </plugin-info>
+
+    <resource type="i18n" name="Bitbucket Dashboard i18n" location="i18n/bitbucket-webapp-dashboard"/>
+
+    <!-- Everything related to the personal dashboard lives in this plugin -->
+
+    <web-fragment-location key="dashboard-repository-search-location"
+                           location="internal.bitbucket.dashboard.repository.search"
+                           type="panel" />
+
+    <client-resource key="dashboard-page-resources" name="Dashboard page">
+        <directory location="/static/bitbucket/internal/page/dashboard" source="webContextStatic">
+            <exclude>/**/*.soy</exclude>
+        </directory>
+
+        <context>bitbucket.page.dashboard</context>
+
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web:react</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web:react-redux</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-dashboard:dashboard-feature-resources</dependency>
+    </client-resource>
+
+    <client-resource key="dashboard-feature-resources" name="Dashboard feature resources">
+        <directory location="/static/bitbucket/internal/feature/dashboard" source="webContextStatic">
+            <exclude>/**/*.soy</exclude>
+        </directory>
+
+        <resource type="download" name="grey-tick.svg" location="/static/bitbucket/internal/feature/dashboard/images/grey-tick.svg">
+            <param name="source" value="webContextStatic"/>
+            <param name="content-type" value="image/svg+xml"/>
+        </resource>
+
+        <resource type="download" name="pull-request-empty-state.svg" location="/static/bitbucket/internal/feature/dashboard/images/pull-request-empty-state.svg">
+            <param name="source" value="webContextStatic"/>
+            <param name="content-type" value="image/svg+xml"/>
+        </resource>
+
+        <resource type="download" name="no-recent-repos.svg" location="/static/bitbucket/internal/feature/dashboard/images/no-recent-repos.svg">
+            <param name="source" value="webContextStatic"/>
+            <param name="content-type" value="image/svg+xml"/>
+        </resource>
+
+        <resource type="download" name="no-search-repos.svg" location="/static/bitbucket/internal/feature/dashboard/images/no-search-repos.svg">
+            <param name="source" value="webContextStatic"/>
+            <param name="content-type" value="image/svg+xml"/>
+        </resource>
+
+        <resource type="download" name="icons/icon-warning-large.svg" location="/static/bitbucket/internal/images/icons/icon-warning-large.svg">
+            <param name="source" value="webContextStatic"/>
+            <param name="content-type" value="image/svg+xml"/>
+        </resource>
+
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web-api:aui</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web-api:events</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web-api:navbuilder</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web-api:scheduler</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web-api:server</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web-api:state</dependency>
+
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web:analytics-helper</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web:analytics</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web:avatar-dropdown</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web:bitbucket-web-fragments</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web:classnames</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web:client-storage</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web:commit-link</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web:commits-table</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web:enums</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web:error-boundary</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web:keyboard-shortcuts-util</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web:lodash</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web:property-util</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web:pull-request-state-lozenge</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web:react</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web:reducer-util</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web:redux-util</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web:redux</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web:repository-item</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web:repository-search-results</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web:reselect</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web:text-util</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web:time</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web:parse-commit-message-util</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-web:react-icons</dependency>
+
+        <dependency>com.atlassian.bitbucket.server.bitbucket-bbui-components:aui-react</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-bbui-components:avatars</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-bbui-components:pull-request-table</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-bbui-components:ref-label</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-bbui-components:utils</dependency>
+
+        <dependency>com.atlassian.bitbucket.server.bitbucket-client-web-fragments:dashboard-pull-request-table-column-after-internal</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-client-web-fragments:dashboard-pull-request-suggestion-table-column-before-internal</dependency>
+        <dependency>com.atlassian.bitbucket.server.bitbucket-dashboard:dashboard-repository-search-location</dependency>
+
+        <dependency>com.atlassian.bitbucket.server.config-wrm-data:dashboard.poll.pull-request-suggestions.interval</dependency>
+        <dependency>com.atlassian.bitbucket.server.config-wrm-data:dashboard.poll.pull-requests.interval</dependency>
+    </client-resource>
+
+</atlassian-plugin>

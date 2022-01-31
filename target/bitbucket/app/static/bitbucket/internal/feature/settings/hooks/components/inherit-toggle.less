@@ -1,0 +1,28 @@
+@import "/static/global.less";
+
+.inherit-toggle {
+    .option-icon {
+        &-disabled {
+            color: @ak-color-R300;
+
+        }
+
+        &-enabled {
+            color: @ak-color-G300;
+
+        }
+
+        &::before {
+            font-weight: bold;
+        }
+    }
+
+    .busy-value {
+        .bb-spinner {
+            .square(@iconSizeSmall);
+            margin-right: @halfSpacing;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}

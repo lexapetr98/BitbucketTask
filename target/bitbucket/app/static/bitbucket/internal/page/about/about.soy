@@ -1,0 +1,48 @@
+{namespace bitbucket.internal.page}
+
+/**
+ * @param copyrightStartYear
+ * @param copyrightEndYear
+ * @param showLicenses
+ * @param hideProfile
+ */
+{template .about}
+{webResourceManager_requireResourcesForContext('bitbucket.page.about')}
+    {call bitbucket.internal.layout.entity}
+        {param windowTitle: getText('bitbucket.web.about', productFullName()) /}
+        {param entityName: getText('bitbucket.web.about', productFullName()) /}
+        {param hideProfile: $hideProfile /}
+        {param content}
+            <div class="copyright">
+                <p>
+                    {call .copyrightLine}
+                        {param copyrightYearRange}
+                            {if $copyrightStartYear == $copyrightEndYear}{$copyrightEndYear}{else}{$copyrightStartYear} - {$copyrightEndYear}{/if}
+                        {/param}
+                    {/call}
+                </p>
+            </div>
+            <div class="licenses">
+                <p>{getText('bitbucket.web.about.license.line1')|noAutoescape}</p>
+                <p>{getText('bitbucket.web.about.license.line2')|noAutoescape}</p>
+                <p>
+                {getText('bitbucket.web.about.license.line3')}
+                // Ignore the licenses for development builds
+                {if $showLicenses}
+                    //This function is in an auto-generated soy file derived from third-party-licensing/bom.csv
+                    {call bitbucket.internal.page.about.lgplLibraries/}
+                {/if}
+                </p>
+                <p>{getText('bitbucket.web.about.license.line4')}</p>
+                <p>{getText('bitbucket.web.about.license.line5', productFullName())}</p>
+            </div>
+        {/param}
+    {/call}
+{/template}
+
+/**
+ * @param copyrightYearRange
+ */
+{template .copyrightLine}
+    {{getText('bitbucket.web.about.copyright', $copyrightYearRange)}}
+{/template}

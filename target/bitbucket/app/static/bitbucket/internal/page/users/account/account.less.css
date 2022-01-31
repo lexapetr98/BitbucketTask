@@ -1,0 +1,16 @@
+.aui-iconfont-user.view-profile-icon {
+  margin-right: 10px;
+  color: #505F79;
+}
+#content .aui-group.account-settings {
+  width: auto;
+}
+#content .aui-group.account-settings form {
+  width: 400px;
+}
+#content .aui-group.account-settings .aui-item:first-child {
+  padding-right: 20px;
+}
+#content .aui-group.account-settings .aui-item.avatar-item {
+  border-left: 1px solid #DFE1E6;
+}

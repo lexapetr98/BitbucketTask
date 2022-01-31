@@ -1,0 +1,76 @@
+form.aui legend,
+form.aui label {
+  color: #7A869A;
+}
+form.aui div.description {
+  color: #505F79;
+}
+form.aui .text,
+form.aui .password,
+form.aui .textarea,
+form.aui .select,
+form.aui .multi-select,
+form.aui .aui-select2-container .select2-choices {
+  border-color: #DFE1E6;
+}
+body,
+body.aui-page-fixed,
+body.aui-page-hybrid {
+  background: #FFFFFF;
+}
+body #footer-logo,
+body.aui-page-fixed #footer-logo,
+body.aui-page-hybrid #footer-logo {
+  background: #FFFFFF;
+}
+body.aui-page-focused,
+body.aui-page-notification {
+  background: #F4F5F7;
+}
+body.aui-page-focused #footer-logo,
+body.aui-page-notification #footer-logo {
+  background: #F4F5F7;
+}
+.aui-button[aria-pressed="true"].aui-button-subtle {
+  background-color: #344563;
+  color: #FFFFFF;
+}
+.aui-button,
+a.aui-button,
+.aui-button:visited {
+  line-height: 1.42857143;
+}
+.aui-button.aui-button-compact .aui-icon {
+  margin-top: 0;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.bitbucket-theme .aui-message p.scm-command,
+.bitbucket-theme .scm-command {
+  font-family: monospace;
+  margin-top: 16px;
+  word-wrap: break-word;
+}
+.bitbucket-theme.scrolling-forwarded #page {
+  position: fixed;
+  min-width: 1004px;
+}
+.bitbucket-theme.scrolling-forwarded .aui-page-panel-content {
+  padding-bottom: 0;
+}
+.aui-page-focused .aui-page-panel {
+  margin-top: 50px;
+}
+.aui-page-focused .aui-page-panel p:last-child {
+  margin-bottom: 20px;
+}
+.aui-page-hybrid #content > .aui-page-header {
+  padding-left: 0;
+  padding-right: 0;
+}

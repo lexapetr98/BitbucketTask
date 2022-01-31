@@ -1,0 +1,1 @@
+define("bitbucket/internal/util/codemirror",["module","exports","codemirror"],function(b,a,d){Object.defineProperty(a,"__esModule",{value:!0});var e=babelHelpers.interopRequireDefault(d),c=null;a.default={doInOperation:function(a){if(null===c){var b=document.createElement("div");c=(0,e.default)(b)}return c.operation(a)}};b.exports=a["default"]});

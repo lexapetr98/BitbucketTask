@@ -1,0 +1,13 @@
+.branch-multi-selector-branch .aui-icon {
+  color: #5E6C84;
+}
+.branch-multi-selector-branch .name {
+  width: calc(100% - 21px);
+  display: inline-block;
+  margin-left: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.select2-highlighted .branch-multi-selector-branch .aui-icon {
+  color: #FFFFFF;
+}

@@ -1,0 +1,2 @@
+define("bitbucket/internal/widget/aui/dropdown/dropdown",["module","exports","@atlassian/aui","jquery"],function(e,b,f,g){Object.defineProperty(b,"__esModule",{value:!0});var c=babelHelpers.interopRequireDefault(f),d=babelHelpers.interopRequireDefault(g);b.default={onReady:function(){var a={dropDown:".aui-dropdown-left:not(.aui-dropdown-ajax)",alignment:"left"};c.default.dropDown.Standard(d.default.extend({},a));a.dropDown=".aui-dropdown-right:not(.aui-dropdown-ajax)";a.alignment="right";c.default.dropDown.Standard(d.default.extend({},
+a))}};e.exports=b["default"]});

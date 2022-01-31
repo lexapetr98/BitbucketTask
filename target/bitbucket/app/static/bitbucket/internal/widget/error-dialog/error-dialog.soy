@@ -1,0 +1,51 @@
+{namespace bitbucket.internal.dialogs}
+
+/**
+ * @param? id
+ * @param? titleText
+ * @param? titleClass
+ * @param? panelContent
+ * @param? panelClass
+ * @param? okButtonText
+ * @param? okButtonClass
+ * @param? showCloseButton
+ * @param? closeButtonText
+ * @param? closeButtonClass
+ * @param? closeOnOutsideClick
+ * @param? extraClasses
+ */
+{template .error}
+    <section
+        {sp}
+        {if $id}id="{$id}"{/if}
+        class="aui-dialog2 aui-dialog2-small aui-dialog2-warning aui-layer{call aui.renderExtraClasses}{param extraClasses: $extraClasses/}{/call}"
+        role="dialog"
+        aria-hidden="true"
+        data-aui-remove-on-hide="true"
+        {if $closeOnOutsideClick == false} data-aui-modal="true"{/if}
+    >
+        {call aui.dialog.dialog2Header}
+            {param titleText: $titleText/}
+            {param extraClasses: $titleClass/}
+        {/call}
+
+        {call aui.dialog.dialog2Panel}
+            {param content: $panelContent/}
+            {param extraClasses: $panelClass/}
+        {/call}
+
+        {call aui.dialog.dialog2Footer}
+            {param actionContent}
+                <button class="aui-button aui-button-primary{call aui.renderExtraClasses}{param extraClasses: $okButtonClass/}{/call}">
+                    {$okButtonText}
+                </button>
+
+                {if $showCloseButton}
+                    <button class="aui-button aui-button-link{call aui.renderExtraClasses}{param extraClasses: $closeButtonClass/}{/call}">
+                        {$closeButtonText}
+                    </button>
+                {/if}
+            {/param}
+        {/call}
+    </section>
+{/template}

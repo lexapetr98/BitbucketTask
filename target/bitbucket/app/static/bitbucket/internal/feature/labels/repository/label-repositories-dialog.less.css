@@ -1,0 +1,9 @@
+.label-repositories-dialog .aui-dialog2-header-main {
+  max-width: 100%;
+  max-width: initial;
+}
+.label-repositories-dialog__title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

@@ -1,0 +1,25 @@
+@import '../../../../global-mixins.less';
+
+@bitbucket-logo-web-resource: 'bitbucket-logo';
+
+@atlassian-logo-neutral-image: 'images/logo/atlassian-horizontal-neutral-gradient-small.svg';
+@atlassian-logo-blue-image: 'images/logo/atlassian-horizontal-blue-gradient-small.svg';
+
+@atlassian-logo-image-width: 127px;
+@atlassian-logo-image-height: 24px;
+
+// TODO: BBSDEV-17090 Remove this file and SVG assets after upgrading to AUI 7.7.X
+#footer-logo a {
+    // The hover style in AUI is overtiring all of width, height and background properties
+    &, &:hover {
+        .web-resource-background-image(@bitbucket-logo-web-resource, @atlassian-logo-neutral-image);
+
+        background-size: @atlassian-logo-image-width @atlassian-logo-image-height;
+        height: @atlassian-logo-image-height;
+        width: @atlassian-logo-image-width;
+    }
+
+    &:hover {
+        .web-resource-background-image(@bitbucket-logo-web-resource, @atlassian-logo-blue-image);
+    }
+}

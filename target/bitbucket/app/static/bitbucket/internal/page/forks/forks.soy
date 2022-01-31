@@ -1,0 +1,29 @@
+{namespace bitbucket.internal.page}
+
+/**
+ * @param repository
+ * @param hasRepoCreate
+ */
+{template .forks}
+{webResourceManager_requireResourcesForContext('bitbucket.page.repository.forks')}
+    {let $containerId: 'forks-container' /}
+    {call bitbucket.internal.layout.repository}
+        {{param windowTitle: getText('bitbucket.web.repository.forks.window.title', $repository.project.name, $repository.name) /}}
+        {param panelContentHeader: getText('bitbucket.web.repository.nav.forks') /}
+        {param panelContentHeaderActions}
+            {foreach $webItem in getWebItems('bitbucket.web.repository.forks.header.actions', ['repository': $repository])}
+                {call bitbucket.internal.widget.webItemButton data="$webItem" /}
+            {/foreach}
+        {/param}
+        {param content}
+            <div id='{$containerId}'></div>
+        {/param}
+        {param repository: $repository /}
+        {param activeNav: 'bitbucket.repository.nav.forks' /}
+        {param pageBottomContent}
+            <script>
+                require('bitbucket/internal/page/forks/forks').init(document.getElementById('{$containerId}'), {$hasRepoCreate});
+            </script>
+        {{/param}}
+    {/call}
+{/template}

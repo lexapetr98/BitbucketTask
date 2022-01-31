@@ -1,0 +1,35 @@
+@import "/static/global.less";
+
+#content {
+    > .aui-page-header:first-child {
+
+        h1 {
+            .text-overflow();
+        }
+
+        + .aui-page-panel {
+            margin-top: 0;
+        }
+    }
+}
+
+// Override until AUI ships updated focus state
+.aui-page-focused .aui-page-panel {
+    border: none;
+    margin-bottom: @doubleSpacing;
+
+    .aui-page-panel-content {
+       .shadow.z100();
+        border: none;
+        border-radius: @baseBorderRadius;
+
+        > h2:first-of-type,
+        > form.aui:last-of-type .buttons-container {
+            border: none;
+            padding: 0;
+        }
+        > form.aui:last-of-type .buttons-container {
+            text-align: right;
+        }
+    }
+}

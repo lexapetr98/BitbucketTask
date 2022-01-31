@@ -1,0 +1,1 @@
+define("bitbucket/internal/util/is-in-viewport",["exports"],function(a){Object.defineProperty(a,"__esModule",{value:!0});a.isInViewport=function(b){var a=document.documentElement.clientHeight;b=b.getBoundingClientRect().bottom;return a>=b}});

@@ -1,0 +1,17 @@
+.avatar-with-name.participant-item {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.avatar-dropdown .avatar-with-name .aui-avatar {
+  vertical-align: middle;
+}
+.avatar-dropdown .avatar-with-name .aui-avatar.aui-avatar-badged {
+  margin: 0 10px 0 5px;
+}
+.avatar-dropdown .avatar-with-name .user-avatar .badge {
+  top: -5px;
+  right: -5px;
+  overflow: hidden;
+  pointer-events: none;
+}

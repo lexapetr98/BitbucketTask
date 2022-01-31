@@ -1,0 +1,93 @@
+{namespace bitbucket.internal.feature}
+
+/**
+ * @param? commit
+ * @param? repository
+ * @param? extraClasses
+ * @param? showCommitSelector
+ */
+{template .treeAndDiffView}
+<div class="commit-files{if $extraClasses}{sp}{$extraClasses}{/if}">
+    <div class="file-tree-container">
+        {call aui.toolbar2.toolbar2}
+            {param extraClasses: 'diff-tree-toolbar' /}
+            {param content}
+                {call aui.toolbar2.item}
+                    {param item: 'primary' /}
+                    {param extraClasses: 'primary' /}
+                    {param content}
+                        <h4>{getTextAsHtml('bitbucket.web.diff.show.diff.from.html')}</h4>
+                    {/param}
+                {/call}
+                {call aui.toolbar2.item}
+                    {param item: 'secondary' /}
+                    {param extraClasses: 'secondary' /}
+                    {param content}
+                        <button class="aui-button collapse-file-tree"
+                            title={getText('bitbucket.web.difftree.toolbar.toggle.tooltip')}
+                            autocomplete="off">
+                            <span class="aui-icon aui-icon-small aui-iconfont aui-iconfont-chevron-double-left collapse-file-tree-icon">
+                                {getText('bitbucket.web.difftree.toolbar.toggle.tooltip')}
+                            </span>
+                        </button>
+                        {foreach $webItem in getWebItems('bitbucket.internal.repository.difftree.header.deprecated')}
+                            {call bitbucket.internal.widget.webItemButton data="$webItem" /}
+                        {/foreach}
+                    {/param}
+                {/call}
+            {/param}
+        {/call}
+        {if $showCommitSelector}
+            {call aui.inlineDialog2.trigger}
+                {param menu: ['id': 'inline-dialog-commit-selector'] /}
+                {param tagName: 'button' /}
+                {param extraClasses: 'aui-button aui-dd-trigger commit-selector-button' /}
+                {param content}
+                    {call aui.icons.icon}
+                        {param icon: 'multiple-commits'/}
+                        {param useIconFont: true/}
+                    {/call}
+                    <span class='text'>{$commit ? $commit.message : getText('bitbucket.web.diff.all.changes.displayed')}</span>
+                {/param}
+                {param title: getText('bitbucket.web.pullrequest.commitselector.tooltip') /}
+            {/call}
+
+            {call aui.inlineDialog2.inlineDialog2}
+                {param id: 'inline-dialog-commit-selector' /}
+                {param content: '' /}
+                {param alignment: 'bottom left' /}
+            {/call}
+            {call .fileTreeHeader}
+                {param commit: $commit /}
+                {param repository: $repository /}
+            {/call}
+        {/if}
+        <div class="file-tree-wrapper">
+            <div class="file-tree"></div>
+        </div>
+    </div>
+    <div id="commit-file-content" class="file-content"></div>
+</div>
+{/template}
+
+/**
+ * @param? commit
+ * @param? repository
+ */
+{template .fileTreeHeader}
+    <div class="file-tree-header">
+        <h5>
+            {if $commit}
+                {let $commitLink}
+                    {call bitbucket.internal.feature.commit.link}
+                        {param commit: $commit /}
+                        {param repository: $repository /}
+                    {/call}
+                {/let}
+                {getText('bitbucket.web.difftree.header.commit.html', $commitLink)|noAutoescape}
+            {else}
+                {getText('bitbucket.web.difftree.header')}
+            {/if}
+        </h5>
+    </div>
+{/template}

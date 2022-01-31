@@ -1,0 +1,61 @@
+[2022-01-31T07:24:08,529][INFO ][o.e.n.Node               ] [] initializing ...
+[2022-01-31T07:24:08,621][INFO ][o.e.e.NodeEnvironment    ] [osz1Bu-] using [1] data paths, mounts [[(D:)]], net usable_space [715.3gb], net total_space [931.5gb], spins? [unknown], types [NTFS]
+[2022-01-31T07:24:08,621][INFO ][o.e.e.NodeEnvironment    ] [osz1Bu-] heap size [1.9gb], compressed ordinary object pointers [true]
+[2022-01-31T07:24:08,665][INFO ][o.e.n.Node               ] node name [osz1Bu-] derived from node ID [osz1Bu-STiOzEcnuXa0cmA]; set [node.name] to override
+[2022-01-31T07:24:08,665][INFO ][o.e.n.Node               ] version[5.5.3], pid[15816], build[9305a5e/2017-09-07T15:56:59.599Z], OS[Windows 10/10.0/amd64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_271/25.271-b09]
+[2022-01-31T07:24:08,666][INFO ][o.e.n.Node               ] JVM arguments [-Xms2g, -Xmx2g, -XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -Djdk.io.permissionsUseCanonicalPath=true, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Dlog4j.skipJansi=true, -XX:+HeapDumpOnOutOfMemoryError]
+[2022-01-31T07:24:09,432][INFO ][o.e.p.PluginsService     ] [osz1Bu-] loaded module [aggs-matrix-stats]
+[2022-01-31T07:24:09,432][INFO ][o.e.p.PluginsService     ] [osz1Bu-] loaded module [ingest-common]
+[2022-01-31T07:24:09,432][INFO ][o.e.p.PluginsService     ] [osz1Bu-] loaded module [lang-expression]
+[2022-01-31T07:24:09,432][INFO ][o.e.p.PluginsService     ] [osz1Bu-] loaded module [lang-groovy]
+[2022-01-31T07:24:09,432][INFO ][o.e.p.PluginsService     ] [osz1Bu-] loaded module [lang-mustache]
+[2022-01-31T07:24:09,432][INFO ][o.e.p.PluginsService     ] [osz1Bu-] loaded module [lang-painless]
+[2022-01-31T07:24:09,432][INFO ][o.e.p.PluginsService     ] [osz1Bu-] loaded module [parent-join]
+[2022-01-31T07:24:09,432][INFO ][o.e.p.PluginsService     ] [osz1Bu-] loaded module [percolator]
+[2022-01-31T07:24:09,432][INFO ][o.e.p.PluginsService     ] [osz1Bu-] loaded module [reindex]
+[2022-01-31T07:24:09,432][INFO ][o.e.p.PluginsService     ] [osz1Bu-] loaded module [transport-netty3]
+[2022-01-31T07:24:09,432][INFO ][o.e.p.PluginsService     ] [osz1Bu-] loaded module [transport-netty4]
+[2022-01-31T07:24:09,433][INFO ][o.e.p.PluginsService     ] [osz1Bu-] no plugins loaded
+[2022-01-31T07:24:11,285][INFO ][o.e.d.DiscoveryModule    ] [osz1Bu-] using discovery type [zen]
+[2022-01-31T07:24:11,696][INFO ][o.e.n.Node               ] initialized
+[2022-01-31T07:24:11,696][INFO ][o.e.n.Node               ] [osz1Bu-] starting ...
+[2022-01-31T07:24:12,467][INFO ][o.e.t.TransportService   ] [osz1Bu-] publish_address {127.0.0.1:7993}, bound_addresses {127.0.0.1:7993}, {[::1]:7993}
+[2022-01-31T07:24:15,514][INFO ][o.e.c.s.ClusterService   ] [osz1Bu-] new_master {osz1Bu-}{osz1Bu-STiOzEcnuXa0cmA}{_n3sTBvyT52iFHlkVeo1EQ}{127.0.0.1}{127.0.0.1:7993}, reason: zen-disco-elected-as-master ([0] nodes joined)
+[2022-01-31T07:24:15,706][INFO ][o.e.g.GatewayService     ] [osz1Bu-] recovered [1] indices into cluster_state
+[2022-01-31T07:24:15,964][INFO ][o.e.h.n.Netty4HttpServerTransport] [osz1Bu-] publish_address {127.0.0.1:7992}, bound_addresses {127.0.0.1:7992}, {[::1]:7992}
+[2022-01-31T07:24:15,965][INFO ][o.e.n.Node               ] [osz1Bu-] started
+[2022-01-31T07:24:16,345][INFO ][o.e.c.r.a.AllocationService] [osz1Bu-] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[bitbucket-search-v1][4]] ...]).
+[2022-01-31T07:40:11,406][WARN ][o.e.h.n.Netty4HttpServerTransport] [osz1Bu-] caught exception while handling client http traffic, closing connection [id: 0x2a04d504, L:/127.0.0.1:7992 - R:/127.0.0.1:64370]
+java.io.IOException: Удаленный хост принудительно разорвал существующее подключение
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[?:?]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[?:?]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[?:?]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197) ~[?:?]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378) ~[?:?]
+	at io.netty.buffer.PooledHeapByteBuf.setBytes(PooledHeapByteBuf.java:261) ~[netty-buffer-4.1.11.Final.jar:4.1.11.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1100) ~[netty-buffer-4.1.11.Final.jar:4.1.11.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:372) ~[netty-transport-4.1.11.Final.jar:4.1.11.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123) [netty-transport-4.1.11.Final.jar:4.1.11.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:644) [netty-transport-4.1.11.Final.jar:4.1.11.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:544) [netty-transport-4.1.11.Final.jar:4.1.11.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:498) [netty-transport-4.1.11.Final.jar:4.1.11.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:458) [netty-transport-4.1.11.Final.jar:4.1.11.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858) [netty-common-4.1.11.Final.jar:4.1.11.Final]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_271]
+[2022-01-31T07:40:11,406][WARN ][o.e.h.n.Netty4HttpServerTransport] [osz1Bu-] caught exception while handling client http traffic, closing connection [id: 0x8149e3ee, L:/127.0.0.1:7992 - R:/127.0.0.1:64368]
+java.io.IOException: Удаленный хост принудительно разорвал существующее подключение
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[?:?]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[?:?]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[?:?]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197) ~[?:?]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378) ~[?:?]
+	at io.netty.buffer.PooledHeapByteBuf.setBytes(PooledHeapByteBuf.java:261) ~[netty-buffer-4.1.11.Final.jar:4.1.11.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1100) ~[netty-buffer-4.1.11.Final.jar:4.1.11.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:372) ~[netty-transport-4.1.11.Final.jar:4.1.11.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123) [netty-transport-4.1.11.Final.jar:4.1.11.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:644) [netty-transport-4.1.11.Final.jar:4.1.11.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:544) [netty-transport-4.1.11.Final.jar:4.1.11.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:498) [netty-transport-4.1.11.Final.jar:4.1.11.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:458) [netty-transport-4.1.11.Final.jar:4.1.11.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858) [netty-common-4.1.11.Final.jar:4.1.11.Final]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_271]

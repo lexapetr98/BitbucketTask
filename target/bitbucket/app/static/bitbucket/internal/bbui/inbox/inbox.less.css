@@ -1,0 +1,32 @@
+#inbox-wapper .inbox-spinner-padding {
+  padding: 50px;
+}
+#inbox-wapper h2 {
+  padding: 10px 20px;
+  border-bottom: 0;
+}
+#inbox-wapper .aui-tabs {
+  margin: 10px;
+}
+#inbox-wapper .aui-tabs .tabs-pane {
+  overflow: auto;
+  max-height: 400px;
+  margin: 10px 10px 0;
+  padding: 0;
+}
+#inbox-wapper .aui-tabs .tabs-pane tr.prNeedsWork {
+  background-color: #F4F5F7;
+}
+#inbox-wapper .aui-tabs .tabs-pane .overflow-reviewers-tooltip {
+  cursor: help;
+}
+#inbox-wapper .aui-tabs .tabs-pane .empty-inbox-message {
+  text-align: center;
+  color: #7A869A;
+}
+#inbox-wapper .pull-request-row:first-child td {
+  border-top: none;
+}
+#inbox-pull-request-reviewer .user-avatar {
+  margin-right: 0;
+}

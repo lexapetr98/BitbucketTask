@@ -1,0 +1,1 @@
+define("bitbucket/internal/util/highlight-text",["module","exports","internal/util/highlight-text"],function(c,a,b){Object.defineProperty(a,"__esModule",{value:!0});b=babelHelpers.interopRequireDefault(b);a.default=b.default;c.exports=a["default"]});

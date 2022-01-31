@@ -1,0 +1,2 @@
+define("bitbucket/internal/bbui/reducers/pull-request-watch",["module","exports","bitbucket/internal/util/reducers","../actions/pull-request","../utils/replace-state-with-rollback"],function(e,c,f,d,g){Object.defineProperty(c,"__esModule",{value:!0});var h=babelHelpers.interopRequireDefault(g),a;c.default=(0,f.reduceByType)(!1,(a={},babelHelpers.defineProperty(a,d.PR_WATCH,function(a,b){return(0,h.default)(a,b,{forward:function(){return b.payload}})}),babelHelpers.defineProperty(a,d.PR_SET_IS_WATCHING,
+function(a,b){return b.payload}),a));e.exports=c["default"]});

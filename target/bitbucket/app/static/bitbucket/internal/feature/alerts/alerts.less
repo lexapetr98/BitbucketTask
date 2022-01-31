@@ -1,0 +1,82 @@
+@import "/static/global.less";
+
+@dialogWidth: 340px;
+@dialogPadding: 20px;
+
+#alerts-trigger {
+    &.alerts-menu {
+
+        &.error {
+            background-color: @errorTextColor;
+        }
+
+        &.warning {
+            background-color: @bitbucket-banner-warning-bg;
+        }
+
+        .alerts-count {
+            margin-left: @halfSpacing;
+        }
+    }
+}
+
+.alerts-empty {
+    text-align: center;
+
+    p {
+        color: @secondaryTextColor;
+    }
+
+    .empty-img {
+        @image-height: 250px;
+        background-size: @image-height @image-height;
+        background: url(images/empty-state.svg) no-repeat center;
+        height: @image-height;
+        opacity: 0.5;
+    }
+}
+
+#alerts-content {
+    width: 400px;
+}
+
+.bitbucket-alerts {
+    @alertIconSize: 30px;
+    @alertIconOffset: 7px;
+    max-height: inherit;
+    overflow-y: auto;
+
+    .alerts-list {
+        margin-top: @baseSpacing;
+        padding-left: 0;
+        list-style: none;
+
+        .aui-message {
+            max-width: @dialogWidth;
+            border: 0;
+            margin: 0;
+            padding-top: 0;
+            padding-left: (@baseSpacing + @alertIconSize);
+
+            p {
+                margin: 0;
+            }
+
+            &.closeable .icon-close {
+                top: 0;
+            }
+
+            &:before {
+                width: @alertIconSize;
+                height: @alertIconSize;
+                border-radius: 100%;
+            }
+
+            &:after {
+                margin-top: 0;
+                top: @alertIconOffset;
+                left: @alertIconOffset;
+            }
+        }
+    }
+}

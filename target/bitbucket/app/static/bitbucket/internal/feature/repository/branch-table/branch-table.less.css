@@ -1,0 +1,87 @@
+.branch-table thead th {
+  color: #6B778C;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: nowrap;
+}
+.branch-table.aui > tbody > tr > td {
+  vertical-align: middle;
+}
+.branch-table .aui-icon {
+  color: #505F79;
+}
+.branch-table .aui-icon + a {
+  margin-left: 5px;
+}
+.branch-table .base-branch {
+  background: #EBECF0;
+}
+.branch-table .base-branch-lozenge,
+.branch-table .default-branch-lozenge {
+  margin-left: 10px;
+}
+.branch-table .ahead-behind-column,
+.branch-table .last-updated-column,
+.branch-table .pull-requests-column,
+.branch-table .build-status-branch-list-col,
+.branch-table .branch-actions-column {
+  width: 1%;
+}
+.branch-table .last-updated-column {
+  white-space: nowrap;
+}
+.branch-table .last-updated-column .commitid {
+  font-family: Arial, FreeSans, Helvetica, sans-serif;
+  color: #172B4D;
+}
+.branch-table .last-updated-column .user-avatar {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.branch-table .last-updated-column time {
+  vertical-align: middle;
+  color: #505F79;
+}
+.branch-table td[headers=branch-name-column] {
+  max-width: 325px;
+}
+.branch-table td[headers=branch-name-column] > div {
+  position: relative;
+}
+.branch-table td[headers=branch-name-column] > div > .aui-icon {
+  left: 5px;
+  position: absolute;
+}
+.branch-table td[headers=branch-name-column] > div > .line {
+  box-sizing: border-box;
+  display: flex;
+  align-items: baseline;
+  padding-left: 25px;
+  width: 100%;
+}
+.branch-table td[headers=branch-name-column] > div > .line .aui-lozenge {
+  white-space: nowrap;
+}
+.branch-table td[headers=branch-name-column] > div > .line > a {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+}
+.branch-table td[headers=branch-name-column] > div > .line .aui-lozenge + a {
+  padding-right: 120px;
+}
+.branch-table th#pull-requests-column {
+  white-space: nowrap;
+}
+.branch-table td.last-updated-column > time {
+  white-space: nowrap;
+}
+.branch-table #branch-actions-column {
+  width: 70px;
+}

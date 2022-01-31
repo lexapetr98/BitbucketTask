@@ -1,0 +1,2 @@
+/* avoid jumping around when pages are loaded: this fits 5 digits. min-width
+                                       and max-width not supported when element is display: table-cell */

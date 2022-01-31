@@ -1,0 +1,10 @@
+{namespace bitbucket.internal.labels.repository}
+
+/**
+ * template
+ * @param isEditable
+ */
+{template .panel}
+    {webResourceManager_requireResourcesForContext('bitbucket.labels')}
+    <div id="label-list-container" data-editable="{$isEditable}" />
+{/template}

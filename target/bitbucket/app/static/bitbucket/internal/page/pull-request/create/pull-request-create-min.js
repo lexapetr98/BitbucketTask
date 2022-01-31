@@ -1,0 +1,2 @@
+define("bitbucket/internal/page/pull-request/create/pull-request-create",["module","exports","jquery","bitbucket/internal/feature/compare/compare"],function(c,a,f,g){Object.defineProperty(a,"__esModule",{value:!0});var h=babelHelpers.interopRequireDefault(f),k=babelHelpers.interopRequireDefault(g);a.default={onReady:function(b,a,c,d,e){b={targetRepositoryJson:b,sourceRepositoryJson:a,tabs:c,prCreateMode:!0};d&&(b.submittedReviewers=d);e&&(b.additionalPreloadRepositories=e);return k.default.onReady((0,
+h.default)("#branch-compare"),b)}};c.exports=a["default"]});

@@ -1,0 +1,106 @@
+{namespace bitbucket.internal.feature.edit.commitDialog}
+
+/**
+ * @param fileName
+ * @param branchName
+ */
+{template .dialog}
+    {call aui.dialog.dialog2}
+        {param id: 'commit-dialog' /}
+        {param titleText: getText('bitbucket.web.sourceview.button.edit.commitDialog.title') /}
+        {param content}
+            {call aui.form.form}
+                {param action: '' /}
+                {param content}
+                    {call .commitMessage}
+                        {param fileName: $fileName /}
+                        {param errorTexts: false /}
+                    {/call}
+                    {call aui.form.checkboxField}
+                        {param legendContent: '' /}
+                        {param fields: [[
+                                'id': 'create-pr-checkbox',
+                                'labelText': getText('bitbucket.web.sourceview.button.edit.commitDialog.pullRequest'),
+                                'isChecked': false,
+                                'isDisabled': false
+                                ]] /}
+                    {/call}
+                    <div class="pull-request-fields">
+                        {call .branchName}
+                            {param branchName: $branchName /}
+                            {param errorTexts: false /}
+                        {/call}
+                    </div>
+                {/param}
+            {/call}
+        {/param}
+        {param footerActionContent}
+           <div class="button-spinner"></div>
+           {call aui.buttons.button}
+               {param extraClasses: 'commit-button' /}
+               {param text: getText('bitbucket.web.sourceview.button.edit.commitDialog.commit')  /}
+               {param type: 'primary'/}
+           {/call}
+           {call aui.buttons.button}
+               {param text: getText('bitbucket.web.sourceview.button.edit.commitDialog.cancel')/}
+               {param type: 'link'/}
+               {param extraClasses: 'cancel-button' /}
+           {/call}
+        {/param}
+    {/call}
+{/template}
+
+/**
+ * @param errorTexts
+ * @param? fileName the commit message will be prepopulated if present
+ */
+{template .commitMessage}
+    {call widget.aui.form.largetext}
+        {param id: 'commit-message' /}
+        {param labelContent: getText('bitbucket.web.sourceview.button.edit.commitDialog.messageLabel') /}
+        {param initialValue: $fileName ? getText('bitbucket.web.sourceview.button.edit.commitDialog.messagePlaceholder', $fileName) : null /}
+        {param required: true /}
+        {param autofocus: true /}
+        {param errors: $errorTexts /}
+        {param rows: 3 /}
+    {/call}
+{/template}
+
+/**
+ * @param errorTexts
+ * @param branchName
+ */
+{template .branchName}
+    {call widget.aui.form.text}
+        {param id: 'branch-name' /}
+        {param required: true /}
+        {param labelContent: getText('bitbucket.web.sourceview.button.edit.commitDialog.branchName') /}
+        {param initialValue: $branchName /}
+        {param errors: $errorTexts /}
+    {/call}
+{/template}
+
+/**
+ * @param details
+ */
+{template .errorList}
+    {if $details and length($details)}
+        <ul>
+            {foreach $detail in $details}
+                <li>{$detail}</li>
+            {/foreach}
+        </ul>
+    {/if}
+{/template}
+
+/**
+ * @param? errorTitle
+ * @param errorMessage
+ */
+{template .genericErrorMessage}
+    {call aui.message.warning}
+        {param extraClasses: 'error-message' /}
+        {param titleContent: $errorTitle ? $errorTitle : '' /}
+        {param content: $errorMessage /}
+    {/call}
+{/template}

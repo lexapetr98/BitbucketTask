@@ -1,0 +1,19 @@
+@import "/static/global.less";
+
+.filterable-entity-table {
+    .paged-table-filter {
+        .sticky();
+        background-color: @contentBackgroundColor;
+        border: none;
+        margin: -@baseSpacing 0 -@baseSpacing -1px; // -1 to cover over the blue focused border
+        padding: @baseAndHalfSpacing 0 @baseAndHalfSpacing 3px; // 3px fixes focus outline cropping in Chrome
+        top: 0;
+        z-index: 100;
+    }
+
+    mark.term-highlight {
+        font-weight: bold;
+        background: none;
+        color: inherit;
+    }
+}

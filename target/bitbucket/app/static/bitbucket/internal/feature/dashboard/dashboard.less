@@ -1,0 +1,615 @@
+@import "../../../../global.less";
+
+@transition-timing: 0.2s ease-in-out;
+@repositoriesWidth: 340px;
+@tablePaddingX: @baseSpacing;
+@tablePaddingY: (@baseSpacing * .7);
+@headerLogoHeight: 40px;
+
+.bitbucket-theme.dashboard-page {
+    min-width: 1360px; // This needs to be kept in syc with pull-request-row.jsx
+
+    #header nav {
+        // # IE11 bug/issue :(
+        // something in the header nav pushes the rest of the content out in IE11, fixing the height makes it go away.
+        height: @headerLogoHeight + @borderWidth;
+    }
+
+    // make the dashboard take up the full page height
+    #page,
+    #content,
+    .aui-page-panel,
+    .aui-page-panel-content,
+    .aui-page-panel-inner,
+    .dashboard,
+    .dashboard-container {
+        display: flex;
+        flex-grow: 1;
+    }
+
+    #page,
+    #content {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .dashboard-container-horizontal {
+        flex-direction: row;
+    }
+
+    .aui-page-panel-content {
+        padding: 0; //Page sections manage their own padding
+    }
+}
+
+.dashboard {
+    h3 {
+        margin-bottom: @baseSpacing;
+    }
+
+    .table-expander {
+        background: none;
+        border: none;
+        font-size: inherit;
+
+        .aui-icon {
+            color: @secondaryTextColor;
+            vertical-align: middle;
+            margin-top: -3px; // align point of chevron with middle of text
+        }
+
+        .aui-iconfont-chevron-right {
+            transition: transform @transition-timing;
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.dashboard-your-work {
+    flex-grow: 1;
+    width: 100%;
+    padding: @doubleSpacing;
+
+    .project-and-repository {
+        .text-overflow();
+        display: flex;
+        white-space: pre;
+
+        .project-name, .name {
+            .text-overflow();
+        }
+    }
+}
+
+.dashboard-pull-request-suggestions {
+    margin-bottom: @doubleSpacing;
+    width: 100%;
+
+    .pull-request-suggestion {
+        border-bottom: @divider-border-width solid @dividerColor;
+        justify-content: space-between;
+        line-height: @tripleSpacing;
+        padding: @baseSpacing;
+        max-height: @tripleSpacing + 2px; // height of tr in the suggestion-details
+        overflow: hidden;
+        transition: max-height @transition-timing;
+
+        .suggestion-details {
+            line-height: @tripleSpacing;
+            margin-top: -2px; // remove extra table spacing
+
+            .aui-iconfont-chevron-right {
+                transition: transform @transition-timing;
+                transform: rotate(0deg);
+            }
+
+            .summary {
+                white-space: nowrap;
+                max-width: 500px;
+                min-width: 500px;
+            }
+
+            .meta, .description {
+                display: flex;
+                white-space: pre;
+                overflow: hidden;
+            }
+
+            .description .aui-avatar-xsmall {
+                margin: -1px 3px 0 0;
+
+                .aui-avatar-inner {
+                    display: inline-block;
+                }
+            }
+
+            .aui-avatar-project {
+                margin: @halfSpacing;
+            }
+
+            @faster-flex-shrink: 2;
+
+            .recent-branch-name {
+                .text-overflow();
+                flex-shrink: @faster-flex-shrink;
+            }
+
+            .project-and-repository {
+                flex-shrink: 2 * @faster-flex-shrink;
+                color: @secondaryTextColor;
+            }
+
+            time {
+                color: @secondaryTextColor;
+                margin: auto @baseSpacing;
+            }
+        }
+
+        .bb-spinner {
+            padding: @tripleSpacing 0 @doubleSpacing;
+        }
+
+        .table-expander-wrapper, .create-pr {
+            width: 1%;
+        }
+
+        .suggested-commits-error {
+            margin-left: @tripleSpacing;
+        }
+
+        .suggested-commits-table {
+            margin-left: @doubleSpacing;
+
+            td {
+                padding: 3px @baseSpacing;
+            }
+
+            .commits-table {
+                margin-top: -5px;
+            }
+
+            .timestamp {
+                text-align: right;
+            }
+        }
+
+        &.show-commit-details {
+            padding-bottom: @doubleSpacing;
+            max-height: 240px; // height of 5 commits when expanded
+
+            &.loading-commit-details {
+                max-height: 80px;
+            }
+
+            .aui-iconfont-chevron-right {
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
+
+.dashboard-pull-requests {
+    width: 100%;
+
+    &-table-container {
+        @header-height: @doubleSpacing + 2 * @tablePaddingY + @divider-border-width;
+
+        &.dashboard-pull-requests-table-closed {
+            //This is to shrink the container after the table collapses and prevent the window scrollbar showing
+            //(because scaleY(0) doesn't affect the layout around the element)
+            max-height: 1530px; //max rows + header + buffer
+            transition: max-height @transition-timing;
+            overflow: hidden;
+        }
+
+        &.dashboard-pull-requests-empty h4 {
+            border-bottom: 1px solid @dividerColor;
+        }
+
+        h4 {
+            z-index: 1;
+            font-weight: normal;
+            font-size: @font-size-large;
+            padding: @tablePaddingY 0 @tablePaddingY @tablePaddingX;
+            position: relative;
+            border-bottom: @divider-border-width solid @dividerColor;
+
+            .aui-badge {
+                margin-left: @baseSpacing;
+            }
+        }
+
+        .pull-request-list-empty-state {
+            @baseLineHeightPx: (@font-size-default * @baseLineHeight);
+            margin-top: @doubleSpacing;
+
+            .pull-request-empty-state-description,
+            .pull-request-empty-state-title {
+                margin-top: -(@icon-size-medium / 8);
+
+                &:last-child {
+                    margin-top: 0;
+                }
+            }
+
+            .dashboard-pull-requests-table-created&,
+            .dashboard-pull-requests-table-reviewing&,
+            .dashboard-pull-requests-table-closed& {
+                color: @ak-color-N300;
+                line-height: @baseLineHeightPx;
+                padding-left: (@iconSizeSmall + @baseSpacing);
+                position: relative;
+
+                .aui-icon {
+                    position: absolute;
+                    left: 0;
+                    top: ((@baseLineHeightPx - @iconSizeSmall) /2);
+                }
+            }
+
+        }
+
+        .dashboard-pull-requests-table {
+            .table-headings();
+
+            thead th {
+                line-height: (@font-size-large * 1.25); // It's because the h4 is using 16px for fonts and it's 20px tall  (The line height factor is taken from AUI)
+            };
+
+            transition: transform @transition-timing;
+            margin: 0;
+            margin-top: -@header-height;
+            transform: scaleY(1);
+            transform-origin: 0 @header-height;
+        }
+
+        &.collapsed {
+            max-height: @header-height;
+
+            .dashboard-pull-requests-table {
+                transform: scaleY(0);
+            }
+
+            .table-expander .aui-iconfont-chevron-right {
+                transform: none;
+            }
+        }
+
+        .table-expander .aui-icon {
+            margin-right: @halfSpacing;
+        }
+    }
+
+    .more-container {
+        margin-top: @baseSpacing;
+        text-align: center;
+        min-height: @tripleSpacing; // for spinner
+    }
+
+    table.aui&-table {
+        width: 100%;
+
+        tr, td {
+            // Collapse the empty cells completely, this avoids keeping
+            // space reserved for these columns when it's not necessary
+            // Web section columns are collapsed as well explicitly so
+            // that plugins can provide control over what and how to show
+            // their things
+            &.web-section-column,
+            &:empty {
+                padding: 0;
+                width: 0;
+                min-width: 0;
+            }
+        }
+
+        td {
+            padding: @baseSpacing;
+            vertical-align: middle;
+
+            &:first-child {
+                border-left: 2px solid transparent;
+            }
+        }
+
+        tr.focused {
+            background-color: @feintGreyColor;
+
+            td:first-child {
+                border-left-color: @primaryHighlightColor;
+            }
+
+            a:focus {
+                outline: none;
+                text-decoration: none;
+            }
+        }
+
+        .header-summary {
+            min-width: 200px;
+        }
+
+        .author-avatar {
+            width: @avatar-size-medium;
+            padding-right: 0;
+        }
+
+        .summary {
+            min-width: 400px;
+            max-width: 400px;
+
+            .title {
+                display: flex;
+                font-weight: bold;
+                align-items: baseline;
+
+                .aui-lozenge {
+                    margin-right: @halfSpacing;
+                }
+
+                a {
+                    .text-overflow();
+                    flex: 0 @flexMaxShrink auto;
+                    display: inline-block;
+                    min-width: 5em;
+                    max-width: 100%;
+                }
+            }
+        }
+
+        .activity,
+        .conflict {
+            .shrinkwrap();
+        }
+
+        td.activity {
+            white-space: nowrap;
+            color: @secondaryTextColor;
+
+            .activity-count {
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                margin-left: @baseSpacing;
+            }
+        }
+
+        td.new-commits .aui-icon {
+            .new-activity-indicator();
+        }
+
+        .reviewers {
+            .shrinkwrap();
+            white-space: nowrap;
+            min-width: 130px; // to prevent the column becoming wider when additional content loads
+
+            .reviewer-avatar-list .user-avatar:first-child {
+                margin-left: 0;
+            }
+        }
+
+        .meta {
+            font-size: @font-size-small;
+            color: @secondaryTextColor;
+            display: flex;
+            align-items: flex-end;
+
+        }
+
+        .pull-request-id::before, .project-and-repository::before {
+            content: "\00a0-\00a0"; // &nbsp;-&nbsp;
+        }
+
+        .author,
+        .project-and-repository,
+        .ref-label {
+            .text-overflow();
+            min-width: 3em;
+        }
+
+        .project-and-repository {
+            min-width: 5em;
+        }
+
+        .author,
+        .pull-request-id {
+            flex-shrink: @flexMaxShrink;
+        }
+
+        .ref-label {
+            margin: 0 0 0 @baseSpacing;
+            color: @bodyTextColor;
+        }
+
+        tr.focused,
+        tr:hover {
+            .ref-label, .overflow-reviewers-trigger {
+                border-color: @ak-color-N40;
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+.dashboard-pull-requests-all-empty {
+    @image-height: 102px;
+    background: url(pull-request-empty-state.svg) no-repeat top center;
+    background-size: auto @image-height;
+    margin-top: 90px;
+    padding-top: @image-height;
+
+    p, h3 {
+        margin: auto;
+        text-align: center;
+    }
+
+    h3 {
+        padding-top: @tripleSpacing;
+    }
+
+    p {
+        color: @secondaryTextColor;
+        padding-top: @baseSpacing;
+    }
+}
+
+.dashboard-repositories {
+    @defaultNumberOfItems: 10;
+    @listItemInnerHeight: 35px;
+    @itemHeight: @halfSpacing + @baseSpacing + @listItemInnerHeight;
+    @headerAndPadding: @globalHeaderHeight + 2*@doubleSpacing;
+    @formBottomPadding: @doubleSpacing;
+
+    padding: @doubleSpacing;
+    min-width: @repositoriesWidth;
+    width: @repositoriesWidth;
+    min-height: @itemHeight * @defaultNumberOfItems;
+    height: ~"calc(100vh - @{headerAndPadding})";
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+        margin: 0;
+    }
+
+    .repository-search-form {
+        width: 100%;
+        left: 0;
+        z-index: 1;
+        padding: 0 @doubleSpacing @formBottomPadding @doubleSpacing;
+        margin-left: -@doubleSpacing;
+        margin-right: -@doubleSpacing;
+        transition: all 0.2s;
+    }
+
+    &.scrolled .repository-search-form {
+        box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.1);
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    // Matches styles from the search query plugin
+    .dashboard-search-repo-error {
+        padding: @doubleSpacing;
+        min-height: @icon-size-large;
+
+        .warning-icon {
+            .square(@icon-size-large);
+            background: url(icons/icon-warning-large.svg) center no-repeat;
+            float: left;
+        }
+
+        .error-text {
+            margin-left: @icon-size-large;
+            margin-top: 4px;
+            padding-left: @baseSpacing;
+
+            .error-text-primary {
+                font-weight: bold;
+                color: @bodyTextColor;
+            }
+
+            .error-text-secondary {
+                color: @secondaryTextColor;
+            }
+        }
+    }
+
+    .dashboard-repository-list-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: -@formBottomPadding; // Undo the form bottom padding so we can slide under it.
+        overflow-y: auto;
+
+        .repository-list-container {
+            overflow-x: hidden;
+            position: relative;
+            padding-top: @formBottomPadding; // restore the form bottom padding so we don't _start_ under it.
+        }
+
+        .load-more-button {
+            width: 100%;
+            text-align: center;
+        }
+
+        &.searching .repository-link strong {
+            font-weight: normal;
+        }
+    }
+
+    .dashboard-recent-repo-empty, .dashboard-search-repo-empty {
+        text-align: center;
+        width: 100%;
+
+        .empty-action {
+            color: @secondaryTextColor;
+        }
+    }
+
+    .dashboard-recent-repo-empty {
+        @image-height: 130px;
+        background: url(no-recent-repos.svg) no-repeat top center;
+        background-size: @image-height @image-height;
+        height: @image-height + @tripleSpacing;
+        margin: @tripleSpacing auto;
+        padding-top: @image-height + @tripleSpacing;
+    }
+
+    .dashboard-search-repo-empty {
+        @image-height: 100px;
+        background: url(no-search-repos.svg) no-repeat top center;
+        background-size: @image-height @image-height;
+        height: 2 * @image-height;
+        margin: @tripleSpacing auto @doubleSpacing;
+        padding-top: @image-height + @doubleSpacing;
+    }
+}
+
+// For small screens shrink up some things horizontally
+@media screen and (max-width: 1359px) {
+    .bitbucket-theme.dashboard-page {
+        min-width: 1100px;
+    }
+
+    .dashboard-repositories {
+        @condensedRepositoriesWidth: 270px;
+        min-width: @condensedRepositoriesWidth;
+        width: @condensedRepositoriesWidth;
+        .dashboard-repository-list-container {
+            ul li div a {
+                max-width: @condensedRepositoriesWidth - @baseAndHalfSpacing - @avatar-size-medium - @baseSpacing;
+            }
+        }
+    }
+
+    .dashboard-pull-requests {
+
+        table.aui&-table {
+            .summary {
+                min-width: 300px;
+                max-width: 300px;
+            }
+
+            .new-commits,
+            .conflict {
+                width: 0;
+                max-width: 0;
+                overflow: hidden;
+                padding: 0;
+                border: 0;
+            }
+
+            .conflicted {
+                // required for Safari
+                display: none;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 1099px) {
+    .dashboard-repositories {
+        display: none;
+    }
+}

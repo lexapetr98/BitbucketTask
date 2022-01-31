@@ -1,0 +1,2 @@
+define("bitbucket/internal/feature/dashboard/reducers/entities/pull-request-suggestions",["module","exports","bitbucket/internal/util/reducers","../../actions","../../util/suggestion-unique-id"],function(b,a,c,d,e){Object.defineProperty(a,"__esModule",{value:!0});var f=babelHelpers.interopRequireDefault(e);a.default=(0,c.reduceByType)({},babelHelpers.defineProperty({},d.LOAD_PULL_REQUEST_SUGGESTIONS_SUCCESS,function(a,b){return b.payload.values.reduce(function(a,b){a[(0,f.default)(b)]=b;return a},
+{})}));b.exports=a["default"]});

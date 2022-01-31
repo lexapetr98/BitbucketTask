@@ -1,0 +1,14 @@
+<included>
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${log.format}</pattern>
+        </encoder>
+    </appender>
+    <!--When starting up Elasticsearch in-process (for dev):
+    We need to set the logging level of org.elasticsearch.bootstrap to ERROR because otherwise
+    it will log a misleading warning (with a stacktrace) about JNA being unavailable.-->
+    <logger name="org.elasticsearch.bootstrap" level="ERROR"/>
+    <root>
+        <appender-ref ref="console"/>
+    </root>
+</included>

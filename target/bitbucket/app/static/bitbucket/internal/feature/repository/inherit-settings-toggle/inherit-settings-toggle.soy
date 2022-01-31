@@ -1,0 +1,28 @@
+{namespace bitbucket.internal.feature.repository}
+
+/**
+ * @param? overrideInheritedSettings
+ * @param? projectSettingsUrl
+ * @param? id
+ **/
+{template .inheritSettingsToggle}
+<div class="inherit-settings-toggle" {if $id}id='{$id}'{/if}>
+    <h4>{getText('bitbucket.web.repository.settings.inheritedsettingstoggle.title')}</h4>
+    {call aui.form.radioField}
+        {param id: 'inherit-settings-selection'/}
+        {param legendContent: ''/}
+        {param fields: [
+            ['id': 'inherit-settings-selection-inherit',
+            'labelText': $projectSettingsUrl ?
+                getTextAsHtml('bitbucket.web.repository.settings.inheritedsettingstoggle.inherit.label.html', $projectSettingsUrl) :
+                getText('bitbucket.web.repository.settings.inheritedsettingstoggle.inherit.label'),
+            'value': 'INHERIT',
+            'isChecked':  $overrideInheritedSettings ? false : true],
+            ['id': 'inherit-settings-selection-custom',
+            'labelText': getText('bitbucket.web.repository.settings.inheritedsettingstoggle.custom.label'),
+            'value': 'CUSTOM',
+            'isChecked': $overrideInheritedSettings ? true : false]
+        ]/}
+    {/call}
+</div>
+{/template}

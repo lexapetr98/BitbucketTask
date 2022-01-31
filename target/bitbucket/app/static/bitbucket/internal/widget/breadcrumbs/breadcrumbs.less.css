@@ -1,0 +1,18 @@
+.breadcrumbs .aui-icon {
+  margin-right: 5px;
+}
+.breadcrumbs {
+  white-space: normal;
+  vertical-align: bottom;
+  line-height: 2.14285714em;
+}
+.breadcrumbs .sep {
+  padding: 0;
+}
+.breadcrumbs .sep:before,
+.breadcrumbs .sep:after {
+  content: ' ';
+}
+.breadcrumbs .stub {
+  font-weight: bold;
+}

@@ -1,0 +1,1 @@
+AppLinks=window.AppLinks||{};AppLinks.SPI=jQuery.extend(AppLinks.SPI||{},{showCreateEntityLinkSuggestion:function(){return!1}});

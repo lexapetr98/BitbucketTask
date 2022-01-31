@@ -1,0 +1,1 @@
+require("bitbucket/feature/files/file-handlers").register({weight:3E3,handle:function(a){return require("bitbucket/internal/feature/readme/filecontent/readme-file-content").apply(this,arguments)}});

@@ -1,0 +1,56 @@
+#alerts-trigger.alerts-menu.error {
+  background-color: #FF5630;
+}
+#alerts-trigger.alerts-menu.warning {
+  background-color: #FFAB00;
+}
+#alerts-trigger.alerts-menu .alerts-count {
+  margin-left: 5px;
+}
+.alerts-empty {
+  text-align: center;
+}
+.alerts-empty p {
+  color: #5E6C84;
+}
+.alerts-empty .empty-img {
+  background-size: 250px 250px;
+  background: url(images/empty-state.svg) no-repeat center;
+  height: 250px;
+  opacity: 0.5;
+}
+#alerts-content {
+  width: 400px;
+}
+.bitbucket-alerts {
+  max-height: inherit;
+  overflow-y: auto;
+}
+.bitbucket-alerts .alerts-list {
+  margin-top: 10px;
+  padding-left: 0;
+  list-style: none;
+}
+.bitbucket-alerts .alerts-list .aui-message {
+  max-width: 340px;
+  border: 0;
+  margin: 0;
+  padding-top: 0;
+  padding-left: 40px;
+}
+.bitbucket-alerts .alerts-list .aui-message p {
+  margin: 0;
+}
+.bitbucket-alerts .alerts-list .aui-message.closeable .icon-close {
+  top: 0;
+}
+.bitbucket-alerts .alerts-list .aui-message:before {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+.bitbucket-alerts .alerts-list .aui-message:after {
+  margin-top: 0;
+  top: 7px;
+  left: 7px;
+}

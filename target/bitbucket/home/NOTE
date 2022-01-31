@@ -1,0 +1,3 @@
+AMPS starts Bitbucket with an empty home directory,
+then executes some initialization to create suitable test data for plugin development.
+Finally, a snapshot (bitbucket-it-resources.zip) is created (and published) for use by the bitbucket-maven-plugin.

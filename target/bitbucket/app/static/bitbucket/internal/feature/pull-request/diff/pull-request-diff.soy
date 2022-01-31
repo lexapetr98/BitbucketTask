@@ -1,0 +1,87 @@
+{namespace bitbucket.internal.feature.pullRequest}
+
+/**
+ * @param? commit
+ * @param? repository
+ */
+{template .diff}
+    {call bitbucket.internal.feature.treeAndDiffView}
+        {param commit : $commit /}
+        {param repository : $repository /}
+        {param extraClasses : 'tabbed' /}
+        {param showCommitSelector: true /}
+    {/call}
+{/template}
+
+/**
+ */
+{template .commitLevelReviewFeatureDiscoveryContent}
+    <div class="feature-discovery-commit-level-review">
+        <h2>{getText('bitbucket.web.pullrequest.commitselector.discovery.main.title')}</h2>
+        <p>{getText('bitbucket.web.pullrequest.commitselector.discovery.main.content')}</p>
+        <h4>
+            {call bitbucket.internal.images.icons.allCommits /}
+            {getText('bitbucket.web.pullrequest.commitselector.discovery.section1.title')}
+        </h4>
+        <p>{getText('bitbucket.web.pullrequest.commitselector.discovery.section1.content')}</p>
+        <h4>
+            {call bitbucket.internal.images.icons.commit /}
+            {getText('bitbucket.web.pullrequest.commitselector.discovery.section2.title')}
+        </h4>
+        <p>{getText('bitbucket.web.pullrequest.commitselector.discovery.section2.content')}</p>
+    </div>
+{/template}
+
+/**
+ * Inner message contents for arbitrary diff button
+ *
+ * @param sinceCommit
+ * @param untilCommit
+ */
+{template .arbitraryDiffButton}
+    <div class="aui-button commit-selector-button arbitrary-diff-button">
+        {call bitbucket.internal.feature.fileContent.singleCommitIcon /}
+        <div class="arbitrary-diff-button-content">
+            <div class="arbitrary-diff-button-commit-range">
+                  {display_commit_id($sinceCommit)}..{display_commit_id($untilCommit)}
+            </div>
+            <div class="arbitrary-diff-button-message">
+                 {getText('bitbucket.web.diff.custom')}
+            </div>
+        </div>
+        <button class="aui-button aui-button-link close-dialog">
+            {call aui.icons.icon}
+                {param useIconFont: true /}
+                {param size: 'small' /}
+                {param icon: 'cross' /}
+            {/call}
+        </button>
+    </div>
+{/template}
+
+/**
+ * Inner message contents for a commit selector preload item
+ * @param unreviewedCommits
+ * @param? includesMerge
+ */
+{template .commitSelectorUnreviewedCommits}
+    <div class="commit-selector-item-content">
+        <div class="commit-selector-item-content-message">{getText('bitbucket.web.diff.show.unreviewed.commits', $unreviewedCommits)}</div>
+        {if $includesMerge}
+            <div class="commit-selector-item-content-warning">
+                <span class="aui-icon aui-icon-small aui-iconfont-info"></span>
+                {getText('bitbucket.web.diff.unreviewed.merge')}
+            </div>
+        {/if}
+    </div>
+{/template}
+
+/**
+ */
+{template .lastReviewedMarker}
+    <div class="last-reviewed-commit-marker">
+        <span class="aui-icon aui-icon-small aui-iconfont-arrow-up"/>
+        <span class="text">{getText('bitbucket.web.diff.unreviewed')}</span>
+        <span class="aui-icon aui-icon-small aui-iconfont-arrow-up"/>
+    </div>
+{/template}

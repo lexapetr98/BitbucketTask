@@ -1,0 +1,64 @@
+/* avoid jumping around when pages are loaded: this fits 5 digits. min-width
+                                       and max-width not supported when element is display: table-cell */
+.source-view.text-view .line .line-number,
+.source-view.text-view .line .CodeMirror-linenumber {
+  box-sizing: border-box;
+  transition: border-color 0.2s, background-color 0.2s;
+  background-color: #FFFFFF;
+  border: solid #DFE1E6;
+  border-width: 0 1px 0 0;
+  display: inline-block;
+  font-family: monospace;
+  line-height: 17px;
+  padding: 0 5px;
+  text-align: right;
+  text-decoration: none;
+  /* Target lines and hovers are only in source view and do not affect diff view */
+}
+.source-view.text-view .line .line-number:hover,
+.source-view.text-view .line .CodeMirror-linenumber:hover {
+  background-color: #EEE;
+  border-right-color: #326CA6;
+}
+.source-view.text-view .line .line-number.target,
+.source-view.text-view .line .CodeMirror-linenumber.target {
+  background: #0065FF;
+  color: #FFF;
+  font-weight: bold;
+  text-decoration: none;
+}
+.source-view.text-view .line-number {
+  width: 56px;
+}
+.source-view.text-view.capacity-reached .CodeMirror-sizer {
+  padding-bottom: 0;
+}
+.source-view.text-view .capacity-reached-message {
+  line-height: inherit;
+  background-color: #ddd;
+  padding-bottom: 36px;
+}
+.source-view.text-view .capacity-reached-message > .aui-message {
+  margin: 10px 10px 0;
+}
+.source-view.text-view.editing .CodeMirror {
+  height: 100%!important;
+}
+.source-view.text-view.editing .CodeMirror .CodeMirror-cursor {
+  display: block;
+}
+.source-view.text-view.editing .CodeMirror .CodeMirror-gutter.line-number {
+  width: 0;
+}
+.source-view.text-view.editing .CodeMirror .CodeMirror-linenumber {
+  box-sizing: content-box;
+  color: #0065FF;
+  white-space: nowrap;
+  width: 44px;
+  padding: 0 5px;
+  border-right: 1px solid #DFE1E6;
+  font-family: monospace;
+}
+.source-view.text-view.editing .CodeMirror .CodeMirror-scroll {
+  overflow-y: scroll !important;
+}

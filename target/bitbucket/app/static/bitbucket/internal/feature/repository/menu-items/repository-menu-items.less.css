@@ -1,0 +1,25 @@
+.repository-menu-item {
+  /** for the loading and the error messages displayed in the menu */
+  /** -- Spacing and colouring -- */
+}
+.repository-menu-item > span {
+  padding: 7px 8px 6px;
+  display: block;
+}
+.repository-menu-item > a > span {
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.repository-menu-item .active .project-name,
+.repository-menu-item .active .separator {
+  color: #FFFFFF;
+}
+.repository-menu-item mark {
+  background-color: inherit;
+  color: inherit;
+  font-weight: bold;
+}

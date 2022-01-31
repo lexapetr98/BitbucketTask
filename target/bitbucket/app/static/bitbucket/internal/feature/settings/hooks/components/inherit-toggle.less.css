@@ -1,0 +1,16 @@
+.inherit-toggle .option-icon-disabled {
+  color: #FF5630;
+}
+.inherit-toggle .option-icon-enabled {
+  color: #36B37E;
+}
+.inherit-toggle .option-icon::before {
+  font-weight: bold;
+}
+.inherit-toggle .busy-value .bb-spinner {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
+}

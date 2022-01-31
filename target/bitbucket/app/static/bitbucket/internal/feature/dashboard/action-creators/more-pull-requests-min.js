@@ -1,0 +1,1 @@
+define("bitbucket/internal/feature/dashboard/action-creators/more-pull-requests",["module","exports","../actions"],function(b,a,c){Object.defineProperty(a,"__esModule",{value:!0});a.default=function(a){return{type:c.SHOW_MORE_PULL_REQUESTS,meta:{type:a}}};b.exports=a["default"]});

@@ -1,0 +1,83 @@
+a[href].aui-lozenge,
+button.aui-lozenge {
+  cursor: pointer;
+}
+a[href].aui-lozenge:hover,
+button.aui-lozenge:hover,
+a[href].aui-lozenge:active,
+button.aui-lozenge:active,
+a[href].aui-lozenge:focus,
+button.aui-lozenge:focus {
+  text-decoration: none;
+}
+a[href].aui-lozenge:hover.aui-lozenge-success,
+button.aui-lozenge:hover.aui-lozenge-success,
+a[href].aui-lozenge:active.aui-lozenge-success,
+button.aui-lozenge:active.aui-lozenge-success,
+a[href].aui-lozenge:focus.aui-lozenge-success,
+button.aui-lozenge:focus.aui-lozenge-success {
+  border-color: #79F2C0;
+}
+a[href].aui-lozenge:hover.aui-lozenge-error,
+button.aui-lozenge:hover.aui-lozenge-error,
+a[href].aui-lozenge:active.aui-lozenge-error,
+button.aui-lozenge:active.aui-lozenge-error,
+a[href].aui-lozenge:focus.aui-lozenge-error,
+button.aui-lozenge:focus.aui-lozenge-error {
+  border-color: #FF8F73;
+}
+a[href].aui-lozenge:hover.aui-lozenge-current,
+button.aui-lozenge:hover.aui-lozenge-current,
+a[href].aui-lozenge:active.aui-lozenge-current,
+button.aui-lozenge:active.aui-lozenge-current,
+a[href].aui-lozenge:focus.aui-lozenge-current,
+button.aui-lozenge:focus.aui-lozenge-current {
+  border-color: #4C9AFF;
+}
+a[href].aui-lozenge:hover.aui-lozenge-complete,
+button.aui-lozenge:hover.aui-lozenge-complete,
+a[href].aui-lozenge:active.aui-lozenge-complete,
+button.aui-lozenge:active.aui-lozenge-complete,
+a[href].aui-lozenge:focus.aui-lozenge-complete,
+button.aui-lozenge:focus.aui-lozenge-complete {
+  border-color: #998DD9;
+}
+a[href].aui-lozenge:hover.aui-lozenge-moved,
+button.aui-lozenge:hover.aui-lozenge-moved,
+a[href].aui-lozenge:active.aui-lozenge-moved,
+button.aui-lozenge:active.aui-lozenge-moved,
+a[href].aui-lozenge:focus.aui-lozenge-moved,
+button.aui-lozenge:focus.aui-lozenge-moved {
+  border-color: #FFE380;
+}
+a[href].aui-lozenge.aui-lozenge-subtle:hover,
+button.aui-lozenge.aui-lozenge-subtle:hover {
+  border-color: #253858;
+}
+a[href].aui-lozenge.aui-lozenge-subtle.aui-lozenge-success:hover,
+button.aui-lozenge.aui-lozenge-subtle.aui-lozenge-success:hover {
+  border-color: #00875A;
+}
+a[href].aui-lozenge.aui-lozenge-subtle.aui-lozenge-error:hover,
+button.aui-lozenge.aui-lozenge-subtle.aui-lozenge-error:hover {
+  border-color: #DE350B;
+}
+a[href].aui-lozenge.aui-lozenge-subtle.aui-lozenge-current:hover,
+button.aui-lozenge.aui-lozenge-subtle.aui-lozenge-current:hover {
+  border-color: #0052CC;
+}
+a[href].aui-lozenge.aui-lozenge-subtle.aui-lozenge-complete:hover,
+button.aui-lozenge.aui-lozenge-subtle.aui-lozenge-complete:hover {
+  border-color: #5243AA;
+}
+a[href].aui-lozenge.aui-lozenge-subtle.aui-lozenge-moved:hover,
+button.aui-lozenge.aui-lozenge-subtle.aui-lozenge-moved:hover {
+  border-color: #FFAB00;
+}
+button.aui-lozenge {
+  font-family: Arial, sans-serif;
+}
+button.aui-lozenge::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}

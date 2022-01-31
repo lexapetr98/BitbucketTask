@@ -1,0 +1,22 @@
+{namespace bitbucket.internal.feature.commit.pullRequests}
+
+/**
+ * Generate the "X pull requests" summary panel on the commit page
+ *
+ * @param pullRequestCount The number of pull requests associated with this commit
+ * @param? pullRequestUrl A link to a single pull request (only provided by the context if there is a single related PR)
+ */
+{template .summaryPanel}
+    {if $pullRequestCount > 0}
+        {call bitbucket.internal.widget.summaryPanel.relatedEntitiesWebPanel}
+            {param iconClass: 'aui-icon-small aui-iconfont-pull-requests'/}
+            {param iconText: getText('bitbucket.web.commit.pullrequests.icon.text')/}
+            {param iconTooltip: getText('bitbucket.web.commit.pullrequests.icon.text')/}
+            {param linkClass: 'commit-pull-requests-summary-link' /}
+            {param linkHref: $pullRequestUrl /}
+            {param linkText: getText('bitbucket.web.commit.pullrequests.label', $pullRequestCount) /}
+            {param count: $pullRequestCount /}
+            {param extraClasses: 'commit-pull-requests-summary'/}
+        {/call}
+    {/if}
+{/template}

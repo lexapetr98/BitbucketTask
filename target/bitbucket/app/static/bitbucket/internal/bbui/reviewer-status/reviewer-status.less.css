@@ -1,0 +1,37 @@
+.reviewer-status-selector {
+  vertical-align: bottom;
+}
+.reviewer-status-selector .aui-button.needs-work {
+  color: #FFAB00;
+}
+.reviewer-status-selector .aui-button.approve {
+  color: #36B37E;
+}
+.reviewer-status-selector .aui-button > .aui-icon {
+  color: inherit;
+  vertical-align: text-bottom;
+}
+.reviewer-status-selector[data-status="NEEDS_WORK"] > .aui-button.needs-work {
+  background-color: #FFAB00;
+  color: #FFFFFF;
+}
+.reviewer-status-selector[data-status="NEEDS_WORK"] > .aui-button.needs-work:hover,
+.reviewer-status-selector[data-status="NEEDS_WORK"] > .aui-button.needs-work:focus,
+.reviewer-status-selector[data-status="NEEDS_WORK"] > .aui-button.needs-work:active {
+  background-color: #FF991F;
+}
+.reviewer-status-selector[data-status="NEEDS_WORK"] > .aui-button.needs-work:active {
+  background-color: #F5A151;
+}
+.reviewer-status-selector[data-status="APPROVED"] > .aui-button.approve {
+  background-color: #36B37E;
+  color: #FFFFFF;
+}
+.reviewer-status-selector[data-status="APPROVED"] > .aui-button.approve:hover,
+.reviewer-status-selector[data-status="APPROVED"] > .aui-button.approve:focus,
+.reviewer-status-selector[data-status="APPROVED"] > .aui-button.approve:active {
+  background-color: #00875A;
+}
+.reviewer-status-selector[data-status="APPROVED"] > .aui-button.approve:active {
+  background-color: #289E40;
+}

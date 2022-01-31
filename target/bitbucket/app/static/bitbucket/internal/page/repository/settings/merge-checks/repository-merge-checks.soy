@@ -1,0 +1,53 @@
+{namespace bitbucket.internal.page.repository.settings}
+
+/**
+* @param repository
+* @param prePullRequestMergeHookPage
+* @param scope
+* @param? projectSettingsUrl
+*/
+{template .mergeChecks}
+    {webResourceManager_requireResourcesForContext('bitbucket.page.settings.hooks')}
+    {let $containerId: 'hooks-container' /}
+    {call bitbucket.internal.layout.repositorySettings}
+        {{param windowTitle: getText('bitbucket.web.repository.settings.tab.merge.checks.window.title', $repository.project.name, $repository.name) /}}
+        {param repository: $repository /}
+        {param activeSettingsTab: 'repository-settings-merge-checks' /}
+        {param content}
+            {call aui.page.pageHeader}
+                {param content}
+                    {call aui.page.pageHeaderMain}
+                        {param content}
+                            <h2>{getText('bitbucket.web.merge.checks.title')}</h2>
+                        {/param}
+                    {/call}
+                    {call aui.page.pageHeaderActions}
+                        {param content}
+                            {call aui.buttons.button}
+                                {param text: getText('bitbucket.web.merge.checks.add')/}
+                                {param href: nav_addon_marketplace('Repository hooks')/}
+                                {param extraAttributes: ['target': '_blank'] /}
+                            {/call}
+                        {/param}
+                    {/call}
+                {/param}
+            {/call}
+            <p>
+                {$projectSettingsUrl ?
+                    getTextAsHtml('bitbucket.web.merge.checks.description.repository.html', $projectSettingsUrl, bitbucket_help_url('bitbucket.help.repository.settings.merge.checks.guide')) :
+                    getTextAsHtml('bitbucket.web.merge.checks.description.repository.no.project.link.html', bitbucket_help_url('bitbucket.help.repository.settings.merge.checks.guide'))
+                }
+            </p>
+            <div id="{$containerId}"></div>
+        {/param}
+        {param pageBottomContent}
+            <script>require('bitbucket/internal/page/settings/hooks/hooks-page').onReady(
+                document.getElementById('{$containerId}'),
+                {to_json($scope)|noAutoescape},
+                {lb}
+                    PRE_PULL_REQUEST_MERGE: {to_json($prePullRequestMergeHookPage)|noAutoescape},
+                {rb});
+            </script>
+        {/param}
+    {/call}
+{/template}

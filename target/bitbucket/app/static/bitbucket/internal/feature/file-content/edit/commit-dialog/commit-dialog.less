@@ -1,0 +1,20 @@
+@import "/static/global.less";
+
+#commit-dialog {
+    textarea,
+    input[type=text],
+    .CodeMirror {
+        max-width: 400px;
+    }
+
+    .pull-request-fields {
+        display: none;
+    }
+
+    .button-spinner {
+        display: inline-block;
+        position: relative;
+        padding-right: 4 * @baseSpacing;
+        top: -@halfSpacing;
+    }
+}

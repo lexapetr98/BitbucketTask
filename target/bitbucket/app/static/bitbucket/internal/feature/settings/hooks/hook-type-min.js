@@ -1,0 +1,1 @@
+define("bitbucket/internal/feature/settings/hooks/hook-type",["exports"],function(a){Object.defineProperty(a,"__esModule",{value:!0});var c=a.POST_RECEIVE="POST_RECEIVE",b=a.PRE_PULL_REQUEST_MERGE="PRE_PULL_REQUEST_MERGE",d=a.PRE_RECEIVE="PRE_RECEIVE";a.default={POST_RECEIVE:c,PRE_PULL_REQUEST_MERGE:b,PRE_RECEIVE:d};a.isMergeCheck=function(a){return a.details.type===b}});

@@ -1,0 +1,50 @@
+@import "../../../../global.less";
+
+@inboxTableMaxHeight: 400px;
+
+#inbox-wapper {
+    .inbox-spinner-padding {
+        padding: 50px;
+    }
+
+    h2 {
+        padding: @baseSpacing @doubleSpacing;
+        border-bottom: 0;
+    }
+
+    .aui-tabs {
+        margin: @baseSpacing;
+
+        .tabs-pane {
+            overflow: auto;
+            max-height: @inboxTableMaxHeight;
+            margin: @baseSpacing @baseSpacing 0; // AUI tabs has 10px gap on side, use margin to place scrollbar bellow the horizontal tabs
+            padding: 0; // Override AUI tabs padding and use margin instead to add spacing between tabs and table
+
+            tr.prNeedsWork {
+                background-color: @feintGreyColor;
+            }
+
+            .overflow-reviewers-tooltip {
+                cursor: help;
+            }
+
+            .empty-inbox-message {
+                text-align: center;
+                color: @descriptionTextColor;
+            }
+        }
+    }
+
+    .pull-request-row:first-child {
+        td {
+            border-top: none;
+        }
+    }
+}
+
+#inbox-pull-request-reviewer {
+    .user-avatar {
+        margin-right: 0;
+    }
+}

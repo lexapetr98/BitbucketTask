@@ -1,0 +1,11 @@
+.bitbucket-header-logo {
+  float: left;
+}
+.bitbucket-header-logo a {
+  background: url('images/logo/bitbucket.svg') no-repeat 10px 10px;
+  background-size: 111.5px 16px;
+  height: 40px;
+  padding: 0 10px;
+  text-indent: -9999px;
+  width: 111.5px;
+}

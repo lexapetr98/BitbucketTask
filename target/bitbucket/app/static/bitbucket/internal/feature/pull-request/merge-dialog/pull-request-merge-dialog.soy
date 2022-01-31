@@ -1,0 +1,145 @@
+{namespace bitbucket.internal.feature.pullRequest.merge}
+
+/**
+ * @param person
+ * @param pullRequest
+ * @param? mergeStrategies
+ * @param? defaultStrategy
+ */
+{template .dialog}
+    {call aui.dialog.dialog2}
+        {param id: 'pull-request-merge-dialog' /}
+        {param size: 'medium' /}
+        {param content}
+            <div class="commit-message-container">
+                <div class="committer-avatar">
+                    {call bitbucket.internal.widget.avatar}
+                        {param size: 'medium' /}
+                        {param person: $person /}
+                    {/call}
+                </div>
+                {call bitbucket.internal.widget.form}
+                    {param action: '' /}
+                    {param autocomplete: 'off' /}
+                    {param extraClasses: 'commit-message-form' /}
+                    {param content}
+                        {let $mergeMessage}
+                            {call .mergeMessage}
+                                {param pullRequest: $pullRequest /}
+                            {/call}
+                        {/let}
+                        {call aui.form.textarea}
+                            {param id: 'commit-message' /}
+                            {param value: $mergeMessage/}
+                            {param extraAttributes: ['data-original-value': $mergeMessage]/}
+                        {/call}
+                    {/param}
+                {/call}
+            </div>
+
+            {call bitbucket.internal.feature.repository.branchDiagram}
+                {param type: 'merge' /}
+                {param id: 'merge-branch'/}
+                {param sourceRef: $pullRequest.fromRef /}
+                {param sourceRepo: $pullRequest.fromRef.repository.id != $pullRequest.toRef.repository.id ? $pullRequest.fromRef.repository : null /}
+                {param targetRef: $pullRequest.toRef /}
+                {param targetRepo: $pullRequest.fromRef.repository.id != $pullRequest.toRef.repository.id ? $pullRequest.toRef.repository : null /}
+            {/call}
+        {/param}
+
+        {param titleText: getText('bitbucket.web.pullrequest.merge.dialog.title') /}
+        {param footerHintContent}
+            {foreach $webPanel in getWebPanels('internal.stash.pull-request.merge-dialog.footer.hint')}
+                {if isFirst($webPanel)}
+                    {$webPanel}
+                {/if}
+            {/foreach}
+        {/param}
+        {param footerActionContent}
+            {if $mergeStrategies and $mergeStrategies.length > 1 and $defaultStrategy}
+                {call .mergeStrategy}
+                    {param mergeStrategies: $mergeStrategies /}
+                    {param defaultStrategy: $defaultStrategy /}
+                {/call}
+            {/if}
+            {call aui.buttons.button}
+                {param text: getText('bitbucket.web.button.merge') /}
+                {param type: 'primary' /}
+                {param extraClasses: 'confirm-button' /}
+            {/call}
+            {call aui.buttons.button}
+                {param text: getText('bitbucket.web.button.cancel') /}
+                {param type: 'link' /}
+                {param extraClasses: 'cancel-button' /}
+            {/call}
+        {/param}
+    {/call}
+{/template}
+
+/**
+ * @param pullRequest
+ */
+{template .mergeMessage private="true"}
+    {let $crossRepo: $pullRequest.toRef.repository.id != $pullRequest.fromRef.repository.id /}
+
+    Merge pull request #{$pullRequest.id} in {$pullRequest.toRef.repository.project.key}/{$pullRequest.toRef.repository.slug} from
+    {sp}{if $crossRepo}{$pullRequest.fromRef.repository.project.key}/{$pullRequest.fromRef.repository.slug}:{/if}{$pullRequest.fromRef.displayId}
+    {sp}to {$pullRequest.toRef.displayId}
+{/template}
+
+/**
+ * @param errors
+ */
+{template .errors private="true"}
+    {call aui.message.error}
+        {param content}
+            {foreach $error in $errors}
+                {if $error.conflicted or $error.vetoes and $error.vetoes.length}
+                    {{getText('bitbucket.component.pull.request.merge.warnings.info',
+                    $error.vetoes ? $error.vetoes.length + $error.conflicted : $error.conflicted)}}
+                    <ul>
+                        {if $error.conflicted}
+                            <li>
+                                {{getText('bitbucket.component.pull.request.merge.conflict.detail')}}
+                                {call aui.buttons.button}
+                                    {param text: getText('bitbucket.component.pull.request.merge.warnings.more.button') /}
+                                    {param type: 'link' /}
+                                    {param extraClasses: 'view-merge-veto-details-button' /}
+                                {/call}
+                            </li>
+                        {/if}
+                        {if $error.vetoes and $error.vetoes.length}
+                            {foreach $veto in $error.vetoes}
+                                <li>{$veto.detailedMessage}</li>
+                            {/foreach}
+                        {/if}
+                    </ul>
+                {else}
+                    {call bitbucket.internal.widget.errorContent}
+                        {param message: $error.message /}
+                        {param details: $error.details /}
+                        {param detailListExtraClasses: 'errors' /}
+                    {/call}
+                {/if}
+            {/foreach}
+        {/param}
+    {/call}
+{/template}
+
+/**
+ * @param mergeStrategies
+ * @param defaultStrategy
+ */
+{template .mergeStrategy private="true"}
+    <button id="merge-strategy-button" class="aui-button aui-dropdown2-trigger" aria-controls="merge-strategy-opts">
+        {$defaultStrategy.name}
+    </button>
+
+    <aui-dropdown-menu id="merge-strategy-opts">
+        <aui-section label="{getText('bitbucket.web.pullrequest.merge.strategy.label')}">
+            {foreach $strategy in $mergeStrategies}
+                <aui-item-link href="#" data-strategy="{$strategy.id}"><span class="strategy-name">{$strategy.name}</span>{if $strategy.id == $defaultStrategy.id} ({getText('bitbucket.web.pullrequest.merge.strategy.default')}){/if} <code>{$strategy.flag}</code></aui-item-link>
+            {/foreach}
+        </aui-section>
+    </aui-dropdown-menu>
+{/template}

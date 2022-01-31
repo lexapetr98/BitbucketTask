@@ -1,0 +1,28 @@
+@import "../../../../global.less";
+
+.ref-label {
+    align-items: center;
+    border: 1px solid @ak-color-N50;
+    border-radius: @baseBorderRadius;
+    background: @ak-color-N0;
+    color: @ak-color-N500;
+    display: inline-flex;
+    font-family: @monospaceFontStack;
+    font-size: 13px;
+    text-transform: none;
+    line-height: 99%; /* cross-browser compromise to make the line-height match the font-size */
+    margin: 0 3px;
+    padding: 2px 5px;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: middle;
+
+    .aui-icon {
+        min-width: (@iconSizeSmall + 2px); // Override AUI with and set 18px width
+    }
+
+    a {
+        .text-overflow();
+        flex: 0 1 auto;
+    }
+}

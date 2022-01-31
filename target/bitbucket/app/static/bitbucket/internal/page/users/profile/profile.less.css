@@ -1,0 +1,9 @@
+#content .group-picker .filter-container {
+  width: auto;
+  padding: 10px 0.6em;
+  /* match AUI table cell left margin */
+  background-color: #F4F5F7;
+}
+.paged-table-message.repository-table-message {
+  text-align: left;
+}

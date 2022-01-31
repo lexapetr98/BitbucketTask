@@ -1,0 +1,2 @@
+define("bitbucket/internal/layout/project/project","module exports jquery bitbucket/internal/model/page-state bitbucket/internal/model/project bitbucket/internal/widget/sidebar/sidebar".split(" "),function(b,a,c,d,e,f){Object.defineProperty(a,"__esModule",{value:!0});var g=babelHelpers.interopRequireDefault(c),h=babelHelpers.interopRequireDefault(d),k=babelHelpers.interopRequireDefault(e),l=babelHelpers.interopRequireDefault(f);a.default={onReady:function(a){(0,g.default)(document).ready(l.default.onReady);
+h.default.setProject(new k.default(a))}};b.exports=a["default"]});

@@ -1,0 +1,930 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ExtendedServerProperties",
+      "name": "server",
+      "type": "com.atlassian.bitbucket.internal.boot.web.ExtendedServerProperties"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.EmbeddedServletContainerWiring$AdditionalConnectorWiring",
+      "name": "server.additional-connector.1",
+      "sourceMethod": "additionalConnector1()",
+      "type": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.1.compression",
+      "sourceMethod": "getCompression()",
+      "type": "org.springframework.boot.context.embedded.Compression"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.1.ssl",
+      "sourceMethod": "getSsl()",
+      "type": "org.springframework.boot.context.embedded.Ssl"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.EmbeddedServletContainerWiring$AdditionalConnectorWiring",
+      "name": "server.additional-connector.2",
+      "sourceMethod": "additionalConnector2()",
+      "type": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.2.compression",
+      "sourceMethod": "getCompression()",
+      "type": "org.springframework.boot.context.embedded.Compression"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.2.ssl",
+      "sourceMethod": "getSsl()",
+      "type": "org.springframework.boot.context.embedded.Ssl"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.EmbeddedServletContainerWiring$AdditionalConnectorWiring",
+      "name": "server.additional-connector.3",
+      "sourceMethod": "additionalConnector3()",
+      "type": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.3.compression",
+      "sourceMethod": "getCompression()",
+      "type": "org.springframework.boot.context.embedded.Compression"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.3.ssl",
+      "sourceMethod": "getSsl()",
+      "type": "org.springframework.boot.context.embedded.Ssl"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.EmbeddedServletContainerWiring$AdditionalConnectorWiring",
+      "name": "server.additional-connector.4",
+      "sourceMethod": "additionalConnector4()",
+      "type": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.4.compression",
+      "sourceMethod": "getCompression()",
+      "type": "org.springframework.boot.context.embedded.Compression"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.4.ssl",
+      "sourceMethod": "getSsl()",
+      "type": "org.springframework.boot.context.embedded.Ssl"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.EmbeddedServletContainerWiring$AdditionalConnectorWiring",
+      "name": "server.additional-connector.5",
+      "sourceMethod": "additionalConnector5()",
+      "type": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.5.compression",
+      "sourceMethod": "getCompression()",
+      "type": "org.springframework.boot.context.embedded.Compression"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.5.ssl",
+      "sourceMethod": "getSsl()",
+      "type": "org.springframework.boot.context.embedded.Ssl"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.1.address",
+      "description": "The network address this connector should bind to.",
+      "type": "java.net.InetAddress"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Compression",
+      "name": "server.additional-connector.1.compression.enabled",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Compression",
+      "name": "server.additional-connector.1.compression.excluded-user-agents",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Compression",
+      "name": "server.additional-connector.1.compression.mime-types",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Compression",
+      "name": "server.additional-connector.1.compression.min-response-size",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.1.connection-timeout",
+      "description": "The time in milliseconds the connector will wait for a valid HTTP request before closing the connection. If not set, the connector's container-specific default will be used. Use a value of -1 to indicate no timeout.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "defaultValue": 0,
+      "name": "server.additional-connector.1.max-http-header-size",
+      "description": "The maximum size of HTTP headers, in bytes. If not set, the connector's container-specific default is used.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "defaultValue": 0,
+      "name": "server.additional-connector.1.max-http-post-size",
+      "description": "The maximum size of HTTP POST content, in bytes. If not set, the connector's container-specific default is used.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.1.port",
+      "description": "The port this connector should bind to.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.1.proxy-name",
+      "description": "The proxy name, used to construct proper redirect URLs when a reverse proxy is in use.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.1.proxy-port",
+      "description": "The proxy port, used to construct proper redirect URLs when a reverse proxy is in use. If a proxy port is not set, but a name is, the connector's port will be used as the default.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "defaultValue": 443,
+      "name": "server.additional-connector.1.redirect-port",
+      "description": "The redirect port to use when redirecting from non-SSL to SSL. Defaults to 443, the standard SSL port.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.1.scheme",
+      "description": "The connector scheme, either \"http\" or \"https\". Defaults to \"http\" unless \"secure\" is set to \"true\"; then it defaults to \"https\". In general, this property should not need to be set.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.1.secure",
+      "description": "Whether the connector is secured. Note that setting this to \"true\" does <i>not<\/i> enable SSL; SSL is enabled using \"ssl.enabled\" instead. One use case for setting this to \"true\" for an HTTP connector is when the system is behind a reverse proxy and SSL is terminated at the proxy.",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.1.ssl.ciphers",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.1.ssl.client-auth",
+      "type": "org.springframework.boot.context.embedded.Ssl$ClientAuth"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.1.ssl.enabled",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.1.ssl.enabled-protocols",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.1.ssl.key-alias",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.1.ssl.key-password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.1.ssl.key-store",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.1.ssl.key-store-password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.1.ssl.key-store-provider",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.1.ssl.key-store-type",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.1.ssl.protocol",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.1.ssl.trust-store",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.1.ssl.trust-store-password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.1.ssl.trust-store-provider",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.1.ssl.trust-store-type",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.2.address",
+      "description": "The network address this connector should bind to.",
+      "type": "java.net.InetAddress"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Compression",
+      "name": "server.additional-connector.2.compression.enabled",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Compression",
+      "name": "server.additional-connector.2.compression.excluded-user-agents",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Compression",
+      "name": "server.additional-connector.2.compression.mime-types",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Compression",
+      "name": "server.additional-connector.2.compression.min-response-size",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.2.connection-timeout",
+      "description": "The time in milliseconds the connector will wait for a valid HTTP request before closing the connection. If not set, the connector's container-specific default will be used. Use a value of -1 to indicate no timeout.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "defaultValue": 0,
+      "name": "server.additional-connector.2.max-http-header-size",
+      "description": "The maximum size of HTTP headers, in bytes. If not set, the connector's container-specific default is used.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "defaultValue": 0,
+      "name": "server.additional-connector.2.max-http-post-size",
+      "description": "The maximum size of HTTP POST content, in bytes. If not set, the connector's container-specific default is used.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.2.port",
+      "description": "The port this connector should bind to.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.2.proxy-name",
+      "description": "The proxy name, used to construct proper redirect URLs when a reverse proxy is in use.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.2.proxy-port",
+      "description": "The proxy port, used to construct proper redirect URLs when a reverse proxy is in use. If a proxy port is not set, but a name is, the connector's port will be used as the default.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "defaultValue": 443,
+      "name": "server.additional-connector.2.redirect-port",
+      "description": "The redirect port to use when redirecting from non-SSL to SSL. Defaults to 443, the standard SSL port.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.2.scheme",
+      "description": "The connector scheme, either \"http\" or \"https\". Defaults to \"http\" unless \"secure\" is set to \"true\"; then it defaults to \"https\". In general, this property should not need to be set.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.2.secure",
+      "description": "Whether the connector is secured. Note that setting this to \"true\" does <i>not<\/i> enable SSL; SSL is enabled using \"ssl.enabled\" instead. One use case for setting this to \"true\" for an HTTP connector is when the system is behind a reverse proxy and SSL is terminated at the proxy.",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.2.ssl.ciphers",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.2.ssl.client-auth",
+      "type": "org.springframework.boot.context.embedded.Ssl$ClientAuth"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.2.ssl.enabled",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.2.ssl.enabled-protocols",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.2.ssl.key-alias",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.2.ssl.key-password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.2.ssl.key-store",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.2.ssl.key-store-password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.2.ssl.key-store-provider",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.2.ssl.key-store-type",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.2.ssl.protocol",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.2.ssl.trust-store",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.2.ssl.trust-store-password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.2.ssl.trust-store-provider",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.2.ssl.trust-store-type",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.3.address",
+      "description": "The network address this connector should bind to.",
+      "type": "java.net.InetAddress"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Compression",
+      "name": "server.additional-connector.3.compression.enabled",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Compression",
+      "name": "server.additional-connector.3.compression.excluded-user-agents",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Compression",
+      "name": "server.additional-connector.3.compression.mime-types",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Compression",
+      "name": "server.additional-connector.3.compression.min-response-size",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.3.connection-timeout",
+      "description": "The time in milliseconds the connector will wait for a valid HTTP request before closing the connection. If not set, the connector's container-specific default will be used. Use a value of -1 to indicate no timeout.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "defaultValue": 0,
+      "name": "server.additional-connector.3.max-http-header-size",
+      "description": "The maximum size of HTTP headers, in bytes. If not set, the connector's container-specific default is used.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "defaultValue": 0,
+      "name": "server.additional-connector.3.max-http-post-size",
+      "description": "The maximum size of HTTP POST content, in bytes. If not set, the connector's container-specific default is used.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.3.port",
+      "description": "The port this connector should bind to.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.3.proxy-name",
+      "description": "The proxy name, used to construct proper redirect URLs when a reverse proxy is in use.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.3.proxy-port",
+      "description": "The proxy port, used to construct proper redirect URLs when a reverse proxy is in use. If a proxy port is not set, but a name is, the connector's port will be used as the default.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "defaultValue": 443,
+      "name": "server.additional-connector.3.redirect-port",
+      "description": "The redirect port to use when redirecting from non-SSL to SSL. Defaults to 443, the standard SSL port.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.3.scheme",
+      "description": "The connector scheme, either \"http\" or \"https\". Defaults to \"http\" unless \"secure\" is set to \"true\"; then it defaults to \"https\". In general, this property should not need to be set.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.3.secure",
+      "description": "Whether the connector is secured. Note that setting this to \"true\" does <i>not<\/i> enable SSL; SSL is enabled using \"ssl.enabled\" instead. One use case for setting this to \"true\" for an HTTP connector is when the system is behind a reverse proxy and SSL is terminated at the proxy.",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.3.ssl.ciphers",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.3.ssl.client-auth",
+      "type": "org.springframework.boot.context.embedded.Ssl$ClientAuth"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.3.ssl.enabled",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.3.ssl.enabled-protocols",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.3.ssl.key-alias",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.3.ssl.key-password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.3.ssl.key-store",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.3.ssl.key-store-password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.3.ssl.key-store-provider",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.3.ssl.key-store-type",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.3.ssl.protocol",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.3.ssl.trust-store",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.3.ssl.trust-store-password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.3.ssl.trust-store-provider",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.3.ssl.trust-store-type",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.4.address",
+      "description": "The network address this connector should bind to.",
+      "type": "java.net.InetAddress"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Compression",
+      "name": "server.additional-connector.4.compression.enabled",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Compression",
+      "name": "server.additional-connector.4.compression.excluded-user-agents",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Compression",
+      "name": "server.additional-connector.4.compression.mime-types",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Compression",
+      "name": "server.additional-connector.4.compression.min-response-size",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.4.connection-timeout",
+      "description": "The time in milliseconds the connector will wait for a valid HTTP request before closing the connection. If not set, the connector's container-specific default will be used. Use a value of -1 to indicate no timeout.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "defaultValue": 0,
+      "name": "server.additional-connector.4.max-http-header-size",
+      "description": "The maximum size of HTTP headers, in bytes. If not set, the connector's container-specific default is used.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "defaultValue": 0,
+      "name": "server.additional-connector.4.max-http-post-size",
+      "description": "The maximum size of HTTP POST content, in bytes. If not set, the connector's container-specific default is used.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.4.port",
+      "description": "The port this connector should bind to.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.4.proxy-name",
+      "description": "The proxy name, used to construct proper redirect URLs when a reverse proxy is in use.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.4.proxy-port",
+      "description": "The proxy port, used to construct proper redirect URLs when a reverse proxy is in use. If a proxy port is not set, but a name is, the connector's port will be used as the default.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "defaultValue": 443,
+      "name": "server.additional-connector.4.redirect-port",
+      "description": "The redirect port to use when redirecting from non-SSL to SSL. Defaults to 443, the standard SSL port.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.4.scheme",
+      "description": "The connector scheme, either \"http\" or \"https\". Defaults to \"http\" unless \"secure\" is set to \"true\"; then it defaults to \"https\". In general, this property should not need to be set.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.4.secure",
+      "description": "Whether the connector is secured. Note that setting this to \"true\" does <i>not<\/i> enable SSL; SSL is enabled using \"ssl.enabled\" instead. One use case for setting this to \"true\" for an HTTP connector is when the system is behind a reverse proxy and SSL is terminated at the proxy.",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.4.ssl.ciphers",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.4.ssl.client-auth",
+      "type": "org.springframework.boot.context.embedded.Ssl$ClientAuth"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.4.ssl.enabled",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.4.ssl.enabled-protocols",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.4.ssl.key-alias",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.4.ssl.key-password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.4.ssl.key-store",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.4.ssl.key-store-password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.4.ssl.key-store-provider",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.4.ssl.key-store-type",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.4.ssl.protocol",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.4.ssl.trust-store",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.4.ssl.trust-store-password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.4.ssl.trust-store-provider",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.4.ssl.trust-store-type",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.5.address",
+      "description": "The network address this connector should bind to.",
+      "type": "java.net.InetAddress"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Compression",
+      "name": "server.additional-connector.5.compression.enabled",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Compression",
+      "name": "server.additional-connector.5.compression.excluded-user-agents",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Compression",
+      "name": "server.additional-connector.5.compression.mime-types",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Compression",
+      "name": "server.additional-connector.5.compression.min-response-size",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.5.connection-timeout",
+      "description": "The time in milliseconds the connector will wait for a valid HTTP request before closing the connection. If not set, the connector's container-specific default will be used. Use a value of -1 to indicate no timeout.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "defaultValue": 0,
+      "name": "server.additional-connector.5.max-http-header-size",
+      "description": "The maximum size of HTTP headers, in bytes. If not set, the connector's container-specific default is used.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "defaultValue": 0,
+      "name": "server.additional-connector.5.max-http-post-size",
+      "description": "The maximum size of HTTP POST content, in bytes. If not set, the connector's container-specific default is used.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.5.port",
+      "description": "The port this connector should bind to.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.5.proxy-name",
+      "description": "The proxy name, used to construct proper redirect URLs when a reverse proxy is in use.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.5.proxy-port",
+      "description": "The proxy port, used to construct proper redirect URLs when a reverse proxy is in use. If a proxy port is not set, but a name is, the connector's port will be used as the default.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "defaultValue": 443,
+      "name": "server.additional-connector.5.redirect-port",
+      "description": "The redirect port to use when redirecting from non-SSL to SSL. Defaults to 443, the standard SSL port.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.5.scheme",
+      "description": "The connector scheme, either \"http\" or \"https\". Defaults to \"http\" unless \"secure\" is set to \"true\"; then it defaults to \"https\". In general, this property should not need to be set.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ConnectorProperties",
+      "name": "server.additional-connector.5.secure",
+      "description": "Whether the connector is secured. Note that setting this to \"true\" does <i>not<\/i> enable SSL; SSL is enabled using \"ssl.enabled\" instead. One use case for setting this to \"true\" for an HTTP connector is when the system is behind a reverse proxy and SSL is terminated at the proxy.",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.5.ssl.ciphers",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.5.ssl.client-auth",
+      "type": "org.springframework.boot.context.embedded.Ssl$ClientAuth"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.5.ssl.enabled",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.5.ssl.enabled-protocols",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.5.ssl.key-alias",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.5.ssl.key-password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.5.ssl.key-store",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.5.ssl.key-store-password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.5.ssl.key-store-provider",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.5.ssl.key-store-type",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.5.ssl.protocol",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.5.ssl.trust-store",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.5.ssl.trust-store-password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.5.ssl.trust-store-provider",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springframework.boot.context.embedded.Ssl",
+      "name": "server.additional-connector.5.ssl.trust-store-type",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ExtendedServerProperties",
+      "name": "server.proxy-name",
+      "description": "The proxy name, used to construct proper redirect URLs when a reverse proxy is in use.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ExtendedServerProperties",
+      "name": "server.proxy-port",
+      "description": "The proxy port, used to construct proper redirect URLs when a reverse proxy is in use. If a proxy port is not set, but a name is, the connector's port will be used as the default.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ExtendedServerProperties",
+      "defaultValue": 443,
+      "name": "server.redirect-port",
+      "description": "The redirect port to use when redirecting from non-SSL to SSL. Defaults to 443, the standard SSL port.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ExtendedServerProperties",
+      "defaultValue": false,
+      "name": "server.require-ssl",
+      "description": "Require an SSL connection when connecting to the server. Setting this to \"true\" will automatically redirect insecure connections to the configured \"redirect-port\" for their connectors.",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ExtendedServerProperties",
+      "name": "server.scheme",
+      "description": "The connector scheme, either \"http\" or \"https\". Defaults to \"http\" unless \"secure\" is set to \"true\"; then it defaults to \"https\". In general, this property should not need to be set.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.atlassian.bitbucket.internal.boot.web.ExtendedServerProperties",
+      "name": "server.secure",
+      "description": "Whether the connector is secured. Note that setting this to \"true\" does <i>not<\/i> enable SSL; SSL is enabled using \"ssl.enabled\" instead. One use case for setting this to \"true\" for an HTTP connector is when the system is behind a reverse proxy and SSL is terminated at the proxy.",
+      "type": "java.lang.Boolean"
+    }
+  ]
+}

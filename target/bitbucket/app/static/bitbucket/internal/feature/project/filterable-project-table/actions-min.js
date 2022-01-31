@@ -1,0 +1,1 @@
+define("bitbucket/internal/feature/project/filterable-project-table/actions",["exports"],function(a){Object.defineProperty(a,"__esModule",{value:!0});var b=function(a){return"filterable-project-table/"+a};a.LOAD_PROJECTS=b("LOAD_PROJECTS");a.LOAD_PROJECTS_SUCCESS=b("LOAD_PROJECTS_SUCCESS");a.LOAD_PROJECTS_FAILURE=b("LOAD_PROJECTS_FAILURE")});

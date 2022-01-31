@@ -1,0 +1,85 @@
+@import "/static/global.less";
+
+.repository-list-container {
+    h4 {
+        margin: @baseSpacing 0;
+
+        &.title {
+            text-transform: uppercase;
+            font-size: @font-size-small;
+            color: @headingSmallTextColor;
+            margin-top: 0;
+        }
+        &.results {
+            font-weight: normal;
+            font-size: @font-size-default;
+            color: @secondaryTextColor;
+            margin-top: 0;
+
+            strong {
+                color: @bodyTextColor;
+            }
+        }
+    }
+
+    .search-results-container {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        .search-results-item {
+            &.focused {
+                border-left-color: @primaryHighlightColor;
+                background: @feintGreyColor;
+            }
+
+            .aui-avatar {
+                margin-right: @halfSpacing;
+            }
+
+            a {
+                padding: @halfSpacing 0 @halfSpacing @baseSpacing;
+                display: flex;
+                align-items: center;
+                color: @bodyTextColor;
+
+                &:focus, &:hover {
+                    background-color: @primaryHighlight;
+                    text-decoration: none;
+                    color: @bodyTextColor;
+                }
+
+                &:active {
+                    background-color: @primaryActiveColor;
+                }
+
+                > .item-wrapper {
+                    display: block;
+                    width:~"calc(100% - (@{icon-size-medium} + @{baseSpacing}))";
+
+                    > .item-name {
+                        display: block;
+                        .text-overflow();
+                    }
+
+                    > .item-description {
+                        font-size: @font-size-small;
+                        color: @labelTextColor;
+                        margin-top: -2px;
+                        .text-overflow();
+                    }
+                }
+            }
+
+            .term-highlight {
+                font-weight: bold;
+                background: none;
+                color: inherit;
+            }
+        }
+    }
+
+    & + .load-more-button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,89 @@
+@import 'lib/atlaskit/colors';
+
+// Main Body area
+@bodyBackgroundColor: @ak-color-N20;
+@bodyTextColor: @ak-color-N800;
+@invertedBodyTextColor: @ak-color-N0;
+@primaryLinkColor: @ak-color-B400;
+@primaryHighlightColor: @ak-color-B300; // NOTE: change blame-gutter.js hardcoded value when changing this
+@primaryActiveColor: @ak-color-B50;
+@primaryActiveBorderColor: @ak-color-B300;
+@secondaryTextColor: @ak-color-N300;
+@errorTextColor: @ak-color-R300;
+@confirmationTextColor: @ak-color-G300;
+@placeholderTextColor: @ak-color-N100;
+@disabledSecondaryTextColor: @ak-color-N40;
+@headingSmallTextColor: @ak-color-N200;
+
+// Main Content area
+@contentBackgroundColor: @ak-color-N0;
+
+// Other UI Chrome (if it's AUI component specific, maybe it should go in there, eg toolbars, buttons etc?)
+@feintGreyColor: @ak-color-N20;
+@labelTextColor: @ak-color-N300;
+@secondaryHeaderColor: @ak-color-N200;
+@descriptionTextColor: @ak-color-N100;
+@descriptionSubtextColor: @ak-color-N400;
+@dividerColor: @ak-color-N40;
+@activeDividerColor: @ak-color-N60;
+@lightDividerColor: @ak-color-N40; // used on the source view and PR diff content areas
+@tabDividerColor: @ak-color-N40;
+// NOTE: change blame-gutter.js hardcoded value when changing @primaryHighlight
+@primaryHighlight: @ak-color-N20; // Highlight elements on a page (eg: permalinked comment or commit in a list)
+@secondaryHighlight: @ak-color-N30; // When highlighting something on a Feint Grey bg (CAUTION: Link Blue and Mid Grey do not pass AA contrast ratios on this bg so avoid this)
+
+// Comments
+@newCommentColor: @ak-color-Y50;
+@newCommentColorFadeIn: fade(@newCommentColor, 100%); // Update this when changing the color above!
+
+// Drafts
+@restoredItemBackgroundColor: #fffee8;
+
+// Lozenges
+@lozenge-bg-color: @ak-color-N40;
+@lozenge-text-color: @ak-color-N700;
+@lozenge-text-color-inverse: @ak-color-N0;
+@lozenge-border-color: @ak-color-N40;
+@lozenge-subtle-text-color: @ak-color-N500;
+
+@lozenge-success-bg-color: @ak-color-G400;
+@lozenge-success-subtle-hover-color: @ak-color-G100;
+
+@lozenge-current-text-color: @ak-color-B400;
+@lozenge-current-subtle-hover-color: @ak-color-B100;
+
+@lozenge-moved-bg-color: @ak-color-Y300;
+@lozenge-moved-subtle-hover-color: @ak-color-Y100;
+
+@lozenge-error-bg-color: @ak-color-R400;
+@lozenge-error-subtle-hover-color: @ak-color-R100;
+
+@lozenge-complete-bg-color: @ak-color-P400;
+@lozenge-complete-subtle-hover-color: @ak-color-P100;
+
+@lozenge-user-mention: @ak-color-B400;
+
+
+// Icons
+@aui-iconfont-color: @ak-color-N400;   // default icon font grey
+@aui-iconfont-secondary-color: @ak-color-N100; // secondary icon font grey, for placeholders and disabled icons
+@aui-iconfont-warning-color: @ak-color-Y300;
+
+// Text status colours
+@bitbucket-text-status-added-color: @ak-color-G300;
+@bitbucket-text-status-removed-color: @ak-color-R300;
+
+// Dialogs
+@dialogErrorHeaderColor: @ak-color-R300;
+
+// Database migration warning message
+@bitbucket-admin-warning-color: #db963d; // TODO: update this to ADG and WCAG AA contrast compliant colour
+
+// AUI message banner styles
+// TODO: remove when implemented in AUI
+// Warning state
+@bitbucket-banner-warning-bg: @ak-color-Y300;
+@bitbucket-banner-warning-text-color: @ak-color-N800;
+
+@labelBorderColor: @ak-color-N40; // Why hardcoded? Because AUI didn't update the labels to ADGS
+@labelHoverBorderColor: #707070; // Why hardcoded? Because AUI didn't update the labels to ADGS

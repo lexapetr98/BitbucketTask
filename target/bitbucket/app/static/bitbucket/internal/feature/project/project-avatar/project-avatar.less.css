@@ -1,0 +1,7 @@
+/* @aui-override  */
+.aui-avatar-project {
+  box-shadow: none;
+}
+.aui-avatar-project:before {
+  border: 0;
+}

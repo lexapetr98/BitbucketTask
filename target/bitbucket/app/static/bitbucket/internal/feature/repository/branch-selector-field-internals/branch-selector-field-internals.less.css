@@ -1,0 +1,5 @@
+.branch-selector-field ~ .remove-link {
+  margin-left: 10px;
+  vertical-align: middle;
+  font-size: 12px;
+}

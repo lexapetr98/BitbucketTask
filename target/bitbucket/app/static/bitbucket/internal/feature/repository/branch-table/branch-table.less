@@ -1,0 +1,110 @@
+@import "../../../../../global.less";
+
+.branch-table {
+    .table-headings();
+
+    &.aui > tbody > tr > td {
+        vertical-align: middle;
+    }
+
+    .aui-icon {
+        color: @aui-iconfont-color;
+
+        + a {
+            margin-left: @halfSpacing;
+        }
+    }
+
+    // Base and default branch styles
+
+    .base-branch {
+        background: @secondaryHighlight;
+    }
+
+    .base-branch-lozenge,
+    .default-branch-lozenge {
+        margin-left: @baseSpacing;
+    }
+
+    .ahead-behind-column,
+    .last-updated-column,
+    .pull-requests-column,
+    .build-status-branch-list-col,
+    .branch-actions-column {
+        .shrinkwrap();
+    }
+
+    .last-updated-column {
+        white-space: nowrap;
+
+        .commitid {
+            font-family: @atlassianFontStack;
+            color: @bodyTextColor;
+        }
+
+        .user-avatar {
+            margin-right: @halfSpacing;
+            vertical-align: middle;
+        }
+
+        time {
+            vertical-align: middle;
+            color: @ak-color-N400;
+        }
+    }
+
+    // Column widths + overflow logic
+    td[headers=branch-name-column] {
+        max-width: 325px;
+
+
+        // we have to wrap everything in an extra <div> because in IE a position:relative <td> loses its borders.
+        > div {
+            position: relative;
+
+            > .aui-icon {
+                left: 5px;
+                position: absolute;
+            }
+
+            > .line {
+                box-sizing: border-box;
+                display: flex;
+                align-items: baseline;
+                padding-left: 25px;
+                width: 100%;
+
+                .aui-lozenge {
+
+                    white-space: nowrap;
+                }
+
+                > a {
+                    .text-overflow();
+
+                    box-sizing: border-box;
+                    display: inline-block;
+                    vertical-align: top;
+                }
+
+                .aui-lozenge + a {
+                    padding-right: 120px;
+                }
+            }
+        }
+    }
+
+    th#pull-requests-column {
+        white-space: nowrap;
+    }
+
+    td.last-updated-column > time {
+        white-space: nowrap;
+    }
+
+    #branch-actions-column {
+        width: 70px;
+    }
+
+
+}

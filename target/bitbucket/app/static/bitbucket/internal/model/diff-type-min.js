@@ -1,0 +1,1 @@
+define("bitbucket/internal/model/diff-type",["exports"],function(a){Object.defineProperty(a,"__esModule",{value:!0});var b={EFFECTIVE:"EFFECTIVE",RANGE:"RANGE",COMMIT:"COMMIT"},c=b.EFFECTIVE,d=b.RANGE,e=b.COMMIT;a.default=b;a.EFFECTIVE=c;a.RANGE=d;a.COMMIT=e});

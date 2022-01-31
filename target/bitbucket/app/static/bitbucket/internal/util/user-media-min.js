@@ -1,0 +1,1 @@
+define("bitbucket/internal/util/user-media",["module","exports"],function(c,a){Object.defineProperty(a,"__esModule",{value:!0});var b=navigator.getUserMedia||navigator.webkitGetUserMedia||navigator.mozGetUserMedia||navigator.msGetUserMedia;a.default=b?b.bind(navigator):void 0;c.exports=a["default"]});

@@ -1,0 +1,13 @@
+{namespace bitbucket.notification.banner.header}
+
+/**
+ */
+{template .bitbucketScmServiceResourceExhausted}
+    {call bitbucket.internal.util.alerts.alert}
+        {param type: 'error' /}
+        {param title: getText('bitbucket.web.scm.resource.busy', productName()) /}
+        {param description: getText('bitbucket.web.scm.resource.busy.details') /}
+        {param anchorText: getText('bitbucket.web.scm.resource.busy.help', bitbucket_help_title('bitbucket.help.scaling')) /}
+        {param anchorLink: bitbucket_help_url('bitbucket.help.scaling') /}
+    {/call}
+{/template}

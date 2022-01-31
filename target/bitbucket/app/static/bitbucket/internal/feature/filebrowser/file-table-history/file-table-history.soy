@@ -1,0 +1,31 @@
+{namespace bitbucket.internal.widget.filetablehistory}
+
+/**
+ * @param? commit
+ * @param? linkHtml
+ */
+{template .row}
+    <td class="directory-file-history message hide">
+        {if $linkHtml}{$linkHtml|noAutoescape}{/if}
+    </td>
+    <td class="directory-file-history timestamp hide">
+        {if $commit}
+            {call bitbucket.internal.widget.date.shortAge}
+                {param date: $commit.authorTimestamp /}
+            {/call}
+        {/if}
+    </td>
+{/template}
+
+/**
+ * @param commit
+ * @param fileUrl
+ * @param shortMessage
+ * @param? leadingSpaces
+ * @param? trailingSpaces
+ */
+{template .link}
+    {if $leadingSpaces}{$leadingSpaces}{/if}
+    <a href="{$fileUrl}" class="commit-preview-trigger" data-commit-id="{$commit.id}" data-commit-message="{$commit.message}">{$shortMessage}</a>
+    {if $trailingSpaces}{$trailingSpaces}{/if}
+{/template}

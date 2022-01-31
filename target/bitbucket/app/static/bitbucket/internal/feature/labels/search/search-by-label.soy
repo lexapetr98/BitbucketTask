@@ -1,0 +1,32 @@
+{namespace bitbucket.internal.label}
+
+/**
+* @param repositoryPage a page of repositories
+* @param labelName a page of repositories
+*/
+{template .searchByLabel}
+{webResourceManager_requireResourcesForContext('bitbucket.page.label.search')}
+{let $containerId: 'repository-container' /}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="decorator" content="bitbucket.focused.xlarge">
+        <title>{{getText('bitbucket.web.label.search.title', $labelName)}}</title>
+    </head>
+    <body>
+        <h2>{getText('bitbucket.web.label.search.title', $labelName)}</h2>
+        <div id='{$containerId}'></div>
+    <script>
+            require('bitbucket/internal/feature/labels/search/search-by-label').init(
+                document.getElementById('{$containerId}'),
+                {lb}
+                    {if $repositoryPage}
+                        repositoryPage: {to_json($repositoryPage, [ 'avatarSize': avatarSize('small') ])|noAutoescape},
+                    {/if}
+                {rb},
+                 "{$labelName}"
+            );
+        </script>
+    </body>
+{/template}

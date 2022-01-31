@@ -1,0 +1,40 @@
+@import "/static/global.less";
+.content-view.show-whitespace-characters .CodeMirror {
+    .cm-tab {
+        position: relative;
+
+        &::after {
+            content: ' ';
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 2px;
+            background-image: url('tab-arrow.png');
+            background-size: auto 75%;
+            background-position: right;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .cm-whitespace {
+        position: relative;
+
+        &::after {
+            content: '····'; //Needs to be the length of MAX_SEQ_LENGTH in the JS
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            color: @ak-color-N40;
+        }
+    }
+
+    .CodeMirror-code > div > pre > span::after {
+        content: "↵";
+        color: @ak-color-N40;
+    }
+}

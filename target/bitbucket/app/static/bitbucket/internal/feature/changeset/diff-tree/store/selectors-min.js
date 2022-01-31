@@ -1,0 +1,2 @@
+define("bitbucket/internal/feature/changeset/diff-tree/store/selectors",["exports","reselect","./constants"],function(b,c,d){Object.defineProperty(b,"__esModule",{value:!0});b.getSelectedNodeId=b.isNodeCollapsed=void 0;var e=function(a){return a[d.STATE_NAMESPACE]},f=(0,c.createSelector)([e],function(a){return a.list[a.selectedIndex]});b.isNodeCollapsed=(0,c.createSelector)([e,function(a,b){return b.id}],function(a,b){return a.collapsed[b]===d.NODE_COLLAPSED});b.getSelectedNodeId=(0,c.createSelector)([f],
+function(a){return a&&a.id})});

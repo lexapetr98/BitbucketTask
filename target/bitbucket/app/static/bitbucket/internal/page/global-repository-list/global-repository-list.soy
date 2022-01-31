@@ -1,0 +1,30 @@
+{namespace bitbucket.internal.page}
+
+/**
+* @param repositoryPage a page of repositories
+*/
+{template .globalRepositoryList}
+{webResourceManager_requireResourcesForContext('bitbucket.page.globalRepositoryList')}
+{let $containerId: 'repository-container' /}
+{call bitbucket.internal.layout.entity}
+    {param activeHeaderNav: 'repositories-menu' /}
+    {param appendNextUrlToLogin: false /}
+    {param entityName: getText('bitbucket.web.public.repository.list.heading') /}
+    {param windowTitle: getText('bitbucket.web.public.repository.list.window.title') /}
+    {param content}
+        <div id='{$containerId}'></div>
+    {/param}
+    {param pageBottomContent}
+    <script>
+        require('bitbucket/internal/page/global-repository-list/global-repository-list').init(
+            document.getElementById('{$containerId}'),
+            {lb}
+                {if $repositoryPage}
+                    repositoryPage: {to_json($repositoryPage, [ 'avatarSize': avatarSize('small') ])|noAutoescape},
+                {/if}
+            {rb}
+        );
+    </script>
+    {/param}
+{/call}
+{/template}

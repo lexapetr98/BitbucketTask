@@ -1,0 +1,143 @@
+.aui-sidebar .aui-page-header-main.entity-item .aui-nav-breadcrumbs li {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 100%;
+}
+.aui-sidebar .aui-page-header-main.entity-item h1 {
+  display: inline-block;
+  max-width: 100%;
+}
+.aui-sidebar .aui-page-header-main.entity-item h1 + .aui-button {
+  margin-left: 10px;
+  vertical-align: bottom;
+}
+.aui-sidebar .aui-sidebar-group-tier-one {
+  margin-top: 10px;
+}
+.aui-sidebar .aui-sidebar-group-tier-one #repository-nav-pull-requests aui-badge {
+  margin-top: 4px;
+}
+.aui-sidebar:focus {
+  outline: none;
+}
+.aui-sidebar .aui-nav > li > .aui-nav-item > .aui-icon,
+.aui-sidebar-submenu .aui-nav > li > .aui-nav-item > .aui-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+.aui-sidebar[aria-expanded="false"] .aui-sidebar-group-tier-one > .aui-nav > li > .aui-nav-item > .aui-icon,
+.aui-sidebar-submenu[aria-expanded="false"] .aui-sidebar-group-tier-one > .aui-nav > li > .aui-nav-item > .aui-icon {
+  vertical-align: middle;
+  margin-bottom: 1px;
+}
+.aui-sidebar .aui-nav-heading,
+.aui-sidebar-submenu .aui-nav-heading {
+  padding-bottom: 5px;
+}
+.aui-sidebar .aui-navgroup-vertical .aui-nav > li > a.aui-nav-item,
+.aui-sidebar-submenu .aui-navgroup-vertical .aui-nav > li > a.aui-nav-item,
+.aui-sidebar .aui-navgroup-vertical .aui-nav > li > button.aui-nav-item,
+.aui-sidebar-submenu .aui-navgroup-vertical .aui-nav > li > button.aui-nav-item {
+  line-height: 24px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.aui-sidebar[aria-expanded="true"] .aui-navgroup-vertical .aui-nav > li.has-actions:hover .aui-nav-item,
+.aui-sidebar-submenu[aria-expanded="true"] .aui-navgroup-vertical .aui-nav > li.has-actions:hover .aui-nav-item {
+  padding-right: 48px;
+}
+.aui-sidebar .aui-sidebar-footer > .aui-sidebar-toggle > .aui-icon,
+.aui-sidebar-submenu .aui-sidebar-footer > .aui-sidebar-toggle > .aui-icon {
+  background-image: url('icons/icon-toggle.svg');
+  background-size: 24px;
+}
+.aui-sidebar[aria-expanded="false"] .aui-avatar-xxxlarge .aui-avatar-inner {
+  border-radius: 3px;
+}
+.aui-sidebar .project-repository-link .aui-nav-item svg {
+  float: none;
+  margin-left: 20px;
+  margin-top: 4px;
+  width: 16px;
+  height: 16px;
+}
+.aui-sidebar .project-repository-link .aui-nav-item svg g {
+  fill: #5E6C84;
+}
+[aria-expanded="true"] .aui-sidebar .project-repository-link .aui-nav-item svg {
+  float: left;
+  margin-left: 0;
+  margin-right: 15px;
+  margin-top: 2px;
+}
+.icon-create-pull-request {
+  background-image: url('icons/icon-create-pull-request.svg');
+}
+.icon-fork {
+  background-image: url('icons/icon-fork.svg');
+}
+.icon-forks {
+  background-image: url('icons/icon-forks.svg');
+}
+.icon-clone {
+  background-image: url('icons/icon-clone.svg');
+}
+.icon-source {
+  background-image: url('icons/icon-source.svg');
+}
+.icon-commits {
+  background-image: url('icons/icon-commits.svg');
+}
+.icon-branches {
+  background-image: url('icons/icon-branches.svg');
+}
+.icon-pull-requests {
+  background-image: url('icons/icon-pull-requests.svg');
+}
+.icon-settings {
+  background-image: url('icons/icon-settings.svg');
+}
+.icon-show-actions {
+  background-image: url('icons/icon-show-actions.svg');
+}
+.icon-create-branch {
+  background-image: url('icons/icon-create-branch.svg');
+}
+.icon-add {
+  background-image: url('icons/icon-add.svg');
+}
+.icon-import {
+  background-image: url('icons/icon-import.svg');
+}
+.aui-sidebar-submenu-dialog {
+  max-height: 100vh;
+}
+.aui-sidebar-submenu-dialog .aui-inline-dialog-contents {
+  max-height: inherit;
+  overflow-y: auto;
+}
+/**
+ * @aui-override for AUI-2468
+ */
+.aui-sidebar .aui-sidebar-group:first-child .aui-nav-heading:first-child,
+.aui-sidebar-submenu .aui-sidebar-group:first-child .aui-nav-heading:first-child {
+  border-top: none;
+}
+.aui-sidebar-fly-out {
+  z-index: 10;
+}
+.aui-sidebar.aui-sidebar-fly-out ~ .aui-page-panel {
+  padding-left: 56px;
+}
+#content .aui-sidebar.aui-sidebar-fly-out + .aui-page-header {
+  padding-left: 76px;
+}
+.aui-sidebar[aria-expanded='false'] .aui-sidebar-body {
+  overflow-x: hidden;
+}
+.aui-sidebar .aui-nav > li > .aui-nav-item > .aui-icon.aui-icon-small:before {
+  font-size: 16px;
+  padding: 2px;
+}

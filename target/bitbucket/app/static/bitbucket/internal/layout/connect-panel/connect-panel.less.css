@@ -1,0 +1,6 @@
+body {
+  background-color: #FFFFFF;
+}
+#content:focus {
+  outline: 0;
+}

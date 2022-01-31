@@ -1,0 +1,50 @@
+@import "../../../../global.less";
+
+.reviewer-status-selector {
+    vertical-align: bottom;
+
+    .aui-button {
+        &.needs-work {
+            color: @ak-color-Y300;
+        }
+
+        &.approve {
+            color: @ak-color-G300;
+        }
+
+        > .aui-icon {
+            color: inherit;
+            vertical-align: text-bottom;
+        }
+    }
+
+    &[data-status="NEEDS_WORK"] {
+        > .aui-button.needs-work {
+            background-color: @ak-color-Y300;
+            color: @ak-color-N0;
+
+            &:hover, &:focus, &:active {
+                background-color: @ak-color-Y400;
+            }
+
+            &:active {
+                background-color: #F5A151;
+            }
+        }
+    }
+
+    &[data-status="APPROVED"] {
+        > .aui-button.approve {
+            background-color: @ak-color-G300;
+            color: @ak-color-N0;
+
+            &:hover, &:focus, &:active {
+                background-color: @ak-color-G400;
+            }
+
+            &:active {
+                background-color: #289E40;
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+// The purpose of this file is to provide AUI 7.6+ global overrides that are needed to update our look and feel and match ADGS
+
+@import './global-colours.less';
+@import './global-variables.less';
+
+// Form Pattern
+form.aui {
+    legend,
+    label {
+        color: @ak-color-N100;
+    }
+
+    div.description {
+        color: @ak-color-N400
+    }
+
+    .text,
+    .password,
+    .textarea,
+    .select,
+    .multi-select,
+    .aui-select2-container .select2-choices {
+        border-color: @ak-color-N40;
+    }
+}
+
+// TODO: BBSDEV-17091 Remove page background overrides once the AUI will release the changes (possibly 7.8.x)
+body {
+    .page-background(@color) {
+        background: @color;
+
+        #footer-logo {
+            background: @color;
+        }
+    }
+
+    &,
+    &.aui-page-fixed,
+    &.aui-page-hybrid {
+        .page-background(@ak-color-N0);
+    }
+
+    &.aui-page-focused,
+    &.aui-page-notification {
+        .page-background(@ak-color-N20);
+    }
+}
+
+// TODO: BBSDEV-17091 Remove me after upgrading AUI to version 7.8.x
+.aui-button[aria-pressed="true"].aui-button-subtle {
+    background-color: @ak-color-N600;
+    color: @invertedBodyTextColor;
+}
+
+// TODO: BBSDEV-17091 Remove me after upgrading to AUI 7.9.x
+.aui-button,
+a.aui-button,
+.aui-button:visited {
+    @aui-button-effective-height: 30px;
+    @aui-button-border-width: 1px;
+    @aui-button-padding-y: 4px;
+    @aui-button-font-size: @font-size-default;
+
+    // We are calculating the 20px here but in EMs unit based on the font size
+    line-height: unit((@aui-button-effective-height - (@aui-button-border-width + @aui-button-padding-y) *2) / @aui-button-font-size);
+}
+
+
+// TODO: BBSDEV-17091 Remove me after upgrading to AUI 7.9.X
+.aui-button {
+    &.aui-button-compact .aui-icon {
+        margin-top: 0;
+    }
+}

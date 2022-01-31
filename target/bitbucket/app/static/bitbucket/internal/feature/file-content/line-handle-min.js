@@ -1,0 +1,1 @@
+define("bitbucket/internal/feature/file-content/line-handle",["module","exports"],function(b,a){Object.defineProperty(a,"__esModule",{value:!0});a.default=function(a,b,d,c){this.fileType=a;this.lineType=b;this.lineNumber=d;this._handle=c;c._stashHandle=this};b.exports=a["default"]});

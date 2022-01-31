@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<atlassian-plugin key="com.mycompany.bitbucket.bitbucket-profile-plugin-tests" name="bitbucket-profile-plugin" plugins-version="2"> 
+  <plugin-info> 
+    <description>This is the com.mycompany.bitbucket:bitbucket-profile-plugin plugin for Atlassian Bitbucket Server.</description>  
+    <version>1.0.0-SNAPSHOT</version>  
+    <vendor name="Example Company" url="http://www.example.com/"/> 
+  </plugin-info>  
+  <!-- from our base plugin -->  
+  <component-import key="myComponent" interface="com.mycompany.bitbucket.plugin.profile.api.MyPluginComponent"/>  
+  <!-- from the product container -->  
+  <component-import key="applicationProperties" interface="com.atlassian.sal.api.ApplicationProperties"/>  
+  <component key="my-component-wired-test" class="it.com.mycompany.bitbucket.plugin.profile.MyComponentWiredTest" public="true">
+    <interface>it.com.mycompany.bitbucket.plugin.profile.MyComponentWiredTest</interface>
+    <service-properties>
+      <entry key="inProductTest" value="true"/>
+    </service-properties>
+  </component>
+</atlassian-plugin>

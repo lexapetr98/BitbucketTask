@@ -1,0 +1,14 @@
+#commit-dialog textarea,
+#commit-dialog input[type=text],
+#commit-dialog .CodeMirror {
+  max-width: 400px;
+}
+#commit-dialog .pull-request-fields {
+  display: none;
+}
+#commit-dialog .button-spinner {
+  display: inline-block;
+  position: relative;
+  padding-right: 40px;
+  top: -5px;
+}

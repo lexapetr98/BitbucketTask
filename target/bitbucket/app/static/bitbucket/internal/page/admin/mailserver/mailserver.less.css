@@ -1,0 +1,29 @@
+#testButtonContainer {
+  padding-bottom: 20px;
+  border-top: 0;
+  padding-top: 0;
+}
+#testButtonContainer input {
+  margin-top: 0;
+}
+#testButtonContainer .buttons {
+  padding-top: 0;
+}
+#testButtonContainer .error,
+#testButtonContainer .success {
+  display: inline-block;
+  margin-left: 10px;
+}
+#testButtonContainer .error {
+  /* The error message shown next to the Test button */
+  color: #FF5630;
+}
+#testButtonContainer .success {
+  /* The success message shown next to the Test button */
+  color: #36B37E;
+}
+#testButtonContainer .spinner {
+  display: inline-block;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}

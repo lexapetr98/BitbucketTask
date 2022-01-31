@@ -1,0 +1,29 @@
+@import "/static/global.less";
+
+.filterable-repository-table {
+    tbody tr {
+        .project-name {
+            .aui-avatar {
+                margin-right: @baseSpacing;
+                vertical-align: middle;
+            }
+
+            + .repository-name:before {
+                content: "/";
+                display: inline-block;
+                margin: 0 @halfSpacing;
+            }
+        }
+
+        .aui-icon {
+            margin-right: @baseSpacing;
+            color: @aui-iconfont-color;
+            vertical-align: text-bottom;
+        }
+
+        .public-lozenge {
+            margin-left: @baseSpacing;
+        }
+
+    }
+}

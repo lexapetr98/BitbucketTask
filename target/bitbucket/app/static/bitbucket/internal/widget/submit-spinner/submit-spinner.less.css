@@ -1,0 +1,14 @@
+.submit-spinner {
+  display: inline-block;
+  width: 16px;
+  margin: 10px 10px 0 -5px;
+  /* match 10px on buttons, move closer to the submit button though (-5px)*/
+  vertical-align: top;
+}
+.dialog-button-panel .submit-spinner {
+  margin-top: 1.07142857em;
+}
+.aui-dialog2-footer-actions .submit-spinner {
+  margin-top: 0;
+  vertical-align: middle;
+}

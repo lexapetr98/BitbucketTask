@@ -1,0 +1,23 @@
+{namespace bitbucket.internal.admin.users}
+
+/**
+*/
+{template .anonymize}
+    {webResourceManager_requireResourcesForContext('bitbucket.page.admin.users.anonymize')}
+    {let $containerId: 'anonymize-container' /}
+    {call bitbucket.internal.layout.focused}
+        {param contentTitle: getText('bitbucket.web.user.anonymize.title') /}
+        {param windowTitle: getText('bitbucket.web.user.anonymize.title') /}
+        {param focusedPageSize: 'medium' /}
+        {param content}
+            <div id="{$containerId}"></div>
+        {/param}
+        {param pageBottomContent}
+            <script>
+                require('bitbucket/internal/page/admin/users/anonymize/anonymize-user-page').onReady(
+                    document.getElementById('{$containerId}')
+                );
+            </script>
+        {/param}
+    {/call}
+{/template}

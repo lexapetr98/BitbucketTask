@@ -1,0 +1,34 @@
+{namespace bitbucket.internal.page}
+
+/**
+ * @param repository
+ * @param dataAttributes
+ * @param? mergeConfig
+ * @param? mergeStrategiesHelpUrl
+ */
+{template .repositoryMergeStrategiesSettings}
+    {webResourceManager_requireResourcesForContext('bitbucket.page.repository.settings.mergeStrategies')}
+    {let $containerId: 'merge-strategies' /}
+    {call bitbucket.internal.layout.repositorySettings}
+        {param windowTitle: getText('bitbucket.web.repository.settings.mergestrategy.windowtitle', $repository.project.name, $repository.name) /}
+        {param repository: $repository /}
+        {param dataAttributes: $dataAttributes /}
+        {param activeSettingsTab: 'repository-settings-merge-strategies' /}
+        {param content}
+            <div id="{$containerId}"></div>
+        {/param}
+        {param pageBottomContent}
+            <script>
+                require('bitbucket/internal/feature/settings/merge-strategies/merge-strategies').onReady(
+                    document.getElementById('{$containerId}'),
+                    {lb}
+                        mergeConfigType: require('bitbucket/internal/feature/settings/merge-strategies/merge-strategies').MergeConfigType.REPOSITORY,
+                        repository: {to_json($repository)|noAutoescape},
+                        mergeConfig: {($mergeConfig ? to_json($mergeConfig) : null)|noAutoescape},
+                        mergeStrategiesHelpUrl: "{$mergeStrategiesHelpUrl  ? $mergeStrategiesHelpUrl : ''}"
+                    {rb}
+                );
+            </script>
+        {/param}
+    {/call}
+{/template}

@@ -1,0 +1,44 @@
+{namespace bitbucket.internal.feature.pullRequest.delete}
+
+/**
+ * @param content
+ */
+{template .dialog}
+    {call aui.dialog.dialog2}
+        {param id: 'pull-request-delete-dialog' /}
+        {param content: $content /}
+        {param titleText: getText('bitbucket.web.pullrequest.delete.dialog.title') /}
+        {param extraClasses: 'aui-dialog2-warning'/}
+        {param size: 'small'/}
+        {param class: 'aui-dialog2-warning' /}
+        {param footerActionContent}
+            {call aui.buttons.button}
+                {param text: getText('bitbucket.web.pullrequest.delete.button') /}
+                {param extraClasses: 'confirm-button' /}
+            {/call}
+            {call aui.buttons.button}
+                {param text: getText('bitbucket.web.button.cancel') /}
+                {param type: 'link' /}
+                {param extraClasses: 'cancel-button' /}
+            {/call}
+        {/param}
+    {/call}
+{/template}
+
+
+/**
+ * @param errors
+ */
+{template .errors private="true"}
+    {call aui.message.error}
+        {param content}
+            {foreach $error in $errors}
+                {call bitbucket.internal.widget.errorContent}
+                    {param message: $error.message /}
+                    {param details: $error.details /}
+                    {param detailListExtraClasses: 'errors' /}
+                {/call}
+            {/foreach}
+        {/param}
+    {/call}
+{/template}

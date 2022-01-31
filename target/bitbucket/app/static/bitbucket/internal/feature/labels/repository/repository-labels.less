@@ -1,0 +1,163 @@
+@import "/static/global.less";
+
+@labelPickerMinWidth: 265px; // numbers comes from design
+@labelPickerHeight: (@textFieldHeight - 2px); // remove border from the size
+@dropdownOffset: 3px; // From AUI
+@labelMaxWidth: 250px;
+
+.label-list {
+    align-items: center;
+    display: flex;
+    height: @textFieldHeight;
+    padding-top: @halfSpacing;
+
+    .aui-label:first-child {
+        margin-left: 0;
+    }
+}
+
+.labels-title {
+    .h200();
+    color: @ak-color-N800;
+}
+
+.label-container {
+    margin: @doubleSpacing 0 0 0;
+    width: 100%;
+
+    .empty-labels {
+        .text-place-holder {
+            color: @placeholderTextColor;
+            font-size: @font-size-small;
+        }
+    }
+
+    .aui-label {
+        max-width: @labelMaxWidth;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .label-editor {
+        display: flex;
+        margin-top: @halfSpacing;
+
+        .label-edit-controls {
+            margin-left: @halfSpacing;
+        }
+
+        .adg2-react-select {
+            height: @textFieldHeight;
+            min-width: @labelPickerMinWidth;
+            max-width: none;
+
+            .aui-label {
+                cursor: default;
+                margin-right: 0;
+
+                & + .aui-label {
+                    margin-left: @halfSpacing;
+                }
+
+                &:hover {
+                    border-color: @labelBorderColor;
+                }
+            }
+
+
+            .Select-multi-value-wrapper {
+                align-items: center;
+                display: flex;
+                height: @labelPickerHeight;
+                padding: 0 @halfSpacing;
+            }
+
+            .Select-menu-outer {
+                .shadow.z200();
+                margin-top: @dropdownOffset;
+                background: @ak-color-N0;
+                border-radius: @baseBorderRadius;
+                padding: @baseBorderRadius 0;
+            }
+
+            .Select-input,
+            .Select-placeholder {
+                height: @labelPickerHeight;
+                line-height: @labelPickerHeight;
+            }
+
+            .Select-placeholder {
+                color: @placeholderTextColor;
+            }
+
+            .Select-control {
+                border: 1px solid @dividerColor;
+                cursor: text;
+                box-shadow: none;
+                display: inline-block;
+                height: @textFieldHeight;
+            }
+
+            .Select-option:last-child {
+                border-radius: 0;
+            }
+
+            &.is-focused {
+                .Select-control {
+                    outline: none;
+                    border: 1px solid @dividerColor;
+                }
+            }
+
+            .Select-input {
+                margin-left: @halfSpacing;
+
+                & > input {
+                    padding: @halfSpacing 0;
+                    line-height: 18px;
+                    vertical-align: top;
+                }
+            }
+
+            .Select-menu {
+                white-space: normal;
+                word-break: break-word;
+            }
+        }
+    }
+}
+
+.empty-labels-wrapper {
+    .empty-labels-input {
+        .input-placeholder({
+            color: inherit;
+        });
+
+        border: 1px solid transparent;
+        border-radius: @baseBorderRadius;
+        box-sizing: border-box;
+        color: @placeholderTextColor;
+        font-size: @font-size-default;
+        height: @textFieldHeight;
+        line-height: @textFieldHeight;
+        padding: 1px 1px 1px (@baseSpacing + 1px);
+        width: @labelPickerMinWidth;
+
+        &:hover {
+            border-color: @dividerColor;
+        }
+
+    }
+}
+
+.aui-button-link.edit-labels-btn {
+    padding: 0;
+
+    &, &:hover {
+        .aui-icon {
+            color: @secondaryTextColor;
+        }
+    }
+}
+

@@ -1,0 +1,43 @@
+{namespace bitbucket.internal.page}
+
+/**
+* @param projectPage a page of projects
+*/
+{template .projectList}
+{webResourceManager_requireResourcesForContext('bitbucket.page.projectList')}
+{let $containerId: 'projects-container' /}
+{call bitbucket.internal.layout.entity}
+    {param windowTitle: getText('bitbucket.web.project.list.window.title') /}
+    {param entityName: getText('bitbucket.web.project.heading') /}
+    {param activeHeaderNav: 'projects-menu' /}
+    {param panelClass: 'fixed-right' /}
+    {param actionWebItems: getWebItems('bitbucket.project.list.actions') /}
+    {param content}
+        {call widget.aui.group.group}
+            {param extraClasses: 'project-banners' /}
+            {param content}
+                {foreach $webPanel in getWebPanels('bitbucket.web.project.list.banner', ['projectPage' : $projectPage])}
+                    {call widget.aui.group.item}
+                        {param content}
+                            {$webPanel}
+                        {/param}
+                    {/call}
+                {/foreach}
+            {/param}
+        {/call}
+        <div id='{$containerId}'></div>
+    {/param}
+    {param pageBottomContent}
+        <script>
+            require('bitbucket/internal/page/project-list/project-list').init(
+                document.getElementById('{$containerId}'),
+                {lb}
+                    {if $projectPage}
+                        projectPage: {to_json($projectPage, [ 'avatarSize': avatarSize('small') ])|noAutoescape},
+                    {/if}
+                {rb}
+            );
+        </script>
+    {/param}
+{/call}
+{/template}

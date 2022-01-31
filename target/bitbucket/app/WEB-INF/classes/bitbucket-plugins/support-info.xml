@@ -1,0 +1,19 @@
+<atlassian-plugin key="com.atlassian.bitbucket.server.support-info-providers"
+                  name="Bitbucket Server - Support Information Providers">
+
+    <!-- "System Information" display names -->
+    <resource name="atst-i18n" type="i18n" location="i18n/bitbucket-atst"/>
+
+    <!-- Support zip XML tag names -->
+    <resource name="atst-xml-elements" type="support-info-xml" location="bitbucket-atst-xml-elements.properties"/>
+
+    <support-info key="server-support-info" class="bean:serverSupportInfo" weight="10"/>
+    <support-info key="cluster-support-info" class="bean:clusterSupportInfo" weight="11"/>
+    <support-info key="mail-support-info-appender" class="bean:mailSupportInfo" weight="12"/>
+    <support-info key="project-support-info" class="bean:projectSupportInfo" weight="20"/>
+    <support-info key="repository-support-info" class="bean:repositorySupportInfo" weight="30"/>
+    <support-info key="repository-hook-support-info" class="bean:repositoryHookSupportInfo" weight="40"/>
+    <support-info key="pull-requests-support-info" class="bean:pullRequestSupportInfo" weight="45"/>
+    <support-info key="repository-hook-module-support-info" class="bean:repositoryHookModuleSupportInfo" weight="50"/>
+
+</atlassian-plugin>

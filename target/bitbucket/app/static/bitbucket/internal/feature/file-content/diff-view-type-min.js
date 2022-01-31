@@ -1,0 +1,1 @@
+define("bitbucket/internal/feature/file-content/diff-view-type",["exports"],function(a){Object.defineProperty(a,"__esModule",{value:!0});var b=a.EFFECTIVE="EFFECTIVE",c=a.COMMON_ANCESTOR="COMMON_ANCESTOR";a.default={EFFECTIVE:b,COMMON_ANCESTOR:c}});

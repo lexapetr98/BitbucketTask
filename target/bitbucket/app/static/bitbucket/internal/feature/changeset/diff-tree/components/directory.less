@@ -1,0 +1,33 @@
+@import "/static/global.less";
+@import "../styles/variables";
+
+.diff-tree-view .directory {
+    &-icon {
+        color: @diffTreeIconColor;
+        margin-right: @halfSpacing;
+    }
+
+    &-label {
+        .diff-tree-item();
+
+        background: transparent;
+        border: 0;
+        color: @diffTreeDirectoryColor;
+        cursor: pointer;
+    }
+
+    .collapse-icon {
+        color: @diffTreeIconColor !important; // Why? Because aui-button will overwrite the icon color
+    }
+
+    .collapse-button {
+        border: 0;
+        height: @diffTreeItemHeight;
+        line-height: @diffTreeItemBaseHeight;
+        padding: 0;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

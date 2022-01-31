@@ -1,0 +1,8 @@
+<atlassian-plugin key="com.atlassian.bitbucket.server.bitbucket-repository-hooks" name="Bitbucket Repository Hooks">
+
+    <repository-hook key="system-post-repository-hook" class="com.atlassian.stash.internal.hook.SystemPostRepositoryHook"
+                     configurable="false" system="true">
+        <description>Triggers system behaviors related to PostRepositoryHooks</description>
+    </repository-hook>
+
+</atlassian-plugin>

@@ -1,0 +1,14 @@
+{namespace bitbucket.notification.banner.header}
+
+/**
+ * @param serverSettingsUrl
+ */
+{template .bitbucketBaseUrlMismatch}
+    {call bitbucket.internal.util.alerts.alert}
+        {param type: 'warning' /}
+        {param title: getText('bitbucket.web.admin.base.url.mismatch.title') /}
+        {param description: getText('bitbucket.web.admin.base.url.mismatch.body', productName()) /}
+        {param anchorText: getText('bitbucket.web.admin.base.url.mismatch.anchor.text') /}
+        {param anchorLink: $serverSettingsUrl /}
+    {/call}
+{/template}

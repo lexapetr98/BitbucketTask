@@ -1,0 +1,10 @@
+.cm-s-commit-message {
+  background-clip: padding-box;
+  border-radius: 3px;
+  border: 1px solid #DFE1E6;
+  font-family: Arial, FreeSans, Helvetica, sans-serif;
+}
+.cm-s-commit-message .CodeMirror-code > .CodeMirror-line:first-child {
+  font-weight: bold;
+  font-size: 16px;
+}

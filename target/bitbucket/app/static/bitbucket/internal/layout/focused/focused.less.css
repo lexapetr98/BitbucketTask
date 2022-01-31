@@ -1,0 +1,25 @@
+#content > .aui-page-header:first-child h1 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#content > .aui-page-header:first-child + .aui-page-panel {
+  margin-top: 0;
+}
+.aui-page-focused .aui-page-panel {
+  border: none;
+  margin-bottom: 20px;
+}
+.aui-page-focused .aui-page-panel .aui-page-panel-content {
+  box-shadow: 0 1px 1px rgba(9, 30, 66, 0.13), 0 0 1px 0 rgba(9, 30, 66, 0.25);
+  border: none;
+  border-radius: 3px;
+}
+.aui-page-focused .aui-page-panel .aui-page-panel-content > h2:first-of-type,
+.aui-page-focused .aui-page-panel .aui-page-panel-content > form.aui:last-of-type .buttons-container {
+  border: none;
+  padding: 0;
+}
+.aui-page-focused .aui-page-panel .aui-page-panel-content > form.aui:last-of-type .buttons-container {
+  text-align: right;
+}

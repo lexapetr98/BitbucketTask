@@ -1,0 +1,14 @@
+.permission-multi-selector-container {
+  background-color: #F4F5F7;
+}
+.permission-multi-selector-container .aui-item + .aui-item {
+  width: 250px;
+}
+.permission-multi-selector-container form.aui .permission-multi-selector {
+  background-color: #FFFFFF;
+  max-width: none;
+  vertical-align: top;
+}
+.permission-multi-selector-container form.aui .permission-multi-selector .select2-input::-ms-clear {
+  display: none;
+}

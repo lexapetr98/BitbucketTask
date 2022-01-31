@@ -1,0 +1,43 @@
+@import "/static/global.less";
+
+@diffTreeFontSize: @font-size-default;
+
+@diffTreeIconColor: @aui-iconfont-color;
+@diffTreeDirectoryColor: @ak-color-N800;
+
+@diffTreeItemHoverBg: @ak-color-N30;
+@diffTreeItemSelectedBg: @primaryActiveColor;
+@diffTreeItemBaseHeight: @iconSizeSmall;
+@diffTreeItemHeight: (@diffTreeItemBaseHeight + @baseSpacing); // TODO: Hardcoded in jsTree to 26px
+
+@diffTreeHorizontalSpacing: @doubleSpacing;
+
+// Change Types
+@diffTreeFileWithConflictColor: @ak-color-Y500;
+
+@diffTreeFileModifiedColor: #3572B0; // Existing color that we are using for now in jsTree diff tree
+@diffTreeFileAddedColor: @ak-color-G400;
+@diffTreeFileDeletedColor: @ak-color-R400;
+@diffTreeFileMovedColor: @ak-color-Y500;
+
+// Mixins
+.diff-tree-item() {
+    .border-radius(@baseBorderRadius);
+    .transition(background-color 0.2s);
+
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: @font-size-default;
+    height: @diffTreeItemHeight;
+    line-height: @diffTreeItemBaseHeight;
+    padding: @halfSpacing;
+    white-space: nowrap;
+
+    &:hover {
+        background-color: @diffTreeItemHoverBg;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

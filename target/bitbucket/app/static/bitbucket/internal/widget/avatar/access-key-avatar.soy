@@ -1,0 +1,27 @@
+{namespace bitbucket.internal.widget}
+
+/**
+ * @param label
+ * @param size
+ * @param text
+ */
+{template .accessKey}
+    <span title="{$text}">
+           <span class="aui-avatar aui-avatar-{$size} key-avatar"></span>
+           <span class="access-key-label">{$label or $text}</span>
+    </span>
+{/template}
+
+/**
+ * @param label
+ * @param size
+ * @param text
+ */
+{template .accessKeyWithText}
+    {call bitbucket.internal.widget.accessKey}
+        {param label: $label /}
+        {param size: $size /}
+        {param text: $text /}
+    {/call}
+    <span class="access-key-text" title="{$text}">{$text}</span>
+{/template}

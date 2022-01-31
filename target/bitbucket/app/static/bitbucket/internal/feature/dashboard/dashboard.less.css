@@ -1,0 +1,499 @@
+.bitbucket-theme.dashboard-page {
+  min-width: 1360px;
+}
+.bitbucket-theme.dashboard-page #header nav {
+  height: 41px;
+}
+.bitbucket-theme.dashboard-page #page,
+.bitbucket-theme.dashboard-page #content,
+.bitbucket-theme.dashboard-page .aui-page-panel,
+.bitbucket-theme.dashboard-page .aui-page-panel-content,
+.bitbucket-theme.dashboard-page .aui-page-panel-inner,
+.bitbucket-theme.dashboard-page .dashboard,
+.bitbucket-theme.dashboard-page .dashboard-container {
+  display: flex;
+  flex-grow: 1;
+}
+.bitbucket-theme.dashboard-page #page,
+.bitbucket-theme.dashboard-page #content {
+  flex-direction: column;
+  width: 100%;
+}
+.bitbucket-theme.dashboard-page .dashboard-container-horizontal {
+  flex-direction: row;
+}
+.bitbucket-theme.dashboard-page .aui-page-panel-content {
+  padding: 0;
+}
+.dashboard h3 {
+  margin-bottom: 10px;
+}
+.dashboard .table-expander {
+  background: none;
+  border: none;
+  font-size: inherit;
+}
+.dashboard .table-expander .aui-icon {
+  color: #5E6C84;
+  vertical-align: middle;
+  margin-top: -3px;
+}
+.dashboard .table-expander .aui-iconfont-chevron-right {
+  transition: transform 0.2s ease-in-out;
+  transform: rotate(90deg);
+}
+.dashboard-your-work {
+  flex-grow: 1;
+  width: 100%;
+  padding: 20px;
+}
+.dashboard-your-work .project-and-repository {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  white-space: pre;
+}
+.dashboard-your-work .project-and-repository .project-name,
+.dashboard-your-work .project-and-repository .name {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.dashboard-pull-request-suggestions {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.dashboard-pull-request-suggestions .pull-request-suggestion {
+  border-bottom: 1px solid #DFE1E6;
+  justify-content: space-between;
+  line-height: 30px;
+  padding: 10px;
+  max-height: 32px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+}
+.dashboard-pull-request-suggestions .pull-request-suggestion .suggestion-details {
+  line-height: 30px;
+  margin-top: -2px;
+}
+.dashboard-pull-request-suggestions .pull-request-suggestion .suggestion-details .aui-iconfont-chevron-right {
+  transition: transform 0.2s ease-in-out;
+  transform: rotate(0deg);
+}
+.dashboard-pull-request-suggestions .pull-request-suggestion .suggestion-details .summary {
+  white-space: nowrap;
+  max-width: 500px;
+  min-width: 500px;
+}
+.dashboard-pull-request-suggestions .pull-request-suggestion .suggestion-details .meta,
+.dashboard-pull-request-suggestions .pull-request-suggestion .suggestion-details .description {
+  display: flex;
+  white-space: pre;
+  overflow: hidden;
+}
+.dashboard-pull-request-suggestions .pull-request-suggestion .suggestion-details .description .aui-avatar-xsmall {
+  margin: -1px 3px 0 0;
+}
+.dashboard-pull-request-suggestions .pull-request-suggestion .suggestion-details .description .aui-avatar-xsmall .aui-avatar-inner {
+  display: inline-block;
+}
+.dashboard-pull-request-suggestions .pull-request-suggestion .suggestion-details .aui-avatar-project {
+  margin: 5px;
+}
+.dashboard-pull-request-suggestions .pull-request-suggestion .suggestion-details .recent-branch-name {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  flex-shrink: 2;
+}
+.dashboard-pull-request-suggestions .pull-request-suggestion .suggestion-details .project-and-repository {
+  flex-shrink: 4;
+  color: #5E6C84;
+}
+.dashboard-pull-request-suggestions .pull-request-suggestion .suggestion-details time {
+  color: #5E6C84;
+  margin: auto 10px;
+}
+.dashboard-pull-request-suggestions .pull-request-suggestion .bb-spinner {
+  padding: 30px 0 20px;
+}
+.dashboard-pull-request-suggestions .pull-request-suggestion .table-expander-wrapper,
+.dashboard-pull-request-suggestions .pull-request-suggestion .create-pr {
+  width: 1%;
+}
+.dashboard-pull-request-suggestions .pull-request-suggestion .suggested-commits-error {
+  margin-left: 30px;
+}
+.dashboard-pull-request-suggestions .pull-request-suggestion .suggested-commits-table {
+  margin-left: 20px;
+}
+.dashboard-pull-request-suggestions .pull-request-suggestion .suggested-commits-table td {
+  padding: 3px 10px;
+}
+.dashboard-pull-request-suggestions .pull-request-suggestion .suggested-commits-table .commits-table {
+  margin-top: -5px;
+}
+.dashboard-pull-request-suggestions .pull-request-suggestion .suggested-commits-table .timestamp {
+  text-align: right;
+}
+.dashboard-pull-request-suggestions .pull-request-suggestion.show-commit-details {
+  padding-bottom: 20px;
+  max-height: 240px;
+}
+.dashboard-pull-request-suggestions .pull-request-suggestion.show-commit-details.loading-commit-details {
+  max-height: 80px;
+}
+.dashboard-pull-request-suggestions .pull-request-suggestion.show-commit-details .aui-iconfont-chevron-right {
+  transform: rotate(90deg);
+}
+.dashboard-pull-requests {
+  width: 100%;
+}
+.dashboard-pull-requests-table-container.dashboard-pull-requests-table-closed {
+  max-height: 1530px;
+  transition: max-height 0.2s ease-in-out;
+  overflow: hidden;
+}
+.dashboard-pull-requests-table-container.dashboard-pull-requests-empty h4 {
+  border-bottom: 1px solid #DFE1E6;
+}
+.dashboard-pull-requests-table-container h4 {
+  z-index: 1;
+  font-weight: normal;
+  font-size: 16px;
+  padding: 7px 0 7px 10px;
+  position: relative;
+  border-bottom: 1px solid #DFE1E6;
+}
+.dashboard-pull-requests-table-container h4 .aui-badge {
+  margin-left: 10px;
+}
+.dashboard-pull-requests-table-container .pull-request-list-empty-state {
+  margin-top: 20px;
+}
+.dashboard-pull-requests-table-container .pull-request-list-empty-state .pull-request-empty-state-description,
+.dashboard-pull-requests-table-container .pull-request-list-empty-state .pull-request-empty-state-title {
+  margin-top: -4px;
+}
+.dashboard-pull-requests-table-container .pull-request-list-empty-state .pull-request-empty-state-description:last-child,
+.dashboard-pull-requests-table-container .pull-request-list-empty-state .pull-request-empty-state-title:last-child {
+  margin-top: 0;
+}
+.dashboard-pull-requests-table-created.dashboard-pull-requests-table-container .pull-request-list-empty-state,
+.dashboard-pull-requests-table-reviewing.dashboard-pull-requests-table-container .pull-request-list-empty-state,
+.dashboard-pull-requests-table-closed.dashboard-pull-requests-table-container .pull-request-list-empty-state {
+  color: #5E6C84;
+  line-height: 20px;
+  padding-left: 26px;
+  position: relative;
+}
+.dashboard-pull-requests-table-created.dashboard-pull-requests-table-container .pull-request-list-empty-state .aui-icon,
+.dashboard-pull-requests-table-reviewing.dashboard-pull-requests-table-container .pull-request-list-empty-state .aui-icon,
+.dashboard-pull-requests-table-closed.dashboard-pull-requests-table-container .pull-request-list-empty-state .aui-icon {
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+.dashboard-pull-requests-table-container .dashboard-pull-requests-table {
+  transition: transform 0.2s ease-in-out;
+  margin: 0;
+  margin-top: -35px;
+  transform: scaleY(1);
+  transform-origin: 0 35px;
+}
+.dashboard-pull-requests-table-container .dashboard-pull-requests-table thead th {
+  color: #6B778C;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: nowrap;
+}
+.dashboard-pull-requests-table-container .dashboard-pull-requests-table thead th {
+  line-height: 20px;
+}
+.dashboard-pull-requests-table-container.collapsed {
+  max-height: 35px;
+}
+.dashboard-pull-requests-table-container.collapsed .dashboard-pull-requests-table {
+  transform: scaleY(0);
+}
+.dashboard-pull-requests-table-container.collapsed .table-expander .aui-iconfont-chevron-right {
+  transform: none;
+}
+.dashboard-pull-requests-table-container .table-expander .aui-icon {
+  margin-right: 5px;
+}
+.dashboard-pull-requests .more-container {
+  margin-top: 10px;
+  text-align: center;
+  min-height: 30px;
+}
+table.aui.dashboard-pull-requests-table {
+  width: 100%;
+}
+table.aui.dashboard-pull-requests-table tr.web-section-column,
+table.aui.dashboard-pull-requests-table td.web-section-column,
+table.aui.dashboard-pull-requests-table tr:empty,
+table.aui.dashboard-pull-requests-table td:empty {
+  padding: 0;
+  width: 0;
+  min-width: 0;
+}
+table.aui.dashboard-pull-requests-table td {
+  padding: 10px;
+  vertical-align: middle;
+}
+table.aui.dashboard-pull-requests-table td:first-child {
+  border-left: 2px solid transparent;
+}
+table.aui.dashboard-pull-requests-table tr.focused {
+  background-color: #F4F5F7;
+}
+table.aui.dashboard-pull-requests-table tr.focused td:first-child {
+  border-left-color: #0065FF;
+}
+table.aui.dashboard-pull-requests-table tr.focused a:focus {
+  outline: none;
+  text-decoration: none;
+}
+table.aui.dashboard-pull-requests-table .header-summary {
+  min-width: 200px;
+}
+table.aui.dashboard-pull-requests-table .author-avatar {
+  width: 32px;
+  padding-right: 0;
+}
+table.aui.dashboard-pull-requests-table .summary {
+  min-width: 400px;
+  max-width: 400px;
+}
+table.aui.dashboard-pull-requests-table .summary .title {
+  display: flex;
+  font-weight: bold;
+  align-items: baseline;
+}
+table.aui.dashboard-pull-requests-table .summary .title .aui-lozenge {
+  margin-right: 5px;
+}
+table.aui.dashboard-pull-requests-table .summary .title a {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  flex: 0 100000 auto;
+  display: inline-block;
+  min-width: 5em;
+  max-width: 100%;
+}
+table.aui.dashboard-pull-requests-table .activity,
+table.aui.dashboard-pull-requests-table .conflict {
+  width: 1%;
+}
+table.aui.dashboard-pull-requests-table td.activity {
+  white-space: nowrap;
+  color: #5E6C84;
+}
+table.aui.dashboard-pull-requests-table td.activity .activity-count {
+  margin-left: 10px;
+}
+table.aui.dashboard-pull-requests-table td.activity .activity-count:first-child {
+  margin-left: 0;
+}
+table.aui.dashboard-pull-requests-table td.new-commits .aui-icon {
+  position: relative;
+}
+table.aui.dashboard-pull-requests-table td.new-commits .aui-icon::after {
+  background-clip: padding-box;
+  border-radius: 3px;
+  width: 6px;
+  height: 6px;
+  content: '';
+  background-color: #0052CC;
+  position: absolute;
+  right: -3px;
+  top: -3px;
+}
+table.aui.dashboard-pull-requests-table .reviewers {
+  width: 1%;
+  white-space: nowrap;
+  min-width: 130px;
+}
+table.aui.dashboard-pull-requests-table .reviewers .reviewer-avatar-list .user-avatar:first-child {
+  margin-left: 0;
+}
+table.aui.dashboard-pull-requests-table .meta {
+  font-size: 12px;
+  color: #5E6C84;
+  display: flex;
+  align-items: flex-end;
+}
+table.aui.dashboard-pull-requests-table .pull-request-id::before,
+table.aui.dashboard-pull-requests-table .project-and-repository::before {
+  content: "\00a0-\00a0";
+}
+table.aui.dashboard-pull-requests-table .author,
+table.aui.dashboard-pull-requests-table .project-and-repository,
+table.aui.dashboard-pull-requests-table .ref-label {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  min-width: 3em;
+}
+table.aui.dashboard-pull-requests-table .project-and-repository {
+  min-width: 5em;
+}
+table.aui.dashboard-pull-requests-table .author,
+table.aui.dashboard-pull-requests-table .pull-request-id {
+  flex-shrink: 100000;
+}
+table.aui.dashboard-pull-requests-table .ref-label {
+  margin: 0 0 0 10px;
+  color: #172B4D;
+}
+table.aui.dashboard-pull-requests-table tr.focused .ref-label,
+table.aui.dashboard-pull-requests-table tr:hover .ref-label,
+table.aui.dashboard-pull-requests-table tr.focused .overflow-reviewers-trigger,
+table.aui.dashboard-pull-requests-table tr:hover .overflow-reviewers-trigger {
+  border-color: #DFE1E6;
+  background-color: #fff;
+}
+.dashboard-pull-requests-all-empty {
+  background: url(pull-request-empty-state.svg) no-repeat top center;
+  background-size: auto 102px;
+  margin-top: 90px;
+  padding-top: 102px;
+}
+.dashboard-pull-requests-all-empty p,
+.dashboard-pull-requests-all-empty h3 {
+  margin: auto;
+  text-align: center;
+}
+.dashboard-pull-requests-all-empty h3 {
+  padding-top: 30px;
+}
+.dashboard-pull-requests-all-empty p {
+  color: #5E6C84;
+  padding-top: 10px;
+}
+.dashboard-repositories {
+  padding: 20px;
+  min-width: 340px;
+  width: 340px;
+  min-height: 500px;
+  height: calc(100vh - 81px);
+  display: flex;
+  flex-direction: column;
+}
+.dashboard-repositories h3 {
+  margin: 0;
+}
+.dashboard-repositories .repository-search-form {
+  width: 100%;
+  left: 0;
+  z-index: 1;
+  padding: 0 20px 20px 20px;
+  margin-left: -20px;
+  margin-right: -20px;
+  transition: all 0.2s;
+}
+.dashboard-repositories.scrolled .repository-search-form {
+  box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.dashboard-repositories .dashboard-search-repo-error {
+  padding: 20px;
+  min-height: 48px;
+}
+.dashboard-repositories .dashboard-search-repo-error .warning-icon {
+  width: 48px;
+  height: 48px;
+  background: url(icons/icon-warning-large.svg) center no-repeat;
+  float: left;
+}
+.dashboard-repositories .dashboard-search-repo-error .error-text {
+  margin-left: 48px;
+  margin-top: 4px;
+  padding-left: 10px;
+}
+.dashboard-repositories .dashboard-search-repo-error .error-text .error-text-primary {
+  font-weight: bold;
+  color: #172B4D;
+}
+.dashboard-repositories .dashboard-search-repo-error .error-text .error-text-secondary {
+  color: #5E6C84;
+}
+.dashboard-repositories .dashboard-repository-list-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: -20px;
+  overflow-y: auto;
+}
+.dashboard-repositories .dashboard-repository-list-container .repository-list-container {
+  overflow-x: hidden;
+  position: relative;
+  padding-top: 20px;
+}
+.dashboard-repositories .dashboard-repository-list-container .load-more-button {
+  width: 100%;
+  text-align: center;
+}
+.dashboard-repositories .dashboard-repository-list-container.searching .repository-link strong {
+  font-weight: normal;
+}
+.dashboard-repositories .dashboard-recent-repo-empty,
+.dashboard-repositories .dashboard-search-repo-empty {
+  text-align: center;
+  width: 100%;
+}
+.dashboard-repositories .dashboard-recent-repo-empty .empty-action,
+.dashboard-repositories .dashboard-search-repo-empty .empty-action {
+  color: #5E6C84;
+}
+.dashboard-repositories .dashboard-recent-repo-empty {
+  background: url(no-recent-repos.svg) no-repeat top center;
+  background-size: 130px 130px;
+  height: 160px;
+  margin: 30px auto;
+  padding-top: 160px;
+}
+.dashboard-repositories .dashboard-search-repo-empty {
+  background: url(no-search-repos.svg) no-repeat top center;
+  background-size: 100px 100px;
+  height: 200px;
+  margin: 30px auto 20px;
+  padding-top: 120px;
+}
+@media screen and (max-width: 1359px) {
+  .bitbucket-theme.dashboard-page {
+    min-width: 1100px;
+  }
+  .dashboard-repositories {
+    min-width: 270px;
+    width: 270px;
+  }
+  .dashboard-repositories .dashboard-repository-list-container ul li div a {
+    max-width: 213px;
+  }
+  table.aui.dashboard-pull-requests-table .summary {
+    min-width: 300px;
+    max-width: 300px;
+  }
+  table.aui.dashboard-pull-requests-table .new-commits,
+  table.aui.dashboard-pull-requests-table .conflict {
+    width: 0;
+    max-width: 0;
+    overflow: hidden;
+    padding: 0;
+    border: 0;
+  }
+  table.aui.dashboard-pull-requests-table .conflicted {
+    display: none;
+  }
+}
+@media screen and (max-width: 1099px) {
+  .dashboard-repositories {
+    display: none;
+  }
+}

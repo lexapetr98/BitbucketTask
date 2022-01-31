@@ -1,0 +1,1 @@
+define("bitbucket/internal/feature/alerts/constants",["exports"],function(b){Object.defineProperty(b,"__esModule",{value:!0});var a=b.AlertType={ERROR:"error",WARNING:"warning",INFO:"info",SUCCESS:"success"};b.TYPES=[a.ERROR,a.WARNING,a.INFO,a.SUCCESS]});

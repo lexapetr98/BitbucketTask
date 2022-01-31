@@ -1,0 +1,18 @@
+{namespace bitbucket.internal.feature.repository.branchMultiSelector}
+
+/**
+ * @param id
+ * @param displayId
+ */
+{template .branch}
+    <div class="branch-multi-selector-branch">
+        {call aui.icons.icon}
+            {param size: 'small' /}
+            {param useIconFont: true /}
+            {param icon: 'branch' /}
+        {/call}
+        <span class="name" title="{$displayId}" data-id="{$id}">
+            {$displayId ? $displayId : $id}
+        </span>
+    </div>
+{/template}

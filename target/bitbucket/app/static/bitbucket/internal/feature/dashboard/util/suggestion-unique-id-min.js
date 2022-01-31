@@ -1,0 +1,1 @@
+define("bitbucket/internal/feature/dashboard/util/suggestion-unique-id",["module","exports"],function(c,a){Object.defineProperty(a,"__esModule",{value:!0});a.default=function(a){var b=a.refChange;return a.repository.id+"_"+b.refId+"_"+b.toHash};c.exports=a["default"]});

@@ -1,0 +1,1 @@
+define("bitbucket/internal/feature/file-content/editor-mode",["module","exports"],function(b,a){Object.defineProperty(a,"__esModule",{value:!0});a.default={EDIT:"EDIT",READONLY:"READONLY"};b.exports=a["default"]});

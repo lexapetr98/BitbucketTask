@@ -1,0 +1,61 @@
+.bitbucket-theme #browse-table {
+  margin-top: 0;
+  min-width: 0;
+}
+.bitbucket-theme #browse-table thead th {
+  color: #6B778C;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: nowrap;
+}
+.bitbucket-theme #browse-table .folder,
+.bitbucket-theme #browse-table .remote,
+.bitbucket-theme #browse-table .file {
+  background: transparent;
+}
+.bitbucket-theme #browse-table .aui-icon {
+  color: #505F79;
+  margin-right: 10px;
+}
+.bitbucket-theme #browse-table .aui-iconfont-devtools-browse-up,
+.bitbucket-theme #browse-table .aui-iconfont-devtools-submodule {
+  color: #505F79;
+}
+.bitbucket-theme #browse-table .submodule-sep {
+  color: #5E6C84;
+}
+.bitbucket-theme #browse-table .message-row {
+  border-bottom: none;
+}
+.bitbucket-theme #browse-table .message-row:hover {
+  background-color: transparent;
+}
+.bitbucket-theme #browse-table .message-row td {
+  padding: 0;
+}
+.bitbucket-theme #browse-table .message-row .aui-message {
+  margin: 16px 48px 0;
+}
+.bitbucket-theme #browse-table tr td:first-child {
+  border-left: 2px solid transparent;
+}
+.bitbucket-theme #browse-table tr.focused-file {
+  background-color: #EBECF0;
+  /* hover style for now */
+}
+.bitbucket-theme #browse-table tr.focused-file td:first-of-type {
+  border-left-color: #0065FF;
+}
+.bitbucket-theme #browse-table tr.file-row:focus,
+.bitbucket-theme #browse-table tr.file-row a:focus {
+  text-decoration: none;
+}
+.bitbucket-theme #browse-table .folder .collapsed-parents {
+  color: #5E6C84;
+}
+.bitbucket-theme .filebrowser-banner .aui-message {
+  margin-bottom: 20px;
+}

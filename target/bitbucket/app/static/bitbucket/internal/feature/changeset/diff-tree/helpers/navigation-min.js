@@ -1,0 +1,1 @@
+define("bitbucket/internal/feature/changeset/diff-tree/helpers/navigation",["exports","bitbucket/util/navbuilder"],function(a,b){Object.defineProperty(a,"__esModule",{value:!0});a.getPullRequestsDiffTreeFileUrl=void 0;var c=babelHelpers.interopRequireDefault(b);a.getPullRequestsDiffTreeFileUrl=function(a){return c.default.currentPullRequest().diff().withFragment(a).build()}});

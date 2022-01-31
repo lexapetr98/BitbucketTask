@@ -1,0 +1,27 @@
+
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M4.999875,8 C3.345875,8 1.999875,6.654 1.999875,5 C1.999875,3.346 3.345875,2 4.999875,2 C6.653875,2 7.999875,3.346 7.999875,5 C7.999875,6.654 6.653875,8 4.999875,8 M11.706875,10.293 L9.167875,7.754 C9.690875,6.964 9.999875,6.019 9.999875,5 C9.999875,2.239 7.761875,0 4.999875,0 C2.237875,0 -0.000125,2.239 -0.000125,5 C-0.000125,7.761 2.237875,10 4.999875,10 C6.018875,10 6.963875,9.692 7.753875,9.168 L10.292875,11.707 C10.487875,11.902 10.743875,12 10.999875,12 C11.255875,12 11.511875,11.902 11.706875,11.707 C12.097875,11.316 12.097875,10.684 11.706875,10.293" id="path-1"></path>
+    </defs>
+    <g id="Bitbucket" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="00-04-branches" transform="translate(-228.000000, -160.000000)">
+            <g id="Filters" transform="translate(74.000000, 150.000000)">
+                <g id="Filter" transform="translate(145.000000, 1.000000)">
+                    <g id="icon/16px/search" transform="translate(3.000000, 3.000000)">
+                        <g transform="translate(6.000000, 6.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="search" fill="#172B4D" xlink:href="#path-1"></use>
+                            <g id="color/neutrals/N400" mask="url(#mask-2)" fill="#505F79">
+                                <g transform="translate(-6.000000, -6.000000)" id="color">
+                                    <rect x="0" y="0" width="24" height="24"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

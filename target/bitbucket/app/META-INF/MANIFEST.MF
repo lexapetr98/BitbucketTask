@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Implementation-Title: Bitbucket Server - Web Application
+Implementation-Version: 5.16.0
+Built-By: pbc_build_agent
+Implementation-Vendor-Id: com.atlassian.bitbucket.server
+Spring-Boot-Version: 1.5.17.RELEASE
+Implementation-Vendor: Atlassian
+Main-Class: org.springframework.boot.loader.WarLauncher
+Start-Class: com.atlassian.bitbucket.internal.boot.BitbucketServerAppl
+ ication
+Spring-Boot-Classes: WEB-INF/classes/
+Spring-Boot-Lib: WEB-INF/lib/
+Created-By: Apache Maven 3.5.4
+Build-Jdk: 1.8.0_172
+Implementation-URL: https://www.atlassian.com/software/bitbucket/serve
+ r
+

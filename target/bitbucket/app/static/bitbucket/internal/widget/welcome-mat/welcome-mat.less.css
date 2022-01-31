@@ -1,0 +1,141 @@
+.project-banners,
+.project-banners > .aui-item {
+  display: block;
+}
+.project-banners > .aui-item {
+  text-align: center;
+  padding: 15px 0;
+}
+.project-banners > .aui-item:first-child a {
+  margin-top: 40px;
+}
+.project-banners > .aui-item + .aui-item {
+  padding-left: 0;
+}
+.project-banners .aui-item > a {
+  background-clip: padding-box;
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 1px #FCFCFC;
+  text-align: left;
+  display: inline-block;
+  width: 240px;
+  position: relative;
+  background: #F3F3F3;
+  border: 1px solid #DFE1E6;
+  padding: 15px 15px 15px 95px;
+  margin: 0 auto;
+  text-decoration: none;
+}
+.project-banners .aui-item > a > .icon {
+  width: 65px;
+  height: 65px;
+  display: block;
+  position: absolute;
+  left: 15px;
+  background: transparent url('../com.atlassian.bitbucket.server.bitbucket-web:images-icons-banners/icons/icons-banners.png') no-repeat 0 0;
+}
+.project-banners .aui-item .icon {
+  display: block;
+  position: absolute;
+  left: 35px;
+  top: 25px;
+}
+.project-banners .aui-item .create-project-link .icon {
+  background-position: 0 -90px;
+}
+.project-banners .aui-item .create-project-link:hover .icon {
+  background-position: -85px -90px;
+}
+.project-welcome-mat:hover svg g {
+  fill: #5E6C84;
+}
+.project-welcome-mat svg {
+  display: block;
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  width: 32px;
+  height: 32px;
+}
+.project-banners .aui-item .administration-link .icon {
+  background-position: 0 -5px;
+}
+.project-banners .aui-item .administration-link:hover .icon {
+  background-position: -85px -5px;
+}
+.project-banners .entity-empty-desc {
+  white-space: pre-line;
+}
+.bitbucket-theme .project-banners .aui-item > a {
+  color: #555;
+}
+.bitbucket-theme .project-banners .aui-item > a:hover,
+.bitbucket-theme .project-banners .aui-item > a:active,
+.bitbucket-theme .project-banners .aui-item > a:focus {
+  box-shadow: inset 1px 1px 2px #C9C9C9;
+  background: #DDD;
+  border-color: #B3BAC5;
+  text-decoration: none;
+}
+.bitbucket-theme .project-banners h3 {
+  font-size: 14px;
+  color: #172B4D;
+  margin: 0 0 0.5em 0;
+}
+.bitbucket-theme .project-banners p {
+  color: #555;
+  margin: 0;
+}
+.welcome-mat {
+  box-sizing: border-box;
+  border: 1px solid #DFE1E6;
+  background-color: #FFFFFF;
+  background-repeat: no-repeat;
+  margin: 20px 0;
+}
+.welcome-mat h3 {
+  text-align: left;
+  padding: 0;
+  color: #172B4D;
+  font-weight: normal;
+}
+.welcome-mat h3 + .aui-button,
+.welcome-mat p + .aui-button {
+  margin-top: 20px;
+}
+.welcome-mat p {
+  padding: 0;
+  color: #172B4D;
+}
+.welcome-mat.private-repository,
+.welcome-mat.stash-logo {
+  background-image: url('../com.atlassian.bitbucket.server.bitbucket-web:bitbucket-logo/images/logo/bitbucket-icon-grey.svg');
+  background-position: right 40px center;
+  background-size: 126px 114px;
+}
+.welcome-mat-large {
+  background-clip: padding-box;
+  border-radius: 5px;
+  padding: 40px;
+  width: 980px;
+  min-height: 200px;
+}
+.welcome-mat-large h3 {
+  font-size: 24px;
+}
+.welcome-mat-large p {
+  margin-top: 20px;
+}
+.welcome-mat-small {
+  background-clip: padding-box;
+  border-radius: 3px;
+  padding: 20px;
+  width: 300px;
+  min-height: 120px;
+}
+.welcome-mat-small h3 {
+  font-size: 16px;
+}
+.aui-page-hybrid .welcome-mat-large {
+  width: auto;
+}

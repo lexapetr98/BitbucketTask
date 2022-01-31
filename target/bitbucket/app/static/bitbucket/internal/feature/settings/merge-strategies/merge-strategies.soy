@@ -1,0 +1,139 @@
+{namespace bitbucket.internal.feature.settings.mergeStrategies}
+
+/**
+ * @param mergeConfig
+ * @param effectiveMergeConfigType
+ * @param mergeConfigType
+ * @param inheriting
+ * @param personalRepository
+ * @param? projectSettingsUrl
+ * @param? mergeStrategiesHelpUrl
+ */
+{template .pageContent}
+    {call widget.aui.pageHeader}
+        {param content}
+            <h2>{getText('bitbucket.web.settings.mergestrategy.title')}</h2>
+        {/param}
+    {/call}
+    {if $mergeStrategiesHelpUrl}
+        {if $mergeConfigType == 'PROJECT'}
+            <p>{getTextAsHtml('bitbucket.web.project.settings.mergestrategy.description.html', $mergeStrategiesHelpUrl)}</p>
+        {elseif $mergeConfigType == 'REPOSITORY'}
+            <p>{getTextAsHtml('bitbucket.web.repository.settings.mergestrategy.description.html', $mergeStrategiesHelpUrl)}</p>
+        {/if}
+    {/if}
+    {if $mergeConfigType == 'REPOSITORY' and not $personalRepository}
+        {call bitbucket.internal.feature.repository.inheritSettingsToggle}
+            {param id: 'inherit-settings-toggle' /}
+            {param overrideInheritedSettings: $effectiveMergeConfigType == $mergeConfigType /}
+            {param projectSettingsUrl: $projectSettingsUrl /}
+        {/call}
+    {/if}
+    {call .mergeConfig}
+        {param mergeConfig: $mergeConfig /}
+        {param disabled: $inheriting /}
+    {/call}
+    <div id="merge-strategy-errors"></div>
+    {call widget.aui.form.buttons}
+        {param content}
+            {call aui.buttons.button}
+                {param id: 'merge-strategies-submit' /}
+                {param extraClasses: 'aui-button-primary' /}
+                {param extraAttributes}
+                    accesskey="s"
+                    {if $inheriting}
+                        disabled aria-disabled="true"
+                    {/if}
+                {/param}
+                {param text: getText('bitbucket.web.button.save') /}
+            {/call}
+            {call aui.buttons.button}
+                {param id: 'merge-strategies-cancel' /}
+                {param extraClasses: 'aui-button-link cancel' /}
+                {param extraAttributes}
+                    accesskey="c"
+                    {if $inheriting}
+                        disabled aria-disabled="true"
+                    {/if}
+                {/param}
+                {param text: getText('bitbucket.web.button.cancel') /}
+            {/call}
+        {/param}
+    {/call}
+{/template}
+
+/**
+ * @param mergeConfig
+ * @param disabled
+ */
+{template .mergeConfig}
+    <fieldset class="merge-strategies" id="merge-config-form" {if $disabled} disabled aria-disabled="true"{/if}>
+        {foreach $strategy in $mergeConfig.strategies}
+            {call .mergeStrategy}
+                {param strategy: $strategy /}
+                {param isDefaultStrategy: $mergeConfig.defaultStrategy.id == $strategy.id /}
+                {param disabled: $disabled /}
+            {/call}
+        {/foreach}
+    </fieldset>
+{/template}
+
+/**
+ * @param strategy
+ * @param isDefaultStrategy
+ * @param disabled
+ */
+{template .mergeStrategy private="true"}
+    <div class="merge-strategy-container{if $isDefaultStrategy} is-default-strategy{/if}">
+        <h4>{$strategy.name}{if $strategy.flag and $strategy.flag != ''}<code>{$strategy.flag}</code>{/if}</h4>
+        <aui-toggle
+            id="{$strategy.id}"
+            class="merge-strategy"
+            value="{$strategy.id}"
+            label="{$strategy.name}"
+            name="enabledIds"
+            {if $strategy.enabled} checked{/if}
+            {if $disabled} disabled{/if}
+        ></aui-toggle>
+        {if $isDefaultStrategy}
+            {call .defaultLozenge /}
+        {/if}
+        <div class="default-merge-strategy">
+            <input type="radio" value="{$strategy.id}" name="defaultId" id="default-strategy-input-{$strategy.id}"
+                {if $isDefaultStrategy} checked{/if}
+                {if $strategy.enabled != true} disabled{/if}
+            />
+            <label for="default-strategy-input-{$strategy.id}">
+                {if $isDefaultStrategy}
+                    ({getText('bitbucket.web.settings.mergestrategy.default')})
+                {else}
+                    {getText('bitbucket.web.settings.mergestrategy.set.default')}
+                {/if}
+            </label>
+        </div>
+        <p class="description">{$strategy.description}</p>
+    </div>
+{/template}
+
+/**
+ * @param hasStrategy
+ * @param hasDefault
+ */
+{template .errors}
+    {if not $hasStrategy}
+        <p class="merge-settings-error">{getText('bitbucket.web.settings.mergestrategy.invalid.selection')}</p>
+    {/if}
+    {if not $hasDefault}
+        <p class="merge-settings-error">{getText('bitbucket.web.settings.mergestrategy.invalid.default')}</p>
+    {/if}
+{/template}
+
+/**
+ * Lozenge to indicate default strategy
+ */
+{template .defaultLozenge}
+    {call bitbucket.internal.widget.lozenge.lozenge}
+        {param extraClasses: 'aui-lozenge-subtle aui-lozenge-success lozenge-default-strategy' /}
+        {param text: getText('bitbucket.web.settings.mergestrategy.default') /}
+    {/call}
+{/template}

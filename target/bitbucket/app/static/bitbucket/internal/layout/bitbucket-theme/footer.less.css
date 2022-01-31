@@ -1,0 +1,10 @@
+#footer-logo a,
+#footer-logo a:hover {
+  background-image: url('../com.atlassian.bitbucket.server.bitbucket-web:bitbucket-logo/images/logo/atlassian-horizontal-neutral-gradient-small.svg');
+  background-size: 127px 24px;
+  height: 24px;
+  width: 127px;
+}
+#footer-logo a:hover {
+  background-image: url('../com.atlassian.bitbucket.server.bitbucket-web:bitbucket-logo/images/logo/atlassian-horizontal-blue-gradient-small.svg');
+}
