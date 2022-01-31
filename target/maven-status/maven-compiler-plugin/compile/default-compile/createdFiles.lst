@@ -2,3 +2,4 @@ com\mycompany\bitbucket\plugin\profile\api\MyPluginComponent.class
 com\mycompany\bitbucket\servlet\AccountServlet.class
 com\mycompany\bitbucket\plugin\profile\config\MyPluginJavaConfig.class
 com\mycompany\bitbucket\plugin\profile\impl\MyPluginComponentImpl.class
+com\mycompany\bitbucket\servlet\ProfileServlet.class

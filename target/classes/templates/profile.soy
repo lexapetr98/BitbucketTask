@@ -1,0 +1,19 @@
+{namespace plugin.profile}
+
+/**
+ * @param user ApplicationUser object which is in the context provided by ProfileServlet
+ */
+{template .profileTab}
+    <html>
+    <head>
+        <meta name="decorator" content="bitbucket.users.profile">
+        <meta name="userSlug" content="{$user.slug}">
+        <meta name="activeTab" content="profile-plugin-tab">
+        <title>{$user.displayName} / Profile Tab</title>
+    </head>
+    <body>
+    <h3>Hello, {$user.displayName}</h3>
+    <p>Welcome to my plugin tab in the profile page.</p>
+    </body>
+    </html>
+{/template}

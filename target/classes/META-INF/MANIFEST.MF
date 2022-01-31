@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
-Atlassian-Build-Date: 2022-01-31T07:21:57+0600
+Atlassian-Build-Date: 2022-01-31T11:37:18+0600
 Atlassian-Plugin-Key: com.mycompany.bitbucket.bitbucket-profile-plugin
-Bnd-LastModified: 1643592118016
+Bnd-LastModified: 1643607439386
 Build-Jdk: 1.8.0_271
 Built-By: lexap
 Bundle-Description: This is the com.mycompany.bitbucket:bitbucket-profil
@@ -24,12 +24,13 @@ Import-Package: org.eclipse.gemini.blueprint.context;resolution:=optiona
  i.external,com.atlassian.plugin.spring.scanner.annotation.export,com.at
  lassian.plugin.spring.scanner.annotation.imports,com.atlassian.sal.api,
  com.atlassian.soy.renderer,com.google.common.collect,com.mycompany.bitb
- ucket.plugin.profile.api,javax.annotation,javax.servlet,javax.servlet.h
- ttp,org.osgi.framework,org.slf4j,org.springframework.beans,org.springfr
- amework.beans.factory,org.springframework.beans.factory.annotation,org.
- springframework.beans.factory.config,org.springframework.cglib.core,org
- .springframework.cglib.proxy,org.springframework.cglib.reflect,org.spri
- ngframework.context,org.springframework.context.annotation,org.springfr
- amework.core.type,org.springframework.stereotype
+ ucket.plugin.profile.api;version="[1.0,2)",javax.annotation,javax.servl
+ et,javax.servlet.http,org.osgi.framework,org.slf4j,org.springframework.
+ beans,org.springframework.beans.factory,org.springframework.beans.facto
+ ry.annotation,org.springframework.beans.factory.config,org.springframew
+ ork.cglib.core,org.springframework.cglib.proxy,org.springframework.cgli
+ b.reflect,org.springframework.context,org.springframework.context.annot
+ ation,org.springframework.core.type,org.springframework.stereotype
+Originally-Created-By: Apache Maven Bundle Plugin
 Spring-Context: *
 Tool: Bnd-3.5.0.201709291849

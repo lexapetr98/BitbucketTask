@@ -1,4 +1,6 @@
+it\com\mycompany\bitbucket\servlet\ProfileServletFuncTest.class
 ut\com\mycompany\bitbucket\servlet\AccountServletTest.class
 it\com\mycompany\bitbucket\plugin\profile\MyComponentWiredTest.class
-it\com\mycompany\bitbucket\servlet\AccountServletFuncTest.class
+ut\com\mycompany\bitbucket\servlet\ProfileServletTest.class
 ut\com\mycompany\bitbucket\plugin\profile\MyComponentUnitTest.class
+it\com\mycompany\bitbucket\servlet\AccountServletFuncTest.class

@@ -28,7 +28,7 @@ public class AccountServlet extends HttpServlet{
     private final UserService userService;
 
     @Autowired
-    public AccountServlet(@ComponentImport final SoyTemplateRenderer soyTemplateRenderer, final UserService userService) {
+    public AccountServlet(@ComponentImport final SoyTemplateRenderer soyTemplateRenderer, @ComponentImport final UserService userService) {
         this.soyTemplateRenderer = soyTemplateRenderer;
         this.userService = userService;
     }
@@ -43,7 +43,7 @@ public class AccountServlet extends HttpServlet{
             resp.sendError(HttpServletResponse.SC_NOT_FOUND);
             return;
         }
-        int id = user.getId();
+
         render(resp, "plugin.account.accountTab", ImmutableMap.<String, Object>of("user", user));
     }
 

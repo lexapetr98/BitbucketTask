@@ -1,7 +1,7 @@
-<repository lastmodified='20220131072158.327'>
+<repository lastmodified='20220131113720.256'>
   <resource id='com.mycompany.bitbucket.profile-plugin/1.0.0.SNAPSHOT' symbolicname='com.mycompany.bitbucket.profile-plugin' presentationname='bitbucket-profile-plugin' uri='bitbucket-profile-plugin-1.0.0-SNAPSHOT.jar' version='1.0.0.SNAPSHOT'>
     <description>This is the com.mycompany.bitbucket:bitbucket-profile-plugin plugin for Atlassian Bitbucket Server.</description>
-    <size>38013</size>
+    <size>40359</size>
     <documentation>http://www.example.com/</documentation>
     <capability name='bundle'>
       <p n='symbolicname' v='com.mycompany.bitbucket.profile-plugin'/>
@@ -27,7 +27,7 @@
     <require name='package' filter='(&amp;(package=com.atlassian.sal.api))' extend='false' multiple='false' optional='false'>Import package com.atlassian.sal.api</require>
     <require name='package' filter='(&amp;(package=com.atlassian.soy.renderer))' extend='false' multiple='false' optional='false'>Import package com.atlassian.soy.renderer</require>
     <require name='package' filter='(&amp;(package=com.google.common.collect))' extend='false' multiple='false' optional='false'>Import package com.google.common.collect</require>
-    <require name='package' filter='(&amp;(package=com.mycompany.bitbucket.plugin.profile.api))' extend='false' multiple='false' optional='false'>Import package com.mycompany.bitbucket.plugin.profile.api</require>
+    <require name='package' filter='(&amp;(package=com.mycompany.bitbucket.plugin.profile.api)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package com.mycompany.bitbucket.plugin.profile.api;version="[1.0,2)"</require>
     <require name='package' filter='(&amp;(package=javax.annotation))' extend='false' multiple='false' optional='false'>Import package javax.annotation</require>
     <require name='package' filter='(&amp;(package=javax.servlet))' extend='false' multiple='false' optional='false'>Import package javax.servlet</require>
     <require name='package' filter='(&amp;(package=javax.servlet.http))' extend='false' multiple='false' optional='false'>Import package javax.servlet.http</require>
